@@ -1,5 +1,5 @@
 # CUDA Cluster
-# container-based cluster scripts to run and control diverse CUDA workloads ( vCPU / vGPU )
+# Container-based cluster scripts to run and control diverse CUDA workloads ( vCPU / vGPU )
 
 System is build with CUDA nodes on top of GPU hosts to allow the distributed workloads layered on top of physical hosts.
 
