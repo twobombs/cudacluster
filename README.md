@@ -1,5 +1,7 @@
 # CUDA Cluster 2018
-# Container-based cluster scripts to run and control diverse CUDA workloads ( vCPU vs. vGPU )
+# Container-based cluster scripts to run and control diverse CUDA workloads (vCPU vs. vGPU)
+
+![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
 
 System is build with CUDA nodes on top of GPU hosts to allow the distributed workloads layered on top of physical hosts. Infra & monitoring is done by invoking rancher:preview
 
