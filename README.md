@@ -8,3 +8,5 @@ The worker node sees the underlying hardware PCI bus X-times the amount of nodes
 This is used to optimize the workload and usage of the GPUs, and also allows the abstract of running workload on thousands of GPU cores while only running on a small subset of those cores, therefore accurately simulation scaling.
 
 This is a solution that came up when developing an emulator for Quantum Computing. 
+
+Project has its base from the deploy-nvidia-cuda environment. This is, obviouslt a very early version.
