@@ -9,4 +9,4 @@ This is used to optimize the workload and usage of the GPUs, and also allows the
 
 This is a solution that came up when developing an emulator for Quantum Computing. 
 
-Project has its base from the deploy-nvidia-cuda environment. This is, obviouslt a very early version.
+Project has its base from the deploy-nvidia-cuda environment. This is, obviously a very early version.
