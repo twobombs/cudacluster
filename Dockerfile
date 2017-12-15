@@ -6,6 +6,8 @@ RUN git clone --recursive http://git.tiker.net/trees/pycuda.git
 RUN git clone --recursive https://github.com/stevenrobertson/cuburn.git
 RUN git clone --recursive https://github.com/mebigfatguy/apophysis-j.git
 
+RUN cd /apophysis-j && ant 
+
 RUN add-apt-repository universe && apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y libboost-all-dev python-pycuda python-pip && apt-get clean all
 
 RUN pip install numpy scipy
