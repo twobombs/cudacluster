@@ -11,8 +11,6 @@ RUN add-apt-repository universe && apt-get update && apt-get -y --force-yes upgr
 
 RUN git clone --recursive http://git.tiker.net/trees/pycuda.git && cd /pycuda && ./configure.py && make && make install
 
-RUN apt-get -y remove nvidia-387 && apt-get purge 
-
 RUN pip install numpy scipy
 
 EXPOSE 6080
