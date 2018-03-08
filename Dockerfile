@@ -9,7 +9,7 @@ RUN cd /apophysis-j && ant
 
 RUN add-apt-repository universe && apt-get update && apt-get -y --force-yes upgrade && export DEBIAN_FRONTEND=noninteractive && apt-get install -y libboost-all-dev python-pip && apt-get clean all
 
-RUN git clone --recursive http://git.tiker.net/trees/pycuda.git && cd /pycuda && ./configure.py && make && make install
+RUN mkdir /usr/local/cuda && export CUDA_ROOT=/usr/local/cuda && git clone --recursive http://git.tiker.net/trees/pycuda.git && cd /pycuda && ./configure.py && make && make install
 
 RUN pip install numpy scipy
 
