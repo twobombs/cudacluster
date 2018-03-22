@@ -12,3 +12,5 @@ RUN add-apt-repository universe && apt-get update && apt-get -y --force-yes upgr
 RUN pip install numpy scipy
 
 EXPOSE 6080
+
+ENTRYPOINT: /root/run
