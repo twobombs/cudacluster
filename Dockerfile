@@ -9,6 +9,8 @@ RUN cd /apophysis-j && ant
 
 RUN add-apt-repository universe && apt-get update && apt-get -y --force-yes upgrade && export DEBIAN_FRONTEND=noninteractive && apt-get install -y libboost-all-dev python-pip phoronix-test-suite && apt-get clean all
 
+RUN add-apt-repository ppa:paulo-miguel-dias/mesa -y && apt-get update && apt -y dist-upgrade && apt-get clean all
+
 RUN pip install numpy scipy
 
 EXPOSE 6080
