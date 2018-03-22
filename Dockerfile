@@ -13,4 +13,4 @@ RUN pip install numpy scipy
 
 EXPOSE 6080
 
-ENTRYPOINT: /root/run
+ENTRYPOINT /root/run
