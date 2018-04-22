@@ -1,5 +1,5 @@
 # CUDA/OpenCL Cluster 2018
-# Container-based cluster scripts to run and control diverse CUDA/OpenCL workloads
+# Container-based cluster to run and control diverse CUDA/OpenCL workloads
 
 ![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
 
