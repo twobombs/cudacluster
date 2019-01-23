@@ -1,6 +1,6 @@
 FROM twobombs/deploy-nvidia-docker
 
-RUN apt-get update&&apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 python-software-properties python-setuptools python3-setuptools python-migrate && apt-get clean all
+RUN apt-get update&&apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 software-properties-common python-setuptools python3-setuptools python-migrate && apt-get clean all
 
 RUN git clone --recursive https://github.com/stevenrobertson/cuburn.git
 RUN git clone --recursive https://github.com/mebigfatguy/apophysis-j.git
