@@ -1,9 +1,9 @@
-# CUDA/OpenCL Cluster 2018
+# CUDA/OpenCL Cluster 2019
 # Container-based cluster to run and control diverse CUDA/OpenCL workloads
 
 ![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
 
-System is build with CUDA/OpenCL nodes on top of (GPU) hosts to allow the distributed workloads layered on top of physical or virtual hosts. The Infra & monitoring will be done by invoking rancher 1.6x or 2.x 
+System is build with CUDA/OpenCL nodes on top of (GPU) hosts to allow the distributed workloads layered on top of physical or virtual hosts. The Infra & monitoring will be done by invoking rancher 1.6.x or 2.x 
 
 The worker node sees the underlying hardware PCI bus X-times the amount of nodes on the host so the controller node will see an X-amount of CUDA cores. Both the worker and controller node are of the same image; a controller can therefore also work.
 
@@ -20,3 +20,6 @@ Experimental:
 
 Todo:
 - Sync mechnism for all the nodes ( DB & ES )
+
+Done:
+- v2019 iteration: upgraded to CUDA 9.2 @ Ubuntu 18.04
