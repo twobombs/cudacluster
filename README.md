@@ -1,5 +1,6 @@
 # CUDA/OpenCL Cluster 2019
 # Container-based cluster to run and control diverse CUDA/OpenCL workloads
+# Based on Ubuntu 18.04
 
 ![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
 
