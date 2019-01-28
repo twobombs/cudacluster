@@ -1,5 +1,4 @@
-# CUDA/OpenCL Cluster 2019
-# To run and control diverse CUDA/OpenCL workloads
+# CUDA/OpenCL Cluster 2019 - run and control diverse CUDA/OpenCL workloads
 # Based on Ubuntu 18.04 NVidia Docker CUDA Dev Image
 
 ![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
