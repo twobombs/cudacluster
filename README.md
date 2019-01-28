@@ -1,5 +1,5 @@
 # CUDA/OpenCL Cluster 2019 - R&D + C&C 
-# Based on Ubuntu 18.04 NVidia Docker CUDA Dev Image
+# Based on Ubuntu 18.04 NVidia Docker2 CUDA Dev Image
 
 ![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
 
