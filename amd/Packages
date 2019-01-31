@@ -1,0 +1,1733 @@
+Package: amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 7
+Depends: amdgpu-pro-dkms (= 17.40-514569), libdrm-amdgpu-pro-amdgpu1 (= 1:2.4.82-514569), libgbm1-amdgpu-pro-base (= 17.40-514569), libgbm1-amdgpu-pro (= 17.40-514569), libgl1-amdgpu-pro-appprofiles (= 17.40-514569), libgl1-amdgpu-pro-glx (= 17.40-514569), libgl1-amdgpu-pro-ext (= 17.40-514569), libgl1-amdgpu-pro-dri (= 17.40-514569), libegl1-amdgpu-pro (= 17.40-514569), libgles2-amdgpu-pro (= 17.40-514569), libopencl1-amdgpu-pro (= 17.40-514569), clinfo-amdgpu-pro (= 17.40-514569), opencl-amdgpu-pro-icd (= 17.40-514569), vulkan-amdgpu-pro (= 17.40-514569), libvdpau-amdgpu-pro (= 1:17.0.1-514569), xserver-xorg-video-glamoregl-amdgpu-pro (= 1.19.0-514569), xserver-xorg-video-amdgpu-pro (= 1:1.3.99-514569)
+Filename: ./amdgpu-pro_17.40-514569_i386.deb
+Size: 1352
+MD5sum: 9ebc641fea5c40ed827f0c75d89894a6
+SHA1: c44ef0cf25dc5f00715ba52e7c7cb0973141d9a1
+SHA256: 4f25df8c4e0b9eb066fab8d537fce3afa50ef48620ae9cfdc85ab28ad5e70b78
+Section: metapackages
+Priority: optional
+Description: Meta package to install amdgpu Pro components.
+
+Package: amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 7
+Depends: amdgpu-pro-dkms (= 17.40-514569), libdrm-amdgpu-pro-amdgpu1 (= 1:2.4.82-514569), libgbm1-amdgpu-pro-base (= 17.40-514569), libgbm1-amdgpu-pro (= 17.40-514569), libgl1-amdgpu-pro-appprofiles (= 17.40-514569), libgl1-amdgpu-pro-glx (= 17.40-514569), libgl1-amdgpu-pro-ext (= 17.40-514569), libgl1-amdgpu-pro-dri (= 17.40-514569), libegl1-amdgpu-pro (= 17.40-514569), libgles2-amdgpu-pro (= 17.40-514569), libopencl1-amdgpu-pro (= 17.40-514569), clinfo-amdgpu-pro (= 17.40-514569), opencl-amdgpu-pro-icd (= 17.40-514569), vulkan-amdgpu-pro (= 17.40-514569), libvdpau-amdgpu-pro (= 1:17.0.1-514569), xserver-xorg-video-glamoregl-amdgpu-pro (= 1.19.0-514569), xserver-xorg-video-amdgpu-pro (= 1:1.3.99-514569)
+Filename: ./amdgpu-pro_17.40-514569_amd64.deb
+Size: 1348
+MD5sum: 01ac6f5dd66994c3db653f9381b6fd27
+SHA1: eed23bc327a16b06d6b0b2075fa69a22574a08c6
+SHA256: 19f1a3faa2cab0ddd79069fba83fdf1bee4e1f508e5257d6b5617962ab221869
+Section: metapackages
+Priority: optional
+Description: Meta package to install amdgpu Pro components.
+
+Package: amdgpu-pro-core
+Version: 17.40-514569
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 7
+Filename: ./amdgpu-pro-core_17.40-514569_all.deb
+Size: 1206
+MD5sum: ca1f954811112067cf8991114994d379
+SHA1: 6223bc6dcfb25f900c8bc444c428f0d6a1715c0b
+SHA256: ae3ecee4dbbbd13ba7b1230f926b850aeaa50cfed1485559348e5f120a4361a8
+Section: metapackages
+Priority: optional
+Multi-Arch: foreign
+Description: Meta package to uninstall amdgpu Pro components.
+
+Package: amdgpu-pro-dkms
+Version: 17.40-514569
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 123839
+Depends: dkms (>= 1.95), amdgpu-pro-core
+Filename: ./amdgpu-pro-dkms_17.40-514569_all.deb
+Size: 5468290
+MD5sum: e028185f86c2e8245c7c272324defafe
+SHA1: 637382deddf5c932bb1643924cfa712baa9158c7
+SHA256: e03e06d0522825303b66f3dbc757ed8797edae29a2ade82ce706774d821487b2
+Section: misc
+Priority: optional
+Description: amdgpu-pro driver in DKMS format.
+
+Package: amdgpu-pro-lib32
+Source: amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 7
+Depends: libdrm-amdgpu-pro-amdgpu1:i386 (= 1:2.4.82-514569), libgbm1-amdgpu-pro:i386 (= 17.40-514569), libgl1-amdgpu-pro-glx:i386 (= 17.40-514569), libgl1-amdgpu-pro-dri:i386 (= 17.40-514569), libegl1-amdgpu-pro:i386 (= 17.40-514569), libgles2-amdgpu-pro:i386 (= 17.40-514569), vulkan-amdgpu-pro:i386 (= 17.40-514569), libvdpau-amdgpu-pro:i386 (= 1:17.0.1-514569), libopencl1-amdgpu-pro:i386 (= 17.40-514569), opencl-amdgpu-pro-icd:i386 (= 17.40-514569)
+Filename: ./amdgpu-pro-lib32_17.40-514569_amd64.deb
+Size: 1310
+MD5sum: db1c5d2dfb9ae411e94879df52450b9c
+SHA1: 5b123ebf37545334a3ad0dc56a87cd93b1463220
+SHA256: e236a7e72ea61d25c87215f1f7874c253930844eb5fe73419869c20e885e75b6
+Section: metapackages
+Priority: optional
+Description: Meta package to support i386 runtime on amd64 architecture
+
+Package: clinfo-amdgpu-pro
+Source: opencl-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 576
+Depends: libc6 (>= 2.3.6-6~), libgcc1 (>= 1:4.2), libopencl1-amdgpu-pro, amdgpu-pro-core
+Recommends: opencl-amdgpu-pro-icd
+Filename: ./clinfo-amdgpu-pro_17.40-514569_i386.deb
+Size: 160556
+MD5sum: 58e124135f63b43692805c0ceb72e336
+SHA1: fd7624dc654b61dbfd9042b21d802d1af0717f26
+SHA256: 2b56641b86eb35ba02fe8f7369bae671ab8ac4da901b625e5fe668c7e3ba3d44
+Section: libs
+Priority: optional
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL info utility
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package contains the clinfo utility provided by AMD. It reports status
+ information for all ICDs (installable client drivers) that are installed in
+ the system.
+
+Package: clinfo-amdgpu-pro
+Source: opencl-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 549
+Depends: libc6 (>= 2.3.3), libgcc1 (>= 1:4.2), libopencl1-amdgpu-pro, amdgpu-pro-core
+Recommends: opencl-amdgpu-pro-icd
+Filename: ./clinfo-amdgpu-pro_17.40-514569_amd64.deb
+Size: 149000
+MD5sum: 3c9d9329276b23203dda0069640073f7
+SHA1: e12373f01359f7e8b6ebf0e4f6dfb418ca4d4d7b
+SHA256: a8a600a70599dd91685386fdc9d6b1cc6a33002b0ee11523d76904a7fb848251
+Section: libs
+Priority: optional
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL info utility
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package contains the clinfo utility provided by AMD. It reports status
+ information for all ICDs (installable client drivers) that are installed in
+ the system.
+
+Package: gst-omx-amdgpu-pro
+Version: 1.0.0.1-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 227
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libgstreamer-plugins-base1.0-0 (>= 1.6.0), libgstreamer1.0-0 (>= 1.0.0), libomxil-bellagio0
+Filename: ./gst-omx-amdgpu-pro_1.0.0.1-514569_i386.deb
+Size: 63730
+MD5sum: 52240ecb3409a56484f72e3f68221e99
+SHA1: 1a806f634504ff4042bf4ac9dc7b57a28c344aba
+SHA256: afb9affbf510221b599c89fd2239df22e43cedfacb6e6ba956e3fd297f079fad
+Section: libs
+Priority: optional
+Homepage: http://gstreamer.freedesktop.org
+Description: GStreamer OpenMAX plugins
+ GStreamer is a streaming media framework, based on graphs of filters
+ which operate on media data.  Applications using this library can do
+ anything from real-time sound processing to playing videos, and just
+ about anything else media-related.  Its plugin-based architecture means
+ that new data types or processing capabilities can be added simply by
+ installing new plug-ins.
+ .
+ This module provides a plugin that allows communication of GStreamer
+ with OpenMAX IL components, which are used to access hardware
+ encoders and decoders.
+
+Package: gst-omx-amdgpu-pro
+Version: 1.0.0.1-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 204
+Depends: libc6 (>= 2.14), libglib2.0-0 (>= 2.37.3), libgstreamer-plugins-base1.0-0 (>= 1.6.0), libgstreamer1.0-0 (>= 1.0.0), libomxil-bellagio0
+Filename: ./gst-omx-amdgpu-pro_1.0.0.1-514569_amd64.deb
+Size: 63030
+MD5sum: 060d07b237def5473615420d961ec469
+SHA1: 300138f81f742708721134b18ea1573fe5fa7f70
+SHA256: 6b250e839b9b080244437ab1897042789f050fa3434e8f70d61d1ffaadb76a7f
+Section: libs
+Priority: optional
+Homepage: http://gstreamer.freedesktop.org
+Description: GStreamer OpenMAX plugins
+ GStreamer is a streaming media framework, based on graphs of filters
+ which operate on media data.  Applications using this library can do
+ anything from real-time sound processing to playing videos, and just
+ about anything else media-related.  Its plugin-based architecture means
+ that new data types or processing capabilities can be added simply by
+ installing new plug-ins.
+ .
+ This module provides a plugin that allows communication of GStreamer
+ with OpenMAX IL components, which are used to access hardware
+ encoders and decoders.
+
+Package: hsa-ext-amdgpu-pro-finalize
+Version: 1.1.6-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 10628
+Depends: libc6 (>= 2.14), libelf1 (>= 0.144), libgcc1 (>= 1:3.0), libstdc++6 (>= 4.8), rocr-amdgpu-pro
+Filename: ./hsa-ext-amdgpu-pro-finalize_1.1.6-514569_amd64.deb
+Size: 2545672
+MD5sum: 92e936c599e8505f92452a23d094512c
+SHA1: 33aee7846fbe75331120018972893d877e27f29d
+SHA256: 25d8d0a01ca701548e685e7307634a8073c2790bd08bf232c7a0a029101a02cd
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: This package provides the development environment for hsa-rocr extensions.
+
+Package: hsa-ext-amdgpu-pro-image
+Version: 1.1.6-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 330
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 4.8), rocr-amdgpu-pro, roct-amdgpu-pro
+Filename: ./hsa-ext-amdgpu-pro-image_1.1.6-514569_amd64.deb
+Size: 116088
+MD5sum: fe52909ec7d6e3c20572ed8b5dfcd997
+SHA1: c71e0dbf389c7a748faeed7593901adae52b947b
+SHA256: c54e8320029609c39a5de2c2e14715f7e582161811f68ca9a2ff3592e70d6070
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: This package provides the development environment for hsa-rocr extensions.
+
+Package: hsa-runtime-tools-amdgpu-pro
+Version: 1.1.6-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 4192
+Depends: libc6 (>= 2.16), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2), roct-amdgpu-pro, rocr-amdgpu-pro
+Filename: ./hsa-runtime-tools-amdgpu-pro_1.1.6-514569_amd64.deb
+Size: 444610
+MD5sum: 99ba34550f43b4db17136190d6253a11
+SHA1: 82a5b7737e5d7a984c2102aa70a4fb5901e43ac7
+SHA256: c07a8818156b7ecb4cac1be2c2b4f6d8ac84ea80d7b4d4f6bd70c5e54e3a2e6f
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: This package provides the development environment for hsa-rocr
+ extensions.
+
+Package: hsa-runtime-tools-amdgpu-pro-dev
+Source: hsa-runtime-tools-amdgpu-pro
+Version: 1.1.6-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 94
+Depends: hsa-runtime-tools-amdgpu-pro (= 1.1.6-514569)
+Filename: ./hsa-runtime-tools-amdgpu-pro-dev_1.1.6-514569_amd64.deb
+Size: 12382
+MD5sum: d6150d5fde6a150a0b8a4e991c531126
+SHA1: 49ee91598bc55584af200714af7fcbfb9ce82799
+SHA256: 03c4d8dc8fe026b8634f4822b642f1e3b9de15b8c48c8d05f7724b2e635f49b6
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: This package contains development library and header files for
+ hsa-rocr extensions.
+
+Package: ids-amdgpu-pro
+Version: 1.0.0-514569
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 18
+Depends: amdgpu-pro-core
+Filename: ./ids-amdgpu-pro_1.0.0-514569_all.deb
+Size: 2608
+MD5sum: 78eaa208210624f4d12474c7a0d6fdb5
+SHA1: 9b25fdb627260e5cf4fdb3d6542d46426c7a2bf8
+SHA256: 33e77b5d72c0c375ffe3639bc08d76350fff25e5976706cc647166b9c64cccbe
+Section: text
+Priority: optional
+Multi-Arch: foreign
+Description: List of AMD/ATI cards' device IDs, revision IDs and marketing names
+
+Package: libdrm-amdgpu-pro-amdgpu1
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 88
+Depends: libc6 (>= 2.17), libdrm2-amdgpu-pro (= 1:2.4.82-514569), ids-amdgpu-pro
+Filename: ./libdrm-amdgpu-pro-amdgpu1_2.4.82-514569_i386.deb
+Size: 22972
+MD5sum: 5a1ae39d65aa53346dd22e1b878b8aea
+SHA1: 6932692de0da72da553415ccfa40b19e4cdd4461
+SHA256: 6e3e764b1cd124fa810b727962c38a3960cc979802cd12ca0c315376471444ac
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to amdgpu-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the amdgpu-specific kernel
+ DRM services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI). The DRI is
+ currently used on Linux to provide hardware-accelerated OpenGL drivers.
+
+Package: libdrm-amdgpu-pro-amdgpu1
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 85
+Depends: libc6 (>= 2.17), libdrm2-amdgpu-pro (= 1:2.4.82-514569), ids-amdgpu-pro
+Filename: ./libdrm-amdgpu-pro-amdgpu1_2.4.82-514569_amd64.deb
+Size: 20318
+MD5sum: bd12c5852de6b5ca674cc1a0541f6b9d
+SHA1: 3ee18830f5f5ed9de666922c9d4850c9058bcf7f
+SHA256: f9f935b45cb900ab69058c8192a99694e555f5d0212da40071001be39c637c64
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to amdgpu-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the amdgpu-specific kernel
+ DRM services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI). The DRI is
+ currently used on Linux to provide hardware-accelerated OpenGL drivers.
+
+Package: libdrm-amdgpu-pro-dev
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 815
+Depends: libdrm2-amdgpu-pro (= 1:2.4.82-514569), libdrm-amdgpu-pro-amdgpu1 (= 1:2.4.82-514569)
+Replaces: linux-libc-dev (<< 2.6.32-10)
+Filename: ./libdrm-amdgpu-pro-dev_2.4.82-514569_amd64.deb
+Size: 149024
+MD5sum: 56a1a979b43f2c21eeadcde996faa7fd
+SHA1: c1f830568f692bb15acdec3380b4cb637ae7cfb7
+SHA256: 3192485ec9c6112b3ff034c7da84bc115b9dcaf8e0e4dc85dea50b9c45b394d6
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to kernel DRM services -- development files
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the development environment for libdrm.
+
+Package: libdrm-amdgpu-pro-dev
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 784
+Depends: libdrm2-amdgpu-pro (= 1:2.4.82-514569), libdrm-amdgpu-pro-amdgpu1 (= 1:2.4.82-514569)
+Replaces: linux-libc-dev (<< 2.6.32-10)
+Filename: ./libdrm-amdgpu-pro-dev_2.4.82-514569_i386.deb
+Size: 154114
+MD5sum: 9b642bddd0ff866e975f3d24e3441386
+SHA1: 2b36749421543a113ddd9685cc5ce41b0c0eb3b8
+SHA256: 883a00e39e117a328a3b285abf44d8627ceb5c0b616444e7a0bec2fc652578f8
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to kernel DRM services -- development files
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the development environment for libdrm.
+
+Package: libdrm-amdgpu-pro-radeon1
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 88
+Depends: libc6 (>= 2.4), libdrm2-amdgpu-pro (= 1:2.4.82-514569)
+Filename: ./libdrm-amdgpu-pro-radeon1_2.4.82-514569_i386.deb
+Size: 19634
+MD5sum: a0180cb9ff9266bfd0bcda3c043e307f
+SHA1: e9353d9fa9290ab5d60f9907ee5ab20d7cf9ef7c
+SHA256: e06016f2e2ba883487729cc9975aae8481964d7de5ed9e036ae913a97b54b7d8
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to radeon-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the radeon-specific kernel
+ DRM services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI). The DRI is
+ currently used on Linux to provide hardware-accelerated OpenGL drivers.
+
+Package: libdrm-amdgpu-pro-radeon1
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 89
+Depends: libc6 (>= 2.4), libdrm2-amdgpu-pro (= 1:2.4.82-514569)
+Filename: ./libdrm-amdgpu-pro-radeon1_2.4.82-514569_amd64.deb
+Size: 19006
+MD5sum: 5ae17279a86ac039bd0a6712ae6c429e
+SHA1: 427700fb0325f0fcb0586fca2caf432abfd6b30d
+SHA256: f38d5800271e1eeb65db739965ec5b2ed66492e07f3d34215d4303e23fd73059
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to radeon-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the radeon-specific kernel
+ DRM services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI). The DRI is
+ currently used on Linux to provide hardware-accelerated OpenGL drivers.
+
+Package: libdrm-amdgpu-pro-utils
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 380
+Depends: libdrm-amdgpu-pro-amdgpu1 (= 1:2.4.82-514569), libc6 (>= 2.17), libcunit1, libdrm2-amdgpu-pro
+Filename: ./libdrm-amdgpu-pro-utils_2.4.82-514569_amd64.deb
+Size: 57032
+MD5sum: 54e7e0b71bae2eb7b164dc6f05468c8a
+SHA1: e381f91b6b2b5eedbf1199843c39a7650fbb3ed7
+SHA256: 0225dd9f3bc560b6db2bef7b692d989149e4965bad01fd576cd79ecd65c0e5be
+Section: utils
+Priority: optional
+Description: Utility programs for the kernel DRM interface.
+
+Package: libdrm-amdgpu-pro-utils
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 359
+Depends: libdrm-amdgpu-pro-amdgpu1 (= 1:2.4.82-514569), libc6 (>= 2.17), libcunit1, libdrm2-amdgpu-pro
+Filename: ./libdrm-amdgpu-pro-utils_2.4.82-514569_i386.deb
+Size: 56206
+MD5sum: 1ac6f0c71eb480d06a03c2a86df3ad8a
+SHA1: 6dc2965e42d3325b6290396d38a225858b2025d1
+SHA256: 1de43b5dbb9d748e5ac8aa4c717874ab814f5142044c22ecd49429c3ac09052d
+Section: utils
+Priority: optional
+Description: Utility programs for the kernel DRM interface.
+
+Package: libdrm2-amdgpu-pro
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 125
+Depends: libc6 (>= 2.17), amdgpu-pro-core
+Filename: ./libdrm2-amdgpu-pro_2.4.82-514569_i386.deb
+Size: 30616
+MD5sum: 3c134d6c2f9a8a9ac3406d951f7d37be
+SHA1: cbf26aeb7fcc3fc4e91185feab6b7a82f396adcb
+SHA256: 6bbea2a50c367989a916414c05a589d37324b31187ddd7bff889a12598505bf5
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to kernel DRM services -- runtime
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the runtime environment for libdrm.
+
+Package: libdrm2-amdgpu-pro
+Source: libdrm-amdgpu-pro
+Version: 1:2.4.82-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 131
+Depends: libc6 (>= 2.17), amdgpu-pro-core
+Filename: ./libdrm2-amdgpu-pro_2.4.82-514569_amd64.deb
+Size: 29566
+MD5sum: 919e6dd08f0848590305edb0c0980fff
+SHA1: 81a6630474b526ee53f81c3dda2398e8937f68b9
+SHA256: 6ca32d54e2974cbe56559dc5048c5d3fdeab063b6b91839241cf71851f0300d2
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to kernel DRM services -- runtime
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the runtime environment for libdrm.
+
+Package: libegl1-amdgpu-pro
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 32
+Depends: libc6 (>= 2.2.5), libstdc++6 (>= 4.1.1), amdgpu-pro-core
+Filename: ./libegl1-amdgpu-pro_17.40-514569_amd64.deb
+Size: 5422
+MD5sum: 0a18ec3a949a37cd0f62542a01896a22
+SHA1: 86e9093379e8256b6d5d5c824440dd4507f53461
+SHA256: c77a99ddce16d2a88b3698696f6970327a263f522be89989836306af96d25401
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the EGL API -- runtime
+
+Package: libegl1-amdgpu-pro
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 27
+Depends: libc6 (>= 2.3.6-6~), libgcc1 (>= 1:3.0), libstdc++6 (>= 4.1.1), amdgpu-pro-core
+Filename: ./libegl1-amdgpu-pro_17.40-514569_i386.deb
+Size: 4748
+MD5sum: 7343ef987c4c110bb767ce32db50d67e
+SHA1: 378e252f9ccdaffdced0082859023bf6b332e813
+SHA256: 8a4fe1c05c211c962509803494fea944c59000d51ad810dbb4177e5e8cbf1c79
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the EGL API -- runtime
+
+Package: libgbm1-amdgpu-pro
+Source: libgbm-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 305
+Depends: libdrm-amdgpu-pro-amdgpu1, libgbm1-amdgpu-pro-base (= 17.40-514569), libc6 (>= 2.4), libdrm2-amdgpu-pro, libgcc1 (>= 1:3.0), libstdc++6 (>= 4.1.1)
+Filename: ./libgbm1-amdgpu-pro_17.40-514569_i386.deb
+Size: 109838
+MD5sum: 81affe00aac90c02dae3d4fc8b93a26d
+SHA1: b40e85a361571e84c0ee176aada4385f4edf0e88
+SHA256: b9ebebd9c29cf2cddc647f6b85f21c79e8ed46ab1a8197d73e9ea2759794b912
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Generic buffer management API -- runtime
+
+Package: libgbm1-amdgpu-pro
+Source: libgbm-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 287
+Depends: libdrm-amdgpu-pro-amdgpu1, libgbm1-amdgpu-pro-base (= 17.40-514569), libc6 (>= 2.14), libdrm2-amdgpu-pro, libgcc1 (>= 1:3.0), libstdc++6 (>= 4.1.1)
+Filename: ./libgbm1-amdgpu-pro_17.40-514569_amd64.deb
+Size: 100242
+MD5sum: 4fd38fdeb5955241f98b336237ecc9cf
+SHA1: ec73527a5cd20303e6f36f44869a91b3599282d9
+SHA256: 6a872c04fbe6d93e2fb123894fd26f59eec4eee67a1b40b44ca764532437866c
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Generic buffer management API -- runtime
+
+Package: libgbm1-amdgpu-pro-base
+Source: libgbm-amdgpu-pro
+Version: 17.40-514569
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 15
+Depends: amdgpu-pro-core
+Filename: ./libgbm1-amdgpu-pro-base_17.40-514569_all.deb
+Size: 3080
+MD5sum: f2f4fa28c7229648e0abddd0c662135a
+SHA1: 411431e426a1bd4939bb4e04f4e83e99e3cc47d4
+SHA256: b33eb13fac6f70b053343f6b99573a8f72c9a0bc2b17cb10e03365aa5ff82253
+Section: libs
+Priority: optional
+Multi-Arch: foreign
+Description: Generic buffer management API -- configuration files
+
+Package: libgbm1-amdgpu-pro-dev
+Source: libgbm-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 31
+Depends: libgbm1-amdgpu-pro (= 17.40-514569)
+Filename: ./libgbm1-amdgpu-pro-dev_17.40-514569_amd64.deb
+Size: 5624
+MD5sum: 4bf96af4c85c4127d4e4df1beb5bebb2
+SHA1: 3f57b59d19cb53f31df80af6f9d3e6990da71ffa
+SHA256: d1dd001969d202c7bcf93a438f4c9f00662605f7e568e20f169de4b775c4e0d5
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Generic buffer management API -- development files
+
+Package: libgbm1-amdgpu-pro-dev
+Source: libgbm-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 31
+Depends: libgbm1-amdgpu-pro (= 17.40-514569)
+Filename: ./libgbm1-amdgpu-pro-dev_17.40-514569_i386.deb
+Size: 5616
+MD5sum: dd376f07ff7d9f7e56c1b16b4378e500
+SHA1: fab4d959a398e12f661b631cb65f2fec02e35acb
+SHA256: a295fabae73edac9fa47ec823a483a186a815191a33e19b29896fa150dd78d0e
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Generic buffer management API -- development files
+
+Package: libgl1-amdgpu-pro-appprofiles
+Source: appprofiles-amdgpu-pro
+Version: 17.40-514569
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 129
+Depends: amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-appprofiles_17.40-514569_all.deb
+Size: 16324
+MD5sum: c7895095afa137a0b42cd851fb9a0039
+SHA1: fb673aa5733116e5562f4a81b1d6172a360df343
+SHA256: 8d3295861b9ea9bcdd9551dca786674e87d2ad23e6f560934778d34543c061d9
+Section: libs
+Priority: optional
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenGL profiles configuration
+
+Package: libgl1-amdgpu-pro-dri
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 47049
+Depends: libc6 (>= 2.3.4), libdrm2-amdgpu-pro, libgcc1 (>= 1:3.0), libstdc++6 (>= 4.2.1), libx11-6, libxext6, libxfixes3, amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-dri_17.40-514569_amd64.deb
+Size: 9460122
+MD5sum: db68f759b9e267b00647df6b9738b367
+SHA1: 8eab9d5cdfc22769e62390e01d600b2499252e96
+SHA256: b7b1d2ed2102d30425684dd8a0e7b3568816be156bde11b1e99d88c342b794d4
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL API -- DRI modules
+
+Package: libgl1-amdgpu-pro-dri
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 46425
+Depends: libc6 (>= 2.3.6-6~), libdrm2-amdgpu-pro, libgcc1 (>= 1:4.2), libstdc++6 (>= 4.1.1), libx11-6, libxext6, libxfixes3, amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-dri_17.40-514569_i386.deb
+Size: 9104428
+MD5sum: 8ae93d62af4d260207cbd08f5329ae14
+SHA1: 6af24c0230fad683ea8410dd7863e4b7d2f7f187
+SHA256: 563158e378c02f9e0f0a00065f62876cc4d04cf75ed20e5d66acc2b55b1fb930
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL API -- DRI modules
+
+Package: libgl1-amdgpu-pro-ext
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 334
+Depends: libc6 (>= 2.3.6-6~), libdrm2-amdgpu-pro, libgcc1 (>= 1:3.0), libgl1-amdgpu-pro-glx, libx11-6, libx11-xcb1, libxcb-dri2-0, libxcb-glx0, libxcb1, libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxxf86vm1, amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-ext_17.40-514569_i386.deb
+Size: 67692
+MD5sum: 299d538dca4c8a558896ca914fb33406
+SHA1: c681d992e4ca0ca7d015d7a7c3d1a4eaec6bb43a
+SHA256: 7dd87c6525139b10f395f74ccb290f48dcaf6def182bc68f2b637b84b5eb7778
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: xorg GLX exetnsion
+
+Package: libgl1-amdgpu-pro-ext
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 447
+Depends: libc6 (>= 2.2.5), libdrm2-amdgpu-pro, libgl1-amdgpu-pro-glx, libx11-6, libx11-xcb1, libxcb-dri2-0, libxcb-glx0, libxcb1, libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxxf86vm1, amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-ext_17.40-514569_amd64.deb
+Size: 79934
+MD5sum: c97384f5f52ad8ec6039bd07cb75f97e
+SHA1: bc69fbcb63bf2a3ebaa7a6d6fa24d675d4715abb
+SHA256: 0ade075f6c11ad9e56fad752235f3a2163d5f2ec64cafe4d92c508fc05dc41b2
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: xorg GLX exetnsion
+
+Package: libgl1-amdgpu-pro-glx
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 975
+Depends: libc6 (>= 2.2.5), libdrm2-amdgpu-pro, libx11-6 (>= 2:1.4.99.1), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-glx0 (>= 1.8), libxcb-present0, libxcb-sync1, libxcb1 (>= 1.9.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxshmfence1, libxxf86vm1, amdgpu-pro-core
+Recommends: libgl1-amdgpu-pro-dri (= 17.40-514569)
+Filename: ./libgl1-amdgpu-pro-glx_17.40-514569_amd64.deb
+Size: 165686
+MD5sum: 224bc8d42427b88e3a1c7ece09a50e55
+SHA1: acc2dbe231bccd2d8684230e2be9fd4b6e296165
+SHA256: 2b22104130f3c0979bdc3f913602b7dc0eaf6bf34df3413c45c72b63b98b0c76
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL API -- GLX runtime
+
+Package: libgl1-amdgpu-pro-glx
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 635
+Depends: libc6 (>= 2.3.6-6~), libdrm2-amdgpu-pro, libgcc1 (>= 1:3.0), libx11-6 (>= 2:1.4.99.1), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-glx0 (>= 1.8), libxcb-present0, libxcb-sync1, libxcb1 (>= 1.9.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxshmfence1, libxxf86vm1, amdgpu-pro-core
+Recommends: libgl1-amdgpu-pro-dri (= 17.40-514569)
+Filename: ./libgl1-amdgpu-pro-glx_17.40-514569_i386.deb
+Size: 137840
+MD5sum: d5075068337cde1244eefb08b8c30697
+SHA1: f779b00de96e973377d1d21bf24e3608c84db4cb
+SHA256: cd2711a81af57ebbad64a4f7ad136866c892f397334281103c8d889f75419e0c
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL API -- GLX runtime
+
+Package: libglamor-amdgpu-pro-dev
+Source: xserver-xorg-amdgpu-pro
+Version: 1.19.0-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 32
+Depends: xserver-xorg-video-glamoregl-amdgpu-pro (= 1.19.0-514569)
+Filename: ./libglamor-amdgpu-pro-dev_1.19.0-514569_amd64.deb
+Size: 5772
+MD5sum: 7e5ccd66a222fd4833cea97077ef52d6
+SHA1: 0d5a288c1697afa8f501c6f71d415c8cb2c305d0
+SHA256: 3216a9020b246154e27ee33a9821e2c7fdf5579336e4fbdefc7fe27803196479
+Section: libdevel
+Priority: optional
+Description: shared graphics acceleration library based on OpenGL -- development files
+ Glamor is a library for accelerating 2D graphics using GL functions.
+ .
+ This package contains the development environment for compiling drivers against
+ the libglamor library.
+
+Package: libglamor-amdgpu-pro-dev
+Source: xserver-xorg-amdgpu-pro
+Version: 1.19.0-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 32
+Depends: xserver-xorg-video-glamoregl-amdgpu-pro (= 1.19.0-514569)
+Filename: ./libglamor-amdgpu-pro-dev_1.19.0-514569_i386.deb
+Size: 5756
+MD5sum: 273cb48769347750427e52b3b7306096
+SHA1: c918b478e0117981291d499e6cd64b1fda61ec01
+SHA256: 929bb170a777f5a4cca8b858740ef89d00234bf99c661e8e3c9c53a7ea11a1a5
+Section: libdevel
+Priority: optional
+Description: shared graphics acceleration library based on OpenGL -- development files
+ Glamor is a library for accelerating 2D graphics using GL functions.
+ .
+ This package contains the development environment for compiling drivers against
+ the libglamor library.
+
+Package: libgles2-amdgpu-pro
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 63
+Depends: libc6 (>= 2.1.3), libegl1-amdgpu-pro (= 17.40-514569), libgcc1 (>= 1:3.0), libstdc++6 (>= 4.1.1)
+Filename: ./libgles2-amdgpu-pro_17.40-514569_i386.deb
+Size: 10340
+MD5sum: 7574024eb96d8824c7ee43c7b03628f2
+SHA1: 382a1d8b6b4dc6b4bd1f47aa934626a6ec006527
+SHA256: 0cdc0cdf3133513386a2b946789149ba06d6fd6bdff04f2a81ffa96ecc1bba5e
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL|ES 2.x API -- runtime
+
+Package: libgles2-amdgpu-pro
+Source: opengl-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 101
+Depends: libc6 (>= 2.2.5), libegl1-amdgpu-pro (= 17.40-514569), libstdc++6 (>= 4.1.1)
+Filename: ./libgles2-amdgpu-pro_17.40-514569_amd64.deb
+Size: 15172
+MD5sum: 052a27bb011d2c8a722c11103d40477a
+SHA1: 3fdb6784537a87e3c4d6456c48233039b67b386d
+SHA256: 079ec6903eac60816d80aeb11f11f511651d3f74ea2fc2633d29a68ab197627f
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL|ES 2.x API -- runtime
+
+Package: libllvm5.0-amdgpu-pro
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 66424
+Depends: libc6 (>= 2.15), libedit2 (>= 2.11-20080614), libgcc1 (>= 1:4.2), libstdc++6 (>= 5.2), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0), amdgpu-pro-core
+Filename: ./libllvm5.0-amdgpu-pro_5.0-514569_i386.deb
+Size: 18372104
+MD5sum: 0ba21c2669b14b1d7292ab42d24c7963
+SHA1: d49f03696433295a518503404689394bacc2040c
+SHA256: 7364adadc028abc97b94762b2d629d21e72d206ad0ba944550d0c9e13dbc0a10
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Modular compiler and toolchain technologies, runtime library
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ This package contains the LLVM runtime library.
+
+Package: libllvm5.0-amdgpu-pro
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 60145
+Depends: libc6 (>= 2.15), libedit2 (>= 2.11-20080614), libgcc1 (>= 1:3.4), libstdc++6 (>= 5.2), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0), amdgpu-pro-core
+Filename: ./libllvm5.0-amdgpu-pro_5.0-514569_amd64.deb
+Size: 16274696
+MD5sum: b3772b3edffc5398dd4f760a7dc96dcd
+SHA1: d362dea43bce96cb3b5cbe74a95a2c4c792f4acb
+SHA256: 3c2d0a0af9c6a25845102ba442f075310e747c7e0cd317e401921fa5709dc58e
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Modular compiler and toolchain technologies, runtime library
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ This package contains the LLVM runtime library.
+
+Package: libopencl1-amdgpu-pro
+Source: opencl-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 45
+Depends: libc6 (>= 2.3.6-6~), amdgpu-pro-core
+Recommends: opencl-amdgpu-pro-icd
+Filename: ./libopencl1-amdgpu-pro_17.40-514569_i386.deb
+Size: 9868
+MD5sum: b244db47cd8feb6b0670874b148f9d38
+SHA1: 40af7d75455201a2213b7839517ea19e2de894a9
+SHA256: 4ae249be94d54aff385847a192c6412ea6c7992510c91274de6414394b98914a
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL ICD Loader library
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ This package contains the ICD Loader library provided by AMD.
+
+Package: libopencl1-amdgpu-pro
+Source: opencl-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 43
+Depends: libc6 (>= 2.2.5), amdgpu-pro-core
+Recommends: opencl-amdgpu-pro-icd
+Filename: ./libopencl1-amdgpu-pro_17.40-514569_amd64.deb
+Size: 9142
+MD5sum: dd40dd1bd91f45be24dacdf9115cee0c
+SHA1: efdcb7655f83e4a47d1bec0d8a253334c83d39ea
+SHA256: 0083ef473c022c8dca974f2d25298c5e460ec5ca5cc417c3d844eb414813108e
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL ICD Loader library
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ This package contains the ICD Loader library provided by AMD.
+
+Package: libvdpau-amdgpu-pro
+Source: mesa-amdgpu-pro
+Version: 1:17.0.1-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 48411
+Depends: libc6 (>= 2.15), libdrm-amdgpu-pro-amdgpu1, libdrm2-amdgpu-pro, libelf1 (>= 0.142), libgcc1 (>= 1:3.4), libstdc++6 (>= 5.2), libtinfo5 (>= 6), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb1, zlib1g (>= 1:1.2.0), amdgpu-pro-core, libvdpau1 (>= 1.1) | libvdpau1-amdgpu-pro
+Filename: ./libvdpau-amdgpu-pro_17.0.1-514569_amd64.deb
+Size: 13207886
+MD5sum: 4d182dd6e593e1996ea1cc8aab31e395
+SHA1: 1ca6decbda1ca31ec525fe4646b9f13d31cd4fcd
+SHA256: caac94949ea59fc27e8ef3115a322d19a9caba67bfd3fc8b2a9c3401a7e27445
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: AMDGPU Pro VDPAU driver
+
+Package: libvdpau-amdgpu-pro
+Source: mesa-amdgpu-pro
+Version: 1:17.0.1-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 53034
+Depends: libc6 (>= 2.15), libdrm-amdgpu-pro-amdgpu1, libdrm2-amdgpu-pro, libelf1 (>= 0.142), libgcc1 (>= 1:3.4), libstdc++6 (>= 5.2), libtinfo5 (>= 6), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb1, zlib1g (>= 1:1.2.0), amdgpu-pro-core, libvdpau1 (>= 1.1) | libvdpau1-amdgpu-pro
+Filename: ./libvdpau-amdgpu-pro_17.0.1-514569_i386.deb
+Size: 14815292
+MD5sum: e85296f79e2be6cc7c6cff1162901f2d
+SHA1: 186da892c8081b6253ab3f919071392390602fc9
+SHA256: 31c8f775b2170ac6ae26d2a3654380da3f0785fdad3dae4bf3527f54f1b4c52f
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: AMDGPU Pro VDPAU driver
+
+Package: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 95
+Depends: llvm-amdgpu-pro-runtime (= 1:5.0-514569), llvm-amdgpu-pro-5.0 (= 1:5.0-514569)
+Filename: ./llvm-amdgpu-pro_5.0-514569_amd64.deb
+Size: 5396
+MD5sum: ba37bba0759e2005aa8f1ceba45526a3
+SHA1: 98290e0f92cac682958782e6eed2f5c8631efd3a
+SHA256: 0e106840f5e85023adb774b0f814ee44a7c13df8c2f22140dc0a3e1b84b812bf
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM)
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default llvm package.
+
+Package: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 95
+Depends: llvm-amdgpu-pro-runtime (= 1:5.0-514569), llvm-amdgpu-pro-5.0 (= 1:5.0-514569)
+Filename: ./llvm-amdgpu-pro_5.0-514569_i386.deb
+Size: 5404
+MD5sum: 49ca9919d3886862446f1ae4c3036dd3
+SHA1: 8f943595ffe303b61386acea5ef08624e08c2d13
+SHA256: 3f37d19ccf6c5431b8e6b70d9fc45b822c3a6e19e723d7d6e3e6d89b79fa63eb
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM)
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default llvm package.
+
+Package: llvm-amdgpu-pro-5.0
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 268607
+Depends: libllvm5.0-amdgpu-pro (= 1:5.0-514569), llvm-amdgpu-pro-5.0-runtime (= 1:5.0-514569), libc6 (>= 2.15), libgcc1 (>= 1:3.4), libstdc++6 (>= 5.2), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0)
+Recommends: llvm-amdgpu-pro-5.0-dev
+Suggests: llvm-amdgpu-pro-5.0-doc
+Filename: ./llvm-amdgpu-pro-5.0_5.0-514569_amd64.deb
+Size: 62812866
+MD5sum: 8bebec797eb37cced7ba5fce63f6c229
+SHA1: 9688e3d6307680888cfc8970781fcc16f79c4b3d
+SHA256: fc292e7a24543cb7a2ceeba01e507ceb4100ce686a798464d81e0ff5840fa41f
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ The strengths of the LLVM infrastructure are its extremely
+ simple design (which makes it easy to understand and use),
+ source-language independence, powerful mid-level optimizer, automated
+ compiler debugging support, extensibility, and its stability and
+ reliability. LLVM is currently being used to host a wide variety of
+ academic research projects and commercial projects. LLVM includes C
+ and C++ front-ends, a front-end for a Forth-like language (Stacker),
+ a young scheme front-end, and Java support is in development. LLVM can
+ generate code for X86, SparcV9, PowerPC or many other architectures.
+ .
+ LLVM is the key component of the clang compiler and the gcc plugin called
+ dragonegg.
+
+Package: llvm-amdgpu-pro-5.0
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 303660
+Depends: libllvm5.0-amdgpu-pro (= 1:5.0-514569), llvm-amdgpu-pro-5.0-runtime (= 1:5.0-514569), libc6 (>= 2.15), libgcc1 (>= 1:4.2), libstdc++6 (>= 5.2), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0)
+Recommends: llvm-amdgpu-pro-5.0-dev
+Suggests: llvm-amdgpu-pro-5.0-doc
+Filename: ./llvm-amdgpu-pro-5.0_5.0-514569_i386.deb
+Size: 72455324
+MD5sum: 9f4109c0a33f298b835da832378c2ba1
+SHA1: 3f0bfe5896b701bac0fb18a3df47dfca15617930
+SHA256: fbe69a3b7196b8283490fc17863f9c450774f7ddc84d9d12d67c7d69524856b2
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ The strengths of the LLVM infrastructure are its extremely
+ simple design (which makes it easy to understand and use),
+ source-language independence, powerful mid-level optimizer, automated
+ compiler debugging support, extensibility, and its stability and
+ reliability. LLVM is currently being used to host a wide variety of
+ academic research projects and commercial projects. LLVM includes C
+ and C++ front-ends, a front-end for a Forth-like language (Stacker),
+ a young scheme front-end, and Java support is in development. LLVM can
+ generate code for X86, SparcV9, PowerPC or many other architectures.
+ .
+ LLVM is the key component of the clang compiler and the gcc plugin called
+ dragonegg.
+
+Package: llvm-amdgpu-pro-5.0-dev
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 89105
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.2), libstdc++6 (>= 5.2), libtinfo5 (>= 6), libffi-dev (>= 3.0.9), llvm-amdgpu-pro-5.0 (= 1:5.0-514569), libtinfo-dev
+Replaces: llvm (<< 2.2-3)
+Filename: ./llvm-amdgpu-pro-5.0-dev_5.0-514569_i386.deb
+Size: 15512042
+MD5sum: c29e4256b2c26ee24334254d87d1b8a7
+SHA1: bac0cd4adc57f3c57ffc4714f11bca907ce2253b
+SHA256: 1fedbaa9901c87d8ff728acd2807c1b104e13cabf9535d4eed27be5c02871438
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies, libraries and headers
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the libraries and headers to develop applications
+ using llvm.
+
+Package: llvm-amdgpu-pro-5.0-dev
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 98162
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:3.4), libstdc++6 (>= 5.2), libtinfo5 (>= 6), libffi-dev (>= 3.0.9), llvm-amdgpu-pro-5.0 (= 1:5.0-514569), libtinfo-dev
+Replaces: llvm (<< 2.2-3)
+Filename: ./llvm-amdgpu-pro-5.0-dev_5.0-514569_amd64.deb
+Size: 14189758
+MD5sum: 68973ad0919bed1ecb8d37e0b474ca6e
+SHA1: b4433443e00b8f6fad464a8c9588bc70fa8df6fc
+SHA256: fd397cde5bebaccfcdc15272e4aa046e1cbc8b15a3cd50359208854ac94347fa
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies, libraries and headers
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the libraries and headers to develop applications
+ using llvm.
+
+Package: llvm-amdgpu-pro-5.0-doc
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: all
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 12741
+Depends: libjs-jquery, libjs-underscorea, amdgpu-pro-core
+Filename: ./llvm-amdgpu-pro-5.0-doc_5.0-514569_all.deb
+Size: 1733022
+MD5sum: a1b905fafa71e1c0dd7e0fde25ab7682
+SHA1: 66c7131445b8165c3a07a880a3001f82d942922d
+SHA256: c88daf1925f1bb5d27e2cf28713f8c187bbe19c816312449bd08d0a899911935
+Section: doc
+Priority: optional
+Description: Modular compiler and toolchain technologies, documentation
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package contains all documentation (extensive).
+
+Package: llvm-amdgpu-pro-5.0-runtime
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 19376
+Depends: binfmt-support, libc6 (>= 2.15), libgcc1 (>= 1:3.4), libstdc++6 (>= 5.2), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0), amdgpu-pro-core
+Conflicts: llvm (<< 2.7-1)
+Replaces: llvm (<< 2.7-1)
+Filename: ./llvm-amdgpu-pro-5.0-runtime_5.0-514569_amd64.deb
+Size: 5733738
+MD5sum: d43dcd23c4b91f14ba7125f276a4c7df
+SHA1: 83b4fc56fd0c32b020d3a935e622e79aa3c1ec69
+SHA256: 726ecd90fdb26adea4c519afa2e6f61d1c43c2ce024882632e1d74e04d3e7e81
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies, IR interpreter
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the minimal required to execute programs in LLVM
+ format.
+
+Package: llvm-amdgpu-pro-5.0-runtime
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 22055
+Depends: binfmt-support, libc6 (>= 2.15), libgcc1 (>= 1:4.2), libstdc++6 (>= 5.2), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0), amdgpu-pro-core
+Conflicts: llvm (<< 2.7-1)
+Replaces: llvm (<< 2.7-1)
+Filename: ./llvm-amdgpu-pro-5.0-runtime_5.0-514569_i386.deb
+Size: 6477636
+MD5sum: d41dcac1e766a0f8b4480be2950d7354
+SHA1: 07aa6072f10e2b3cf7735fd3acedbc01a151ee5a
+SHA256: 7c06849bbd1d8a0aeaad5601e4010c02c527262e88febc5dc0e8e87c2cd39cb5
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies, IR interpreter
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the minimal required to execute programs in LLVM
+ format.
+
+Package: llvm-amdgpu-pro-dev
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 1138
+Depends: llvm-amdgpu-pro-runtime (= 1:5.0-514569), llvm-amdgpu-pro-5.0-dev
+Filename: ./llvm-amdgpu-pro-dev_5.0-514569_i386.deb
+Size: 21594
+MD5sum: ea6ec578a98d19bfb349a483f2a3d812
+SHA1: 4f1459738dcf26f0190d89b19484bd1f2747547a
+SHA256: 55f44ee99dcdd9b0ffc3214ec61b24dea9bc8ed43ea7f82663510d169acad424
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM), libraries and headers
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default libraries and headers.
+
+Package: llvm-amdgpu-pro-dev
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 1138
+Depends: llvm-amdgpu-pro-runtime (= 1:5.0-514569), llvm-amdgpu-pro-5.0-dev
+Filename: ./llvm-amdgpu-pro-dev_5.0-514569_amd64.deb
+Size: 21960
+MD5sum: 87944cb9717725eb0ee46ce3b0c2bf98
+SHA1: f5ca385d95823dad96b6d3ca2bc6eae94fb64899
+SHA256: 121a880accf00acbd9ea6e97b69fb5e1a43152930292adb2bd44c9601421f149
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM), libraries and headers
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default libraries and headers.
+
+Package: llvm-amdgpu-pro-runtime
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 29
+Depends: llvm-amdgpu-pro-5.0-runtime
+Filename: ./llvm-amdgpu-pro-runtime_5.0-514569_i386.deb
+Size: 4534
+MD5sum: 669eaaa13139db1a9272872d5064e55e
+SHA1: 72dae20da8469138d237108c3d9ab2e93e2f8699
+SHA256: 427c918ebcb5fe06e02dbc8a0c2075689e300b64796a9f10953480afc4e6e3e2
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM), bytecode interpreter
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default bytecode interpreter.
+
+Package: llvm-amdgpu-pro-runtime
+Source: llvm-amdgpu-pro
+Version: 1:5.0-514569
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 29
+Depends: llvm-amdgpu-pro-5.0-runtime
+Filename: ./llvm-amdgpu-pro-runtime_5.0-514569_amd64.deb
+Size: 4540
+MD5sum: 9db4fe547e85143f93dd7923432e8b44
+SHA1: f19a69001205a4c9a64f644ce8b43ebf7933bc2e
+SHA256: 380e28c69f15867f6b55373a02fa2964f7db88958cdf1dc1062f216ee3fed887
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM), bytecode interpreter
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default bytecode interpreter.
+
+Package: mesa-amdgpu-pro-omx-drivers
+Source: mesa-amdgpu-pro
+Version: 1:17.0.1-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 26503
+Depends: libc6 (>= 2.15), libdrm-amdgpu-pro-amdgpu1, libdrm2-amdgpu-pro, libelf1 (>= 0.142), libgcc1 (>= 1:3.4), libomxil-bellagio0, libstdc++6 (>= 5.2), libtinfo5 (>= 6), libx11-6, libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb1, zlib1g (>= 1:1.2.0), amdgpu-pro-core
+Provides: omx-driver
+Filename: ./mesa-amdgpu-pro-omx-drivers_17.0.1-514569_i386.deb
+Size: 7393872
+MD5sum: 515574dd1fab96bfc68bb50bca2dba85
+SHA1: f69d6e29e729464d2ed4ec275fc9731993ab7898
+SHA256: 660887db9a411ab3d6be780ee5fb2753e27aca3e59622d067a1eefd94f3f87f5
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa OpenMAX video drivers
+ .
+ This package enables support for OpenMAX.
+
+Package: mesa-amdgpu-pro-omx-drivers
+Source: mesa-amdgpu-pro
+Version: 1:17.0.1-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 24185
+Depends: libc6 (>= 2.15), libdrm-amdgpu-pro-amdgpu1, libdrm2-amdgpu-pro, libelf1 (>= 0.142), libgcc1 (>= 1:3.4), libomxil-bellagio0, libstdc++6 (>= 5.2), libtinfo5 (>= 6), libx11-6, libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb1, zlib1g (>= 1:1.2.0), amdgpu-pro-core
+Provides: omx-driver
+Filename: ./mesa-amdgpu-pro-omx-drivers_17.0.1-514569_amd64.deb
+Size: 6595506
+MD5sum: bb33ba4522e90075f2dac9808a8ad6a7
+SHA1: e4390ed0a3533e4a011c49104e4fb6b1bb79b876
+SHA256: aadd2ca1e41c12e307ed9500d4a2ed7225f77a9df13fc07a9fbcff15251f0e57
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa OpenMAX video drivers
+ .
+ This package enables support for OpenMAX.
+
+Package: opencl-amdgpu-pro-icd
+Source: opencl-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 95358
+Depends: libc6 (>= 2.3.4), libgcc1 (>= 1:4.2), amdgpu-pro-core
+Recommends: libopencl1-amdgpu-pro
+Filename: ./opencl-amdgpu-pro-icd_17.40-514569_amd64.deb
+Size: 25344152
+MD5sum: 53d36d727c0886a82a5ffd4646d046b2
+SHA1: 6f802ee9f6e4acfc308b9f0e44fd3a55903f9b53
+SHA256: f685700e2082a4e76bf1b287c973b54675bd07ef5bbca0dc5a9c6a93e033a191
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: non-free AMD OpenCL ICD Loaders
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package provides the AMD installable client driver (ICD) for OpenCL
+ which supports AMD GPUs (requires the amdgpu-pro driver) as well as CPUs (from
+ any vendor, no driver required).
+
+Package: opencl-amdgpu-pro-icd
+Source: opencl-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 92870
+Depends: libc6 (>= 2.3.6-6~), libgcc1 (>= 1:4.2), amdgpu-pro-core
+Recommends: libopencl1-amdgpu-pro
+Filename: ./opencl-amdgpu-pro-icd_17.40-514569_i386.deb
+Size: 25872986
+MD5sum: 75fe56965d280d886807efd3b9448b5e
+SHA1: 451028c667334c7e8ad1f46a9e118c4b93dd1524
+SHA256: 1f55839bd3db7461811e297537532a6a6910077511f19f0af3db2c35eb0f4d92
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: non-free AMD OpenCL ICD Loaders
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package provides the AMD installable client driver (ICD) for OpenCL
+ which supports AMD GPUs (requires the amdgpu-pro driver) as well as CPUs (from
+ any vendor, no driver required).
+
+Package: rocm-amdgpu-pro
+Source: rocm-amdgpu-pro-opencl
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 7
+Depends: hsa-ext-amdgpu-pro-finalize, hsa-ext-amdgpu-pro-image, hsa-runtime-tools-amdgpu-pro, rocm-amdgpu-pro-opencl, rocm-amdgpu-pro-icd
+Filename: ./rocm-amdgpu-pro_17.40-514569_amd64.deb
+Size: 1280
+MD5sum: 120d03ed66ca4276767cd2d84c29729a
+SHA1: 01d37b96e9325d02a21622fbe0d9b3af53f8bdf5
+SHA256: 0e7c53ea68a57393e78da4740b99ddd51bc5f07f1578c7e4158e8792f3b649cb
+Section: metapackages
+Priority: optional
+Description: Meta package to install OpenCL/ROCm components
+
+Package: rocm-amdgpu-pro-icd
+Source: rocm-amdgpu-pro-opencl
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 56556
+Depends: libc6 (>= 2.3.3), rocr-amdgpu-pro
+Recommends: libopencl1-amdgpu-pro
+Filename: ./rocm-amdgpu-pro-icd_17.40-514569_amd64.deb
+Size: 15458468
+MD5sum: 33060ec1692356e1b834d1a5ffd1081f
+SHA1: c7df13c76c31e81895792af697f1d7773c5d2547
+SHA256: 74028a6493e1c397f7e38def229063a3262923d94e8492af22e525d8de3fea9b
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: non-free AMD OpenCL ICD Loaders
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package provides the AMD installable client driver (ICD) for OpenCL
+ which supports AMD GPUs (requires the amdgpu-pro driver) as well as CPUs (from
+ any vendor, no driver required).
+
+Package: rocm-amdgpu-pro-opencl
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 7
+Depends: amdgpu-pro-core
+Recommends: rocm-amdgpu-pro-icd
+Filename: ./rocm-amdgpu-pro-opencl_17.40-514569_amd64.deb
+Size: 1570
+MD5sum: 03acd8274b2e5d8a2bf72782abf83a00
+SHA1: 9eb52e3aede0a115530a681d7077959259a16913
+SHA256: 469d9f42d87363d0f2fa4319f0c207a64156d67bb3204810b4d4c0712b39091c
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL ICD Loader library
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ This package contains the ICD Loader library provided by AMD.
+
+Package: rocm-amdgpu-pro-opencl-dev
+Source: rocm-amdgpu-pro-opencl
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 1146
+Depends: libc6 (>= 2.3.3), libgcc1 (>= 1:4.2), rocm-amdgpu-pro-opencl
+Recommends: rocm-amdgpu-pro-icd
+Filename: ./rocm-amdgpu-pro-opencl-dev_17.40-514569_amd64.deb
+Size: 223558
+MD5sum: 789b5c59d205e85ae2f8002c8a3e6a3c
+SHA1: 91506bed1d3560785352567f1ae43eccb2f47cd1
+SHA256: 8b691f5d53b47177bcfd1d608dae2fa0de1e6c93f4650dc65997a22a7f0e02a0
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL ICD Loader library
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ This package contains the ICD Loader library provided by AMD.
+
+Package: rocr-amdgpu-pro
+Version: 1.1.6-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 622
+Depends: libc6 (>= 2.16), libelf1 (>= 0.144), libgcc1 (>= 1:3.0), libstdc++6 (>= 4.8), roct-amdgpu-pro
+Filename: ./rocr-amdgpu-pro_1.1.6-514569_amd64.deb
+Size: 178200
+MD5sum: a3baf3719ab263aa3b62323487e65c58
+SHA1: c01f9dea97831f98c0b3bf3e3bdb6e88b378eaac
+SHA256: aa0dc96f2a0964347e947c641e4a08dd0b4057acc1d57eb46088de427aafcc52
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: The user-mode API interfaces used to interact with the Boltzmann
+ KFD driver. Currently supported agents include only the AMD/ATI Fiji family of
+ discrete GPUs. Support for AMD/ATI Hawaii discrete GPUs was added in the 1.2.0
+ release.
+ .
+ This package provides the runtime environment for hsa-rocr.
+
+Package: rocr-amdgpu-pro-dev
+Source: rocr-amdgpu-pro
+Version: 1.1.6-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 429
+Depends: rocr-amdgpu-pro (= 1.1.6-514569)
+Filename: ./rocr-amdgpu-pro-dev_1.1.6-514569_amd64.deb
+Size: 57876
+MD5sum: 8b39f800c54f809da2513dfbdeea6d3e
+SHA1: 4a909a079c766c94b1ec8e655ae5e7b983310a48
+SHA256: 234b54bed990120591874db0889b9f694fa56b06bbab511034d37670d3aa8c7c
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: The user-mode API interfaces used to interact with the Boltzmann
+ KFD driver. Currently supported agents include only the AMD/ATI Fiji family of
+ discrete GPUs. Support for AMD/ATI Hawaii discrete GPUs was added in the 1.2.0
+ release.
+ .
+ This package provides the development environment for hsa-rocr.
+
+Package: roct-amdgpu-pro
+Version: 1.0.6-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 148
+Depends: libc6 (>= 2.14), libpci3 (>= 1:3.3.1-1), amdgpu-pro-core
+Filename: ./roct-amdgpu-pro_1.0.6-514569_amd64.deb
+Size: 40900
+MD5sum: 10e1ddcb5b3cddcc17a01db77916cf50
+SHA1: 6c293e41a2b14febeeba4256c60341d06396c6c4
+SHA256: 327f0f8141090a5ccc07f44696fd0755c79e33c9b8bc5c487599465c3cfcf50f
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: The user-mode API interfaces used to interact with the Boltzmann
+ KFD driver. Currently supported agents include only the AMD/ATI Fiji family of
+ discrete GPUs. Support for AMD/ATI Hawaii discrete GPUs was added in the 1.2.0
+ release.
+ .
+ This package provides the development environment for hsakmt-roct.
+
+Package: roct-amdgpu-pro-dev
+Source: roct-amdgpu-pro
+Version: 1.0.6-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 104
+Depends: roct-amdgpu-pro (= 1.0.6-514569)
+Filename: ./roct-amdgpu-pro-dev_1.0.6-514569_amd64.deb
+Size: 21298
+MD5sum: cf14a833519668438a5513c9882d02e7
+SHA1: a46b5e0629fc2f2d34fdad278440eb2675b5967a
+SHA256: ee1a6e97df186980eb50b4ad8027e36c1e0817c9f4f863abdbdc0be4140a54a0
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: The user-mode API interfaces used to interact with the Boltzmann
+ KFD driver. Currently supported agents include only the AMD/ATI Fiji family of
+ discrete GPUs. Support for AMD/ATI Hawaii discrete GPUs was added in the 1.2.0
+ release.
+ .
+ This package provides the development environment for hsakmt-roct.
+
+Package: vulkan-amdgpu-pro
+Version: 17.40-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 14207
+Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.3.1), libstdc++6 (>= 4.6), amdgpu-pro-core
+Filename: ./vulkan-amdgpu-pro_17.40-514569_amd64.deb
+Size: 3642536
+MD5sum: a17f2ad13e46a0d1f9e89a39f0f2ec1f
+SHA1: 6e6b7835712dcb18504620f59715f1d4341f86b7
+SHA256: 94a75425bd89f8af3bfb64efe7c62f93dd40e5d1ec107a90ac00a2a3a3373907
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMDGPU Pro Vulkan driver
+
+Package: vulkan-amdgpu-pro
+Version: 17.40-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 12719
+Depends: libc6 (>= 2.17), libgcc1 (>= 1:4.2), libstdc++6 (>= 4.6), amdgpu-pro-core
+Filename: ./vulkan-amdgpu-pro_17.40-514569_i386.deb
+Size: 3697740
+MD5sum: 4e4e97013467c35e721fd8dbd2f73cdd
+SHA1: 4c4262c42225d7e50e6fcb2251cba224b69f388c
+SHA256: 95cdb5b0c716f915d5bcdbd231c1d016ac6006229beaae24e1e7e6ab3aab7456
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: 
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMDGPU Pro Vulkan driver
+
+Package: xserver-xorg-video-amdgpu-pro
+Version: 1:1.3.99-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 176
+Depends: libc6 (>= 2.17), libdrm-amdgpu-pro-amdgpu1, libgbm1-amdgpu-pro, libudev1 (>= 183), amdgpu-pro-core
+Suggests: linux-firmware
+Filename: ./xserver-xorg-video-amdgpu-pro_1.3.99-514569_i386.deb
+Size: 64314
+MD5sum: f39e3b9af85d08b22c1b662b20c80b78
+SHA1: 8499dda52395819f8171bc8fb21eda54547b279e
+SHA256: c4671edabcb4060133abdef43c95db798d14a5ae9b0e60d86109fd12c1dd18d9
+Section: x11
+Priority: optional
+Description: X.Org X server -- AMD/ATI Radeon display driver
+ This package provides the 'amdgpu' driver for the AMD/ATI cards. The
+ following chips should be supported: KAVERY, KABINI, CZ.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This package is built from the X.org xf86-video-amdgpu driver module.
+
+Package: xserver-xorg-video-amdgpu-pro
+Version: 1:1.3.99-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 167
+Depends: libc6 (>= 2.17), libdrm-amdgpu-pro-amdgpu1, libgbm1-amdgpu-pro, libudev1 (>= 183), amdgpu-pro-core
+Suggests: linux-firmware
+Filename: ./xserver-xorg-video-amdgpu-pro_1.3.99-514569_amd64.deb
+Size: 58272
+MD5sum: 7738caff15a3f1c09c17af2b7729fe14
+SHA1: d6797abb206ac582d2f19d344dd58b4083d05615
+SHA256: 22bdd5c6e9995962dcf14cb82c6898c1047b40726e0ee528ccd2c8bdac0ad2dd
+Section: x11
+Priority: optional
+Description: X.Org X server -- AMD/ATI Radeon display driver
+ This package provides the 'amdgpu' driver for the AMD/ATI cards. The
+ following chips should be supported: KAVERY, KABINI, CZ.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This package is built from the X.org xf86-video-amdgpu driver module.
+
+Package: xserver-xorg-video-glamoregl-amdgpu-pro
+Source: xserver-xorg-amdgpu-pro
+Version: 1.19.0-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 229
+Depends: libc6 (>= 2.7), libdrm2-amdgpu-pro, libepoxy0 (>= 1.0), libgbm1-amdgpu-pro
+Filename: ./xserver-xorg-video-glamoregl-amdgpu-pro_1.19.0-514569_i386.deb
+Size: 83030
+MD5sum: 510191b1b8409bfc63952e837b981ac3
+SHA1: c312ed25b1d57959f0d6cd62e4137c2921fef2cb
+SHA256: da9002cbb7f5f430e80ca75e88297cf1c67a12489432ac7a83234b0687436467
+Section: x11
+Priority: optional
+Multi-Arch: same
+Description: X.Org X server -- graphics acceleration module based on OpenGL
+ Glamor is a library for accelerating 2D graphics using GL functions.
+ .
+ This package contains the X.Org module.
+
+Package: xserver-xorg-video-glamoregl-amdgpu-pro
+Source: xserver-xorg-amdgpu-pro
+Version: 1.19.0-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 222
+Depends: libc6 (>= 2.14), libdrm2-amdgpu-pro, libepoxy0 (>= 1.0), libgbm1-amdgpu-pro
+Filename: ./xserver-xorg-video-glamoregl-amdgpu-pro_1.19.0-514569_amd64.deb
+Size: 81556
+MD5sum: dc3edd7d94ba961112910cb698bef810
+SHA1: b015b6c3e377c19d2ba000637d64bd004a04ac21
+SHA256: aecbc9cdfa71bf8a4b9a5472c72d283d1a6452d5156f74ed7b0dfa6fd4accc31
+Section: x11
+Priority: optional
+Multi-Arch: same
+Description: X.Org X server -- graphics acceleration module based on OpenGL
+ Glamor is a library for accelerating 2D graphics using GL functions.
+ .
+ This package contains the X.Org module.
+
+Package: xserver-xorg-video-modesetting-amdgpu-pro
+Source: xserver-xorg-amdgpu-pro
+Version: 1.19.0-514569
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 128
+Depends: libc6 (>= 2.17), libudev1 (>= 183)
+Filename: ./xserver-xorg-video-modesetting-amdgpu-pro_1.19.0-514569_amd64.deb
+Size: 42858
+MD5sum: 8ed2413e1a7dfa1183abd8908146b898
+SHA1: 37cfa68d6c3ccdd86a0d7263336c0a42f2471d18
+SHA256: 5bebca0fbee6f39c440569200c03d3a82bfaeceed2be7b5d62e9dbd526de4ca6
+Section: x11
+Priority: optional
+Multi-Arch: same
+Description: XServer modules for amdgpu-pro
+ This package contains modesetting_drv.so
+
+Package: xserver-xorg-video-modesetting-amdgpu-pro
+Source: xserver-xorg-amdgpu-pro
+Version: 1.19.0-514569
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 130
+Depends: libc6 (>= 2.17), libudev1 (>= 183)
+Filename: ./xserver-xorg-video-modesetting-amdgpu-pro_1.19.0-514569_i386.deb
+Size: 47180
+MD5sum: 30f0b817d62d36a3a894610390bbd1a9
+SHA1: 4607c69732f00f8b2c81f92a049cf041e1ed32d6
+SHA256: a0f7810e175dcb96233ff041dca1b409d6e133aa75f14039adbbc0d7a86343e8
+Section: x11
+Priority: optional
+Multi-Arch: same
+Description: XServer modules for amdgpu-pro
+ This package contains modesetting_drv.so
+
