@@ -1,10 +1,10 @@
 FROM twobombs/deploy-nvidia-docker
 
 # add cl apps
-RUN apt-get update&&apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 python-setuptools python3-setuptools python-migrate && apt-get clean all
+RUN apt-get update && apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 python-setuptools python3-setuptools python-migrate && apt-get clean all
 
 # add ES repo and install Logstash for log transport
-RUN apt-get install -y openjdk-8-jre apt-transport-https && wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - && echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" > /etc/apt/sources.list.d/elastic.list && apt-get update && apt-get install -y logstash 
+RUN apt-get install -y openjdk-8-jre apt-transport-https && wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add - && echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" > /etc/apt/sources.list.d/elastic.list && apt-get update && apt-get install -y logstash 
 
 # add CL drivers
 RUN cd /root && wget http://upload.aspeedtech.com/BIOS/v103_linux_freebsd_solaris.zip && unzip /root/v103_linux_freebsd_solaris.zip
