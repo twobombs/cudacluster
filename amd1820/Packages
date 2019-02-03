@@ -1,0 +1,2902 @@
+Package: amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 9
+Depends: amdgpu-core (= 18.20-673703), amdgpu-dkms (= 18.20-673703), libdrm2-amdgpu (= 1:2.4.91-673703), libdrm-amdgpu-amdgpu1 (= 1:2.4.91-673703), ids-amdgpu (= 1.0.0-673703), libllvm6.0-amdgpu (= 1:6.0-673703), libwayland-amdgpu-client0 (= 1.14.0-673703), libwayland-amdgpu-server0 (= 1.14.0-673703), libxatracker2-amdgpu (= 1:18.0.0-673703), libgbm1-amdgpu (= 1:18.0.0-673703), libegl1-amdgpu-mesa (= 1:18.0.0-673703), libegl1-amdgpu-mesa-drivers (= 1:18.0.0-673703), libwayland-amdgpu-egl1-mesa (= 1:18.0.0-673703), libgles1-amdgpu-mesa (= 1:18.0.0-673703), libgles2-amdgpu-mesa (= 1:18.0.0-673703), libglapi-amdgpu-mesa (= 1:18.0.0-673703), libgl1-amdgpu-mesa-glx (= 1:18.0.0-673703), libgl1-amdgpu-mesa-dri (= 1:18.0.0-673703), libosmesa6-amdgpu (= 1:18.0.0-673703), mesa-amdgpu-va-drivers (= 1:18.0.0-673703), mesa-amdgpu-vdpau-drivers (= 1:18.0.0-673703), mesa-amdgpu-omx-drivers (= 1:18.0.0-673703), glamor-amdgpu (= 1.19.0-673703), xserver-xorg-amdgpu-video-amdgpu (= 1:1.4.0-673703), gst-omx-amdgpu (= 1.0.0.1-673703)
+Filename: ./amdgpu_18.20-673703_amd64.deb
+Size: 2180
+MD5sum: 8ef311ce3c1b2e6845f8a944d3e5ec87
+SHA1: efc0026c13cfa208892f272736c1ec44a656a869
+SHA256: 3d49fc4da1438b3643b3b63f48aedf7b5fc7b5cae12c9038d56edb4e14ae206f
+Section: metapackages
+Priority: optional
+Description: Meta package to install amdgpu components.
+
+Package: amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 9
+Depends: amdgpu-core (= 18.20-673703), amdgpu-dkms (= 18.20-673703), libdrm2-amdgpu (= 1:2.4.91-673703), libdrm-amdgpu-amdgpu1 (= 1:2.4.91-673703), ids-amdgpu (= 1.0.0-673703), libllvm6.0-amdgpu (= 1:6.0-673703), libwayland-amdgpu-client0 (= 1.14.0-673703), libwayland-amdgpu-server0 (= 1.14.0-673703), libxatracker2-amdgpu (= 1:18.0.0-673703), libgbm1-amdgpu (= 1:18.0.0-673703), libegl1-amdgpu-mesa (= 1:18.0.0-673703), libegl1-amdgpu-mesa-drivers (= 1:18.0.0-673703), libwayland-amdgpu-egl1-mesa (= 1:18.0.0-673703), libgles1-amdgpu-mesa (= 1:18.0.0-673703), libgles2-amdgpu-mesa (= 1:18.0.0-673703), libglapi-amdgpu-mesa (= 1:18.0.0-673703), libgl1-amdgpu-mesa-glx (= 1:18.0.0-673703), libgl1-amdgpu-mesa-dri (= 1:18.0.0-673703), libosmesa6-amdgpu (= 1:18.0.0-673703), mesa-amdgpu-va-drivers (= 1:18.0.0-673703), mesa-amdgpu-vdpau-drivers (= 1:18.0.0-673703), mesa-amdgpu-omx-drivers (= 1:18.0.0-673703), glamor-amdgpu (= 1.19.0-673703), xserver-xorg-amdgpu-video-amdgpu (= 1:1.4.0-673703), gst-omx-amdgpu (= 1.0.0.1-673703)
+Filename: ./amdgpu_18.20-673703_i386.deb
+Size: 2184
+MD5sum: 8c0d6c60309656657eb3b7fee5181927
+SHA1: c58867662f6d86c7bedac026a867990a2abf2332
+SHA256: c495b6efa8644e5e59048f1b78895ed0fed618f0f7950870e03b61bec9c8b457
+Section: metapackages
+Priority: optional
+Description: Meta package to install amdgpu components.
+
+Package: amdgpu-core
+Version: 18.20-673703
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 11
+Filename: ./amdgpu-core_18.20-673703_all.deb
+Size: 2244
+MD5sum: a95afa529c8d0e7d34af937c4d6fe38b
+SHA1: 32a75aabdb07997239f8f04cb5070a88e930f20e
+SHA256: ac238ad19a103b1f4cf03eda14a2fff941fa6a71f3b92017fcc08b25e2a8fd5d
+Section: metapackages
+Priority: optional
+Multi-Arch: foreign
+Description: Core meta package for unified amdgpu driver.
+
+Package: amdgpu-dkms
+Version: 18.20-673703
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 127549
+Depends: dkms (>= 1.95), amdgpu-core
+Filename: ./amdgpu-dkms_18.20-673703_all.deb
+Size: 6174560
+MD5sum: 0d451c1338c17e523a244a2e8db8da78
+SHA1: 9deecf0785a6c05fc964adfa0e7779d5abca3c23
+SHA256: 80702beb060223d863ced21a5298dc5f4798cbf66b0df9931ba2bb47257b113a
+Section: misc
+Priority: optional
+Description: amdgpu driver in DKMS format.
+
+Package: amdgpu-lib32
+Source: amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 9
+Depends: amdgpu (= 18.20-673703), libdrm2-amdgpu:i386 (= 1:2.4.91-673703), libdrm-amdgpu-amdgpu1:i386 (= 1:2.4.91-673703), libllvm6.0-amdgpu:i386 (= 1:6.0-673703), libwayland-amdgpu-client0:i386 (= 1.14.0-673703), libwayland-amdgpu-server0:i386 (= 1.14.0-673703), libxatracker2-amdgpu:i386 (= 1:18.0.0-673703), libgbm1-amdgpu:i386 (= 1:18.0.0-673703), libegl1-amdgpu-mesa:i386 (= 1:18.0.0-673703), libegl1-amdgpu-mesa-drivers:i386 (= 1:18.0.0-673703), libwayland-amdgpu-egl1-mesa:i386 (= 1:18.0.0-673703), libgles1-amdgpu-mesa:i386 (= 1:18.0.0-673703), libgles2-amdgpu-mesa:i386 (= 1:18.0.0-673703), libglapi-amdgpu-mesa:i386 (= 1:18.0.0-673703), libgl1-amdgpu-mesa-glx:i386 (= 1:18.0.0-673703), libgl1-amdgpu-mesa-dri:i386 (= 1:18.0.0-673703), libosmesa6-amdgpu:i386 (= 1:18.0.0-673703), mesa-amdgpu-va-drivers:i386 (= 1:18.0.0-673703), mesa-amdgpu-vdpau-drivers:i386 (= 1:18.0.0-673703)
+Filename: ./amdgpu-lib32_18.20-673703_amd64.deb
+Size: 2152
+MD5sum: 05fccb1e6a184ef72425f949779beac1
+SHA1: 0aa8f79a5cdc85d43705a00956e40474fd3f64dc
+SHA256: b94a8f1236bd9927517f4e4ff69280f248135329ab7782778e4fad0f54d01d83
+Section: metapackages
+Priority: optional
+Description: Meta package to support i386 runtime on amd64 architecture
+
+Package: amdgpu-pro
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 17
+Depends: amdgpu (= 18.20-673703), amdgpu-pro-core (= 18.20-673703), libgl1-amdgpu-pro-glx (= 18.20-673703), libegl1-amdgpu-pro (= 18.20-673703), libgles2-amdgpu-pro (= 18.20-673703), libgl1-amdgpu-pro-ext (= 18.20-673703), libgl1-amdgpu-pro-dri (= 18.20-673703), libgl1-amdgpu-pro-appprofiles (= 18.20-673703), libgbm1-amdgpu-pro (= 18.20-673703), libgbm1-amdgpu-pro-base (= 18.20-673703)
+Filename: ./amdgpu-pro_18.20-673703_i386.deb
+Size: 5364
+MD5sum: 1b261f6325568574b3e71911aad8630a
+SHA1: b53972c49fccb4e09d7d9ea2b79d6d17a9487dcd
+SHA256: 1784ba16bbf369b4ae4048c719c98e50633cd4b45ce18b0479a45e8cc6969df5
+Section: metapackages
+Priority: optional
+Description: Meta package to install amdgpu Pro components.
+
+Package: amdgpu-pro
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 17
+Depends: amdgpu (= 18.20-673703), amdgpu-pro-core (= 18.20-673703), libgl1-amdgpu-pro-glx (= 18.20-673703), libegl1-amdgpu-pro (= 18.20-673703), libgles2-amdgpu-pro (= 18.20-673703), libgl1-amdgpu-pro-ext (= 18.20-673703), libgl1-amdgpu-pro-dri (= 18.20-673703), libgl1-amdgpu-pro-appprofiles (= 18.20-673703), libgbm1-amdgpu-pro (= 18.20-673703), libgbm1-amdgpu-pro-base (= 18.20-673703)
+Filename: ./amdgpu-pro_18.20-673703_amd64.deb
+Size: 5364
+MD5sum: c87abf5543c9d32bd3147c223b30177a
+SHA1: 782ea3a8ec0eb70ab79aae1fad3d897c3d995116
+SHA256: 8435efdac4d9833731ac578b4909d471e11c87aa3b4350dd6c259d5e354866a9
+Section: metapackages
+Priority: optional
+Description: Meta package to install amdgpu Pro components.
+
+Package: amdgpu-pro-core
+Version: 18.20-673703
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 19
+Depends: amdgpu-core
+Filename: ./amdgpu-pro-core_18.20-673703_all.deb
+Size: 5584
+MD5sum: 51de14fbd01d8c1353406abbe7c81c08
+SHA1: 5605fb846c51da86e60a83c06f63df975c659e17
+SHA256: 46fa4f5dd1a5a2588abab6bb9ad96f07fff0b1a94200b8294c7b6dbddce4c219
+Section: metapackages
+Priority: optional
+Multi-Arch: foreign
+Description: Core meta package for Pro components of the unified amdgpu driver.
+
+Package: amdgpu-pro-lib32
+Source: amdgpu-pro
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 17
+Depends: amdgpu (= 18.20-673703), amdgpu-pro (= 18.20-673703), amdgpu-lib32 (= 18.20-673703), libgl1-amdgpu-pro-glx:i386 (= 18.20-673703), libegl1-amdgpu-pro:i386 (= 18.20-673703), libgles2-amdgpu-pro:i386 (= 18.20-673703), libgl1-amdgpu-pro-dri:i386 (= 18.20-673703), libgbm1-amdgpu-pro:i386 (= 18.20-673703)
+Filename: ./amdgpu-pro-lib32_18.20-673703_amd64.deb
+Size: 5376
+MD5sum: 05fff35042731c84b790f6dfa6511c67
+SHA1: 3287874c44917c235988dc9b817b111a2b0f638f
+SHA256: 03b00052d30bb9a1ac1545c7b877f9bbf1b6888ccc5de5dcecc4e3248e395eab
+Section: metapackages
+Priority: optional
+Description: Meta package to support i386 Pro runtime on amd64 architecture
+
+Package: clinfo-amdgpu-pro
+Source: opencl-orca-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 559
+Depends: libc6 (>= 2.3.3), libgcc1 (>= 1:4.2), libopencl1-amdgpu-pro (= 18.20-673703)
+Filename: ./clinfo-amdgpu-pro_18.20-673703_amd64.deb
+Size: 153100
+MD5sum: 4c62f3e5d50a08473a74faddafacc2ef
+SHA1: 715cc5669ba58c487b26a76eed1afed69f1364f0
+SHA256: 391b77557b112b91f244b9fd368d8cf7e65c60f1f5a98152de5d1785e2ec6882
+Section: libs
+Priority: optional
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL info utility
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package contains the clinfo utility provided by AMD. It reports status
+ information for all ICDs (installable client drivers) that are installed in
+ the system.
+
+Package: clinfo-amdgpu-pro
+Source: opencl-orca-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 586
+Depends: libc6 (>= 2.3.6-6~), libgcc1 (>= 1:4.2), libopencl1-amdgpu-pro (= 18.20-673703)
+Filename: ./clinfo-amdgpu-pro_18.20-673703_i386.deb
+Size: 164380
+MD5sum: 10038ca305e591938daa1df003a244cf
+SHA1: 08ae3c00db78b461ebf6513e8b0904f04ebfc2ea
+SHA256: db9028a4d6f2486bab28c14a9b2d0857ac0379b162823a9b89315d92b59fc99a
+Section: libs
+Priority: optional
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL info utility
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package contains the clinfo utility provided by AMD. It reports status
+ information for all ICDs (installable client drivers) that are installed in
+ the system.
+
+Package: glamor-amdgpu
+Source: xserver-xorg-amdgpu
+Version: 1.19.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 283
+Depends: amdgpu-core, libc6 (>= 2.14), libdrm2-amdgpu, libepoxy0 (>= 1.0)
+Filename: ./glamor-amdgpu_1.19.0-673703_amd64.deb
+Size: 69688
+MD5sum: 14473f38aeed3cf73d0769d563563e89
+SHA1: e36236983604c37a9b3c6636719e54d4b5aa8c76
+SHA256: 00249aaa15ae02fba35702d8f7d5a4543ec50d47fb07806a9310f75ec054df73
+Section: x11
+Priority: optional
+Multi-Arch: same
+Description: X.Org X server -- graphics acceleration module based on OpenGL
+ Glamor is a library for accelerating 2D graphics using GL functions.
+ .
+ This package contains the X.Org module.
+
+Package: glamor-amdgpu
+Source: xserver-xorg-amdgpu
+Version: 1.19.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 258
+Depends: amdgpu-core, libc6 (>= 2.14), libdrm2-amdgpu, libepoxy0 (>= 1.0)
+Filename: ./glamor-amdgpu_1.19.0-673703_i386.deb
+Size: 68084
+MD5sum: 7e83882868849e95f81c04b55d1003e6
+SHA1: bbe3ad5bda8adfff74cd971cf427dff03ffff651
+SHA256: 93bad926b733bac3bfaa5090258b31ad8312d8bbc30d6ade95f589cd229eccc8
+Section: x11
+Priority: optional
+Multi-Arch: same
+Description: X.Org X server -- graphics acceleration module based on OpenGL
+ Glamor is a library for accelerating 2D graphics using GL functions.
+ .
+ This package contains the X.Org module.
+
+Package: glamor-amdgpu-dev
+Source: xserver-xorg-amdgpu
+Version: 1.19.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 32
+Depends: glamor-amdgpu (= 1.19.0-673703)
+Filename: ./glamor-amdgpu-dev_1.19.0-673703_i386.deb
+Size: 5824
+MD5sum: e5e83fb070f822d2b5b9542e92c8cf7a
+SHA1: 2382af1f677948165aa2dc78ac70a096d7a2b0c8
+SHA256: a325a4d7a518169254983e9b4256920cbdb2b8b0599468ba777ac5262fa1b77c
+Section: libdevel
+Priority: optional
+Description: shared graphics acceleration library based on OpenGL -- development files
+ Glamor is a library for accelerating 2D graphics using GL functions.
+ .
+ This package contains the development environment for compiling drivers against
+ the libglamor library.
+
+Package: glamor-amdgpu-dev
+Source: xserver-xorg-amdgpu
+Version: 1.19.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD)
+Installed-Size: 32
+Depends: glamor-amdgpu (= 1.19.0-673703)
+Filename: ./glamor-amdgpu-dev_1.19.0-673703_amd64.deb
+Size: 5832
+MD5sum: ce8d1c476735c08d162a303b52f81649
+SHA1: 4749d0e35365e5048d04ac8bc889aab269627138
+SHA256: db5246e90e4a3f0fef0bad1b0a5422fe986a6ea7294a8bcef717f84b4a5186b8
+Section: libdevel
+Priority: optional
+Description: shared graphics acceleration library based on OpenGL -- development files
+ Glamor is a library for accelerating 2D graphics using GL functions.
+ .
+ This package contains the development environment for compiling drivers against
+ the libglamor library.
+
+Package: gst-omx-amdgpu
+Version: 1.0.0.1-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 209
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libgstreamer-plugins-base1.0-0 (>= 1.6.0), libgstreamer1.0-0 (>= 1.0.0), libomxil-bellagio0, amdgpu-core
+Filename: ./gst-omx-amdgpu_1.0.0.1-673703_i386.deb
+Size: 54864
+MD5sum: 3d8564bcc2dccfd95a67d5e7478092f2
+SHA1: 67a6c730fedd90a9f63a6b5d404d2cbc6cb3428b
+SHA256: c17769cdb81ee0f45216fca98fa4704ec041d1d54dd7f56fe2145d547232428a
+Section: libs
+Priority: optional
+Homepage: http://gstreamer.freedesktop.org
+Description: GStreamer OpenMAX plugins
+ GStreamer is a streaming media framework, based on graphs of filters
+ which operate on media data.  Applications using this library can do
+ anything from real-time sound processing to playing videos, and just
+ about anything else media-related.  Its plugin-based architecture means
+ that new data types or processing capabilities can be added simply by
+ installing new plug-ins.
+ .
+ This module provides a plugin that allows communication of GStreamer
+ with OpenMAX IL components, which are used to access hardware
+ encoders and decoders.
+
+Package: gst-omx-amdgpu
+Version: 1.0.0.1-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 230
+Depends: libc6 (>= 2.14), libglib2.0-0 (>= 2.37.3), libgstreamer-plugins-base1.0-0 (>= 1.6.0), libgstreamer1.0-0 (>= 1.0.0), libomxil-bellagio0, amdgpu-core
+Filename: ./gst-omx-amdgpu_1.0.0.1-673703_amd64.deb
+Size: 57752
+MD5sum: a8714c00985ab67f92e68f8421c36a6d
+SHA1: bad8554a62e8230dd9020c9f1d67fbfb8dee7734
+SHA256: f4ea76c0f9709b4ff1dd6531492c8be8eaa82a91030c5fe575e0849bc96aaf30
+Section: libs
+Priority: optional
+Homepage: http://gstreamer.freedesktop.org
+Description: GStreamer OpenMAX plugins
+ GStreamer is a streaming media framework, based on graphs of filters
+ which operate on media data.  Applications using this library can do
+ anything from real-time sound processing to playing videos, and just
+ about anything else media-related.  Its plugin-based architecture means
+ that new data types or processing capabilities can be added simply by
+ installing new plug-ins.
+ .
+ This module provides a plugin that allows communication of GStreamer
+ with OpenMAX IL components, which are used to access hardware
+ encoders and decoders.
+
+Package: ids-amdgpu
+Version: 1.0.0-673703
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 27
+Depends: amdgpu-core
+Filename: ./ids-amdgpu_1.0.0-673703_all.deb
+Size: 6532
+MD5sum: 972133c2ec73f52eabe9456eb8c020c1
+SHA1: abe055230da4dc913342cdc353725293efe50a97
+SHA256: c81574ce116b3073954c934f0690a08b518dd0324e67b109fc86a4c6af73db65
+Section: text
+Priority: optional
+Multi-Arch: foreign
+Description: List of AMD/ATI cards' device IDs, revision IDs and marketing names
+
+Package: libdrm-amdgpu-amdgpu1
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 85
+Depends: libc6 (>= 2.17), libdrm2-amdgpu (= 1:2.4.91-673703), ids-amdgpu
+Filename: ./libdrm-amdgpu-amdgpu1_2.4.91-673703_amd64.deb
+Size: 19392
+MD5sum: 199b1b7ec888edae764a23b4ece1022d
+SHA1: db4cc5ee0f5c01a62d8fe7b73da29580b2d89d2a
+SHA256: 0339c0113276fa9f537d39cb62a87b002e40f5594b8dac9ab47bfdfc0c3d1b8f
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to amdgpu-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the amdgpu-specific kernel
+ DRM services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI). The DRI is
+ currently used on Linux to provide hardware-accelerated OpenGL drivers.
+
+Package: libdrm-amdgpu-amdgpu1
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 84
+Depends: libc6 (>= 2.17), libdrm2-amdgpu (= 1:2.4.91-673703), ids-amdgpu
+Filename: ./libdrm-amdgpu-amdgpu1_2.4.91-673703_i386.deb
+Size: 21864
+MD5sum: 7b33ccb33a67629668f231e1649579fa
+SHA1: b695264c8af6eec4af04958a836c7656af1df502
+SHA256: ca49b7f858507ef54043f8742cd5a259a72f51c5d958e155240f2a0de469b534
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to amdgpu-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the amdgpu-specific kernel
+ DRM services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI). The DRI is
+ currently used on Linux to provide hardware-accelerated OpenGL drivers.
+
+Package: libdrm-amdgpu-dev
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 841
+Depends: libdrm2-amdgpu (= 1:2.4.91-673703), libdrm-amdgpu-amdgpu1 (= 1:2.4.91-673703)
+Replaces: linux-libc-dev (<< 2.6.32-10)
+Filename: ./libdrm-amdgpu-dev_2.4.91-673703_amd64.deb
+Size: 154600
+MD5sum: f70bfb0993433dea7bc37441345af08c
+SHA1: e58290b294083f6b6c5bbe49876410267e7b2517
+SHA256: f24fed8665e2c19397a34288b3c56c02aba81a7dd9832aaf31e8c04f34076c9a
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to kernel DRM services -- development files
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the development environment for libdrm.
+
+Package: libdrm-amdgpu-dev
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 811
+Depends: libdrm2-amdgpu (= 1:2.4.91-673703), libdrm-amdgpu-amdgpu1 (= 1:2.4.91-673703)
+Replaces: linux-libc-dev (<< 2.6.32-10)
+Filename: ./libdrm-amdgpu-dev_2.4.91-673703_i386.deb
+Size: 159508
+MD5sum: d45a860561fd8fe83d23f0095ebf16b1
+SHA1: 3cebdfe750a4a5c5b0af3648401589989de52bfd
+SHA256: dd4436f47086ed531d963372661e60eceaca165d44b8c48a929b25a22fa67b9d
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to kernel DRM services -- development files
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the development environment for libdrm.
+
+Package: libdrm-amdgpu-radeon1
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 89
+Depends: libc6 (>= 2.4), libdrm2-amdgpu (= 1:2.4.91-673703)
+Filename: ./libdrm-amdgpu-radeon1_2.4.91-673703_amd64.deb
+Size: 19248
+MD5sum: 912fdc0fba2f98594fb00a32b1c252cc
+SHA1: 26938ddfb49c5f422bfa8e88f207fca297fa2b15
+SHA256: 69f32b075ec44bf78da7433cb48fff14437ea7350d69432438299996b51e7e6b
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to radeon-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the radeon-specific kernel
+ DRM services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI). The DRI is
+ currently used on Linux to provide hardware-accelerated OpenGL drivers.
+
+Package: libdrm-amdgpu-radeon1
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 88
+Depends: libc6 (>= 2.4), libdrm2-amdgpu (= 1:2.4.91-673703)
+Filename: ./libdrm-amdgpu-radeon1_2.4.91-673703_i386.deb
+Size: 19776
+MD5sum: 0cfdd2cb7969c39c54203dd950cf319e
+SHA1: 057a7ed2f32ec98fad5d2d4c9e1b348de730e366
+SHA256: 790385294f794a49f3632d9df88519edc0cb0cc669a07b0003c4cf0692fac60e
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to radeon-specific kernel DRM services -- runtime
+ This library implements the userspace interface to the radeon-specific kernel
+ DRM services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI). The DRI is
+ currently used on Linux to provide hardware-accelerated OpenGL drivers.
+
+Package: libdrm-amdgpu-utils
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 423
+Depends: libdrm-amdgpu-amdgpu1 (= 1:2.4.91-673703), libc6 (>= 2.17), libcunit1, libdrm2-amdgpu
+Filename: ./libdrm-amdgpu-utils_2.4.91-673703_amd64.deb
+Size: 65992
+MD5sum: b7dedfb4bfedbf3e00d5c0bea16f94c0
+SHA1: e6514e265acc638f03ffafa510c0c6ca7d43f2b2
+SHA256: 32552810cedb662f3e285f17b7eb4a8b5f08eb22f9a828d64d53106b1f007d8a
+Section: utils
+Priority: optional
+Description: Utility programs for the kernel DRM interface.
+
+Package: libdrm-amdgpu-utils
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 383
+Depends: libdrm-amdgpu-amdgpu1 (= 1:2.4.91-673703), libc6 (>= 2.17), libcunit1, libdrm2-amdgpu
+Filename: ./libdrm-amdgpu-utils_2.4.91-673703_i386.deb
+Size: 62824
+MD5sum: 984e896f7f602a28d6dad8a245b9d0ef
+SHA1: 4209ad9dbd4598505071e7ffd23570faeee74f62
+SHA256: 5921d6d6aa3b60a2d43f9a9183f0554c6ef1e7babb5461e54ee4870f34f4e869
+Section: utils
+Priority: optional
+Description: Utility programs for the kernel DRM interface.
+
+Package: libdrm2-amdgpu
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 133
+Depends: libc6 (>= 2.17), amdgpu-core
+Filename: ./libdrm2-amdgpu_2.4.91-673703_amd64.deb
+Size: 30432
+MD5sum: 0b47ee7aae65a87cdb102c63f7feb79c
+SHA1: d5019619b1afd535c082f918ae8fe856a44c7e6e
+SHA256: 81ea9f3b3ad2db12377f4572832cc64ad64bf6991b9106440c912b87803cb909
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to kernel DRM services -- runtime
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the runtime environment for libdrm.
+
+Package: libdrm2-amdgpu
+Source: libdrm-amdgpu
+Version: 1:2.4.91-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 127
+Depends: libc6 (>= 2.17), amdgpu-core
+Filename: ./libdrm2-amdgpu_2.4.91-673703_i386.deb
+Size: 31676
+MD5sum: 3883bddf12c47295a6d659f91e8491d5
+SHA1: 2649d1608fba2f5ec123509824a1623324961904
+SHA256: 0eb23a15228c9a2548258774480dfefee6d728b361c12d81110f16011e13c758
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Userspace interface to kernel DRM services -- runtime
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package provides the runtime environment for libdrm.
+
+Package: libegl1-amdgpu-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 277
+Depends: libc6 (>= 2.17), libdrm2-amdgpu, libexpat1 (>= 2.0.1), libgbm1-amdgpu, libglapi-amdgpu-mesa, libwayland-amdgpu-client0, libwayland-amdgpu-server0, libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-present0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, zlib1g (>= 1:1.1.4), libudev1 | libudev0, amdgpu-core
+Recommends: libegl1-amdgpu-mesa-drivers
+Filename: ./libegl1-amdgpu-mesa_18.0.0-673703_amd64.deb
+Size: 72984
+MD5sum: c50008dee00fdd96f9532d2fac733c9e
+SHA1: 2f1045079559db506ae4468a217b96bf96129b32
+SHA256: 19a9b97be7563038d08d75130e08fb37dda2f80d962c8c72fcc18426fda95828
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the EGL API -- runtime
+ This package contains the EGL native platform graphics interface library.
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES and OpenVG.
+ .
+ This package contains modules to interface with the existing system GLX or
+ DRI2 drivers to provide OpenGL via EGL.  The libegl1-mesa-drivers package
+ provides drivers to provide hardware-accelerated OpenGL|ES and OpenVG support.
+
+Package: libegl1-amdgpu-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 254
+Depends: libc6 (>= 2.17), libdrm2-amdgpu, libexpat1 (>= 2.0.1), libgbm1-amdgpu, libglapi-amdgpu-mesa, libwayland-amdgpu-client0, libwayland-amdgpu-server0, libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-present0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, zlib1g (>= 1:1.1.4), libudev1 | libudev0, amdgpu-core
+Recommends: libegl1-amdgpu-mesa-drivers
+Filename: ./libegl1-amdgpu-mesa_18.0.0-673703_i386.deb
+Size: 75140
+MD5sum: 184d59f6b713a1f1f91ce60d3860fa3d
+SHA1: eb465599e4c32b6484b58f3793b670efc8110d90
+SHA256: 0c6cf42e300f50780da3d03c3c103de9b965360f6511c518a926048f9b1205dd
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the EGL API -- runtime
+ This package contains the EGL native platform graphics interface library.
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES and OpenVG.
+ .
+ This package contains modules to interface with the existing system GLX or
+ DRI2 drivers to provide OpenGL via EGL.  The libegl1-mesa-drivers package
+ provides drivers to provide hardware-accelerated OpenGL|ES and OpenVG support.
+
+Package: libegl1-amdgpu-mesa-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 127
+Depends: libegl1-amdgpu-mesa (= 1:18.0.0-673703), libegl1-amdgpu-mesa-drivers (= 1:18.0.0-673703), libdrm-amdgpu-dev (>= 2.4.52), x11proto-dri2-dev (>= 2.6), x11proto-gl-dev (>= 1.4.14), libx11-dev, libxext-dev, libxxf86vm-dev, libxdamage-dev, libxfixes-dev, libxcb-glx0-dev, libxcb-dri2-0-dev, libxcb-dri3-dev, libxcb-present-dev, libxcb-sync-dev, libxshmfence-dev, libx11-xcb-dev, libmirclient-dev, libwayland-amdgpu-dev (>= 1.2.0)
+Filename: ./libegl1-amdgpu-mesa-dev_18.0.0-673703_i386.deb
+Size: 20616
+MD5sum: 182cc9414755beb68f99f715d8d36473
+SHA1: 982a732aeef40ed4d2f8afe7b10126fb33193234
+SHA256: 7a2b3024f1abf44cf0f3199c198ace26992443aac257e951bed1e9462e9b090e
+Section: libdevel
+Priority: optional
+Description: free implementation of the EGL API -- development files
+ This package contains the development environment required for compiling
+ programs against EGL native platform graphics interface library.
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES and OpenVG.
+ .
+ This package provides the development environment for compiling programs
+ against the EGL library.
+
+Package: libegl1-amdgpu-mesa-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 127
+Depends: libegl1-amdgpu-mesa (= 1:18.0.0-673703), libegl1-amdgpu-mesa-drivers (= 1:18.0.0-673703), libdrm-amdgpu-dev (>= 2.4.52), x11proto-dri2-dev (>= 2.6), x11proto-gl-dev (>= 1.4.14), libx11-dev, libxext-dev, libxxf86vm-dev, libxdamage-dev, libxfixes-dev, libxcb-glx0-dev, libxcb-dri2-0-dev, libxcb-dri3-dev, libxcb-present-dev, libxcb-sync-dev, libxshmfence-dev, libx11-xcb-dev, libmirclient-dev, libwayland-amdgpu-dev (>= 1.2.0)
+Filename: ./libegl1-amdgpu-mesa-dev_18.0.0-673703_amd64.deb
+Size: 20624
+MD5sum: 3ca11470e3cec63eda4c2824868dcb69
+SHA1: f0fd88b7d7b5008e44c5723cb9e443b756d41beb
+SHA256: fafa4af008af2e261c1f6c7da58f65c2192a4807285bba7c658efc3b32324e92
+Section: libdevel
+Priority: optional
+Description: free implementation of the EGL API -- development files
+ This package contains the development environment required for compiling
+ programs against EGL native platform graphics interface library.
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES and OpenVG.
+ .
+ This package provides the development environment for compiling programs
+ against the EGL library.
+
+Package: libegl1-amdgpu-mesa-drivers
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 16
+Depends: libegl1-amdgpu-mesa (= 1:18.0.0-673703), libglapi-amdgpu-mesa (= 1:18.0.0-673703), libwayland-amdgpu-egl1-mesa (= 1:18.0.0-673703), libudev1 | libudev0
+Filename: ./libegl1-amdgpu-mesa-drivers_18.0.0-673703_amd64.deb
+Size: 4644
+MD5sum: baa70e556e2a41b48f54e9480e199ba7
+SHA1: 167c89ad0ddd96f5ad56e18a2969c55b99dd7182
+SHA256: 8526aadf1fe94400ac0a180a0833d3e82b31ed87fcab136d43a28913869c7bd2
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the EGL API -- hardware drivers
+ This package contains the EGL native platform graphics interface library.
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES and OpenVG.
+ .
+ This package contains the drivers required for hardware accelerated rendering
+ of EGL-based graphics libraries, such as OpenGL|ES and OpenVG.
+
+Package: libegl1-amdgpu-mesa-drivers
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 16
+Depends: libegl1-amdgpu-mesa (= 1:18.0.0-673703), libglapi-amdgpu-mesa (= 1:18.0.0-673703), libwayland-amdgpu-egl1-mesa (= 1:18.0.0-673703), libudev1 | libudev0
+Filename: ./libegl1-amdgpu-mesa-drivers_18.0.0-673703_i386.deb
+Size: 4640
+MD5sum: 8ab40b84f6ae940643f8389ff9224b27
+SHA1: 3a672e166d859749b7cf8452c5cb5dba8d614de0
+SHA256: 0587a66141ad722154c88129bbcd2e68f3392f411877739c0938e3c9e2e8b583
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the EGL API -- hardware drivers
+ This package contains the EGL native platform graphics interface library.
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES and OpenVG.
+ .
+ This package contains the drivers required for hardware accelerated rendering
+ of EGL-based graphics libraries, such as OpenGL|ES and OpenVG.
+
+Package: libegl1-amdgpu-pro
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 42
+Depends: libc6 (>= 2.2.5), libstdc++6 (>= 4.1.1), libwayland-amdgpu-server0, libwayland-amdgpu-client0, amdgpu-pro-core
+Filename: ./libegl1-amdgpu-pro_18.20-673703_amd64.deb
+Size: 9444
+MD5sum: 63999e7eda730ace2d681acb2b8453a8
+SHA1: 7cef161ad952ff65b2e73dbd998180554ef8620b
+SHA256: 23fe8df8eae0d80692716d27b87a3434cda3d9e44f97011a3be835e26777d57e
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the EGL API -- runtime
+
+Package: libegl1-amdgpu-pro
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 42
+Depends: libc6 (>= 2.3.6-6~), libstdc++6 (>= 4.1.1), libwayland-amdgpu-server0, libwayland-amdgpu-client0, amdgpu-pro-core
+Filename: ./libegl1-amdgpu-pro_18.20-673703_i386.deb
+Size: 9640
+MD5sum: fdcd3824e2344727779b70f6d3063671
+SHA1: e68f8f252d9d96216f3283eea151b00f250bfb7e
+SHA256: af40c0db62d11fcf8e9fe32850611c453573dfac042d8725e67db31a514827f7
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the EGL API -- runtime
+
+Package: libgbm-amdgpu-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 39
+Depends: libgbm1-amdgpu (= 1:18.0.0-673703), libudev-dev
+Filename: ./libgbm-amdgpu-dev_18.0.0-673703_amd64.deb
+Size: 7864
+MD5sum: 58b83bb8a9f34179a72fcf9fa50be6da
+SHA1: 68ee161e04085bb85a98e6a01a50424fdb1be6dc
+SHA256: dd4344a897b64189961024276f46c9bcda1b3d5dfc801c2c1eec961da24cac29
+Section: libdevel
+Priority: optional
+Description: generic buffer management API -- development files
+ This package contains the GBM buffer management library.  It provides a
+ mechanism for allocating buffers for graphics rendering tied to Mesa.
+ .
+ GBM is intended to be used as a native platform for EGL on drm or openwfd.
+ .
+ This package provides the development environment for compiling programs
+ against the GBM library.
+
+Package: libgbm-amdgpu-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 39
+Depends: libgbm1-amdgpu (= 1:18.0.0-673703), libudev-dev
+Filename: ./libgbm-amdgpu-dev_18.0.0-673703_i386.deb
+Size: 7860
+MD5sum: e66558a8565278fc395e23b1b6bd60e5
+SHA1: 4864237ba8a9dedc13daed42b9d28952a3076016
+SHA256: bdd6fbab845567bdd52d8026eb4c070fe184a81e73eab5ec7a427af821b6dd71
+Section: libdevel
+Priority: optional
+Description: generic buffer management API -- development files
+ This package contains the GBM buffer management library.  It provides a
+ mechanism for allocating buffers for graphics rendering tied to Mesa.
+ .
+ GBM is intended to be used as a native platform for EGL on drm or openwfd.
+ .
+ This package provides the development environment for compiling programs
+ against the GBM library.
+
+Package: libgbm1-amdgpu
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 81
+Depends: libc6 (>= 2.4), libdrm2-amdgpu, libexpat1 (>= 2.0.1), libwayland-amdgpu-server0, zlib1g (>= 1:1.1.4), libudev1 | libudev0, amdgpu-core
+Filename: ./libgbm1-amdgpu_18.0.0-673703_i386.deb
+Size: 23276
+MD5sum: ba9f2c40cc15bfdd14f542a506665a8c
+SHA1: a114e3ebb07d0a75e957580f2fbb3b3302362156
+SHA256: 4573c0cca87d3cda67af933ce74c17de8f8cda060cd196c96f49038f3b5b4f26
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: generic buffer management API -- runtime
+ This package contains the GBM buffer management library.  It provides a
+ mechanism for allocating buffers for graphics rendering tied to Mesa.
+ .
+ GBM is intended to be used as a native platform for EGL on drm or openwfd.
+
+Package: libgbm1-amdgpu
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 87
+Depends: libc6 (>= 2.14), libdrm2-amdgpu, libexpat1 (>= 2.0.1), libwayland-amdgpu-server0, zlib1g (>= 1:1.1.4), libudev1 | libudev0, amdgpu-core
+Filename: ./libgbm1-amdgpu_18.0.0-673703_amd64.deb
+Size: 23420
+MD5sum: 5b197fb3e712a74cabf684671c22fc12
+SHA1: 426d34a569b04f2f9b26df8dcd72a27d09b13cc0
+SHA256: d75a753c941132e2317d942b15cb75075f62bd5863123acce0f6fc4a2e525f62
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: generic buffer management API -- runtime
+ This package contains the GBM buffer management library.  It provides a
+ mechanism for allocating buffers for graphics rendering tied to Mesa.
+ .
+ GBM is intended to be used as a native platform for EGL on drm or openwfd.
+
+Package: libgbm1-amdgpu-pro
+Source: libgbm-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 351
+Depends: libdrm-amdgpu-amdgpu1, libgbm1-amdgpu-pro-base (= 18.20-673703), libc6 (>= 2.14), libdrm2-amdgpu, libgcc1 (>= 1:3.0), libstdc++6 (>= 4.1.1)
+Filename: ./libgbm1-amdgpu-pro_18.20-673703_amd64.deb
+Size: 87052
+MD5sum: cd630b9c6abfe95c0125345d4dcb20d6
+SHA1: 6f707af8d50fb7d6f1bdbca2a3886999401d4a6e
+SHA256: 89448af9d025c8f01936adad03e31064cd66f7a38505ba91541b88deedaa8833
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Generic buffer management API -- runtime
+
+Package: libgbm1-amdgpu-pro
+Source: libgbm-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 328
+Depends: libdrm-amdgpu-amdgpu1, libgbm1-amdgpu-pro-base (= 18.20-673703), libc6 (>= 2.4), libdrm2-amdgpu, libgcc1 (>= 1:3.0), libstdc++6 (>= 4.1.1)
+Filename: ./libgbm1-amdgpu-pro_18.20-673703_i386.deb
+Size: 91508
+MD5sum: a1f1ed2e84d1195718f90fa04de9cf2f
+SHA1: e4406bc3c8863b0ad69c546ca2f715c260517b71
+SHA256: 15084b0c27a8977e6f63323caa1dd334ff68359dd7906d572b8a97f8c71f70d6
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Generic buffer management API -- runtime
+
+Package: libgbm1-amdgpu-pro-base
+Source: libgbm-amdgpu
+Version: 18.20-673703
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 15
+Depends: amdgpu-pro-core
+Filename: ./libgbm1-amdgpu-pro-base_18.20-673703_all.deb
+Size: 3140
+MD5sum: 6ed5509bcf672fdeb9f423559582f3b6
+SHA1: 779890dfed4622ec826c1a4ee152c627a73f551f
+SHA256: 77d27b47b5c9382338eda91b1ace71c18d22342c23c971d71189bacbb7ecf9e3
+Section: libs
+Priority: optional
+Multi-Arch: foreign
+Description: Generic buffer management API -- configuration files
+
+Package: libgbm1-amdgpu-pro-dev
+Source: libgbm-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 32
+Depends: libgbm1-amdgpu-pro (= 18.20-673703)
+Filename: ./libgbm1-amdgpu-pro-dev_18.20-673703_i386.deb
+Size: 5812
+MD5sum: 1476aa1c8d00e90499df61d571f9afae
+SHA1: 50db5b14f158af9a0143e7f14c5162cbc8d2b7a8
+SHA256: e3dc78779d5cdacba6f5a1abada2150acf60d1fe7475a9b6520b3b2987dced7f
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Generic buffer management API -- development files
+
+Package: libgbm1-amdgpu-pro-dev
+Source: libgbm-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 32
+Depends: libgbm1-amdgpu-pro (= 18.20-673703)
+Filename: ./libgbm1-amdgpu-pro-dev_18.20-673703_amd64.deb
+Size: 5816
+MD5sum: 0e6fcac90bdf86986d52644f34463c66
+SHA1: da6ffbb760d4c24e6ea90884c38a01c044fd87d1
+SHA256: b835b8844676e8f4b263a3e95b85ed5df8a9d1405823ba02ea4550c0ad7f5052
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Generic buffer management API -- development files
+
+Package: libgl1-amdgpu-mesa-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 24
+Depends: mesa-amdgpu-common-dev (= 1:18.0.0-673703), libgl1-amdgpu-mesa-glx (= 1:18.0.0-673703), libdrm-amdgpu-dev (>= 2.4.52), libx11-dev, libx11-xcb-dev, libxcb-dri3-dev, libxcb-present-dev, libxcb-sync-dev, libxshmfence-dev, libxcb-dri2-0-dev, libxcb-glx0-dev, libxdamage-dev, libxext-dev, libxfixes-dev, libxxf86vm-dev, x11proto-dri2-dev (>= 2.6), x11proto-gl-dev (>= 1.4.14)
+Filename: ./libgl1-amdgpu-mesa-dev_18.0.0-673703_amd64.deb
+Size: 5180
+MD5sum: 6b2277460fd713a379ec2c045b38b5c7
+SHA1: 1d24ca297d19c2a8a08c73c4d4ab4496d9502977
+SHA256: 36569c8cb1b759e974edff58d06131784b06ac6804d46c66448f9ac549c17e88
+Section: libdevel
+Priority: optional
+Description: free implementation of the OpenGL API -- GLX development files
+ This version of Mesa provides GLX and DRI capabilities: it is capable of
+ both direct and indirect rendering.  For direct rendering, it can use DRI
+ modules from the libgl1-mesa-dri package to accelerate drawing.
+ .
+ This package includes headers and static libraries for compiling
+ programs with Mesa.
+ .
+ For a complete description of Mesa, please look at the libgl1-mesa-glx
+ package.
+
+Package: libgl1-amdgpu-mesa-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 24
+Depends: mesa-amdgpu-common-dev (= 1:18.0.0-673703), libgl1-amdgpu-mesa-glx (= 1:18.0.0-673703), libdrm-amdgpu-dev (>= 2.4.52), libx11-dev, libx11-xcb-dev, libxcb-dri3-dev, libxcb-present-dev, libxcb-sync-dev, libxshmfence-dev, libxcb-dri2-0-dev, libxcb-glx0-dev, libxdamage-dev, libxext-dev, libxfixes-dev, libxxf86vm-dev, x11proto-dri2-dev (>= 2.6), x11proto-gl-dev (>= 1.4.14)
+Filename: ./libgl1-amdgpu-mesa-dev_18.0.0-673703_i386.deb
+Size: 5168
+MD5sum: d2bbfb22b20ead70fb8c8a78bb6bb856
+SHA1: 558a816e62a70da156f0c1b84704ab2e9f9d72fd
+SHA256: 0feff8d873fa5577e90f8fa736ffa79146967142f7973b38db74be478549f503
+Section: libdevel
+Priority: optional
+Description: free implementation of the OpenGL API -- GLX development files
+ This version of Mesa provides GLX and DRI capabilities: it is capable of
+ both direct and indirect rendering.  For direct rendering, it can use DRI
+ modules from the libgl1-mesa-dri package to accelerate drawing.
+ .
+ This package includes headers and static libraries for compiling
+ programs with Mesa.
+ .
+ For a complete description of Mesa, please look at the libgl1-mesa-glx
+ package.
+
+Package: libgl1-amdgpu-mesa-dri
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 74489
+Depends: libc6 (>= 2.27), libdrm-amdgpu-amdgpu1, libdrm2-amdgpu, libelf1 (>= 0.142), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.4), libglapi-amdgpu-mesa, libllvm6.0-amdgpu, libselinux1 (>= 1.32), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4), amdgpu-core
+Recommends: libtxc-dxtn-s2tc0 | libtxc-dxtn0
+Suggests: libglide3
+Filename: ./libgl1-amdgpu-mesa-dri_18.0.0-673703_i386.deb
+Size: 3849768
+MD5sum: 68d8113b0a619f540d4e87e16ae6c36b
+SHA1: d409163fa0cf2171d3814ccc2ed2072dba7dfa0f
+SHA256: e5b1c0ea7f48dc47585e7dde2252ce88f9391e1f62e2ae71c620c736fd92ff82
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the OpenGL API -- DRI modules
+ This version of Mesa provides GLX and DRI capabilities: it is capable of
+ both direct and indirect rendering.  For direct rendering, it can use DRI
+ modules from the libgl1-mesa-dri package to accelerate drawing.
+ .
+ This package does not include the OpenGL library itself, only the DRI
+ modules for accelerating direct rendering.
+ .
+ For a complete description of Mesa, please look at the
+ libgl1-mesa-glx package.
+ .
+ The tdfx DRI module needs libglide3 to enable direct rendering.
+
+Package: libgl1-amdgpu-mesa-dri
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 80043
+Depends: libc6 (>= 2.27), libdrm-amdgpu-amdgpu1, libdrm2-amdgpu, libelf1 (>= 0.142), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.4), libglapi-amdgpu-mesa, libllvm6.0-amdgpu, libselinux1 (>= 1.32), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4), amdgpu-core
+Recommends: libtxc-dxtn-s2tc0 | libtxc-dxtn0
+Suggests: libglide3
+Filename: ./libgl1-amdgpu-mesa-dri_18.0.0-673703_amd64.deb
+Size: 3799348
+MD5sum: 8d549e59864cf1bec48d666c10ca0eff
+SHA1: 88b85a1f0368faca40dadbbb10f57c91012178fe
+SHA256: 62242553b77e0a08f5eddaef46968a46466ac41c154a1c49b0719656c7404586
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the OpenGL API -- DRI modules
+ This version of Mesa provides GLX and DRI capabilities: it is capable of
+ both direct and indirect rendering.  For direct rendering, it can use DRI
+ modules from the libgl1-mesa-dri package to accelerate drawing.
+ .
+ This package does not include the OpenGL library itself, only the DRI
+ modules for accelerating direct rendering.
+ .
+ For a complete description of Mesa, please look at the
+ libgl1-mesa-glx package.
+ .
+ The tdfx DRI module needs libglide3 to enable direct rendering.
+
+Package: libgl1-amdgpu-mesa-glx
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 580
+Depends: libc6 (>= 2.14), libdrm2-amdgpu, libexpat1 (>= 2.0.1), libglapi-amdgpu-mesa (= 1:18.0.0-673703), libx11-6 (>= 2:1.4.99.1), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-glx0 (>= 1.8), libxcb-present0, libxcb-sync1, libxcb1 (>= 1.9.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxshmfence1, libxxf86vm1, zlib1g (>= 1:1.1.4), libudev1 | libudev0
+Recommends: libgl1-amdgpu-mesa-dri (>= 7.2)
+Filename: ./libgl1-amdgpu-mesa-glx_18.0.0-673703_amd64.deb
+Size: 118252
+MD5sum: 78495542287b3f4b8e099d716e79357b
+SHA1: 658f11e404113f20c11c17f4000b3f1d67b0f865
+SHA256: 99d1f55f1004d81d31f843d6451b6b408a353f56462543d20fefdaed49fee1e7
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the OpenGL API -- GLX runtime
+ Mesa is a 3-D graphics library with an API which is very similar to
+ that of OpenGL.  To the extent that Mesa utilizes the OpenGL command
+ syntax or state machine, it is being used with authorization from
+ Silicon Graphics, Inc.  However, the author makes no claim that Mesa
+ is in any way a compatible replacement for OpenGL or associated with
+ Silicon Graphics, Inc.
+ .
+ This version of Mesa provides GLX and DRI capabilities: it is capable of
+ both direct and indirect rendering.  For direct rendering, it can use DRI
+ modules from the libgl1-mesa-dri package to accelerate drawing.
+ .
+ This package does not include the modules themselves: these can be found
+ in the libgl1-mesa-dri package.
+
+Package: libgl1-amdgpu-mesa-glx
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 510
+Depends: libc6 (>= 2.4), libdrm2-amdgpu, libexpat1 (>= 2.0.1), libglapi-amdgpu-mesa (= 1:18.0.0-673703), libx11-6 (>= 2:1.4.99.1), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-glx0 (>= 1.8), libxcb-present0, libxcb-sync1, libxcb1 (>= 1.9.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxshmfence1, libxxf86vm1, zlib1g (>= 1:1.1.4), libudev1 | libudev0
+Recommends: libgl1-amdgpu-mesa-dri (>= 7.2)
+Filename: ./libgl1-amdgpu-mesa-glx_18.0.0-673703_i386.deb
+Size: 120260
+MD5sum: 486a830616dafb0d8aeaf4f9f310a65b
+SHA1: ba92fe229a3b83b881509663b097c550de3ed88d
+SHA256: 433d12a165c7db83f3c2b4ea9a787b94247b2ba5e1a474398205ac23a9a19ba0
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the OpenGL API -- GLX runtime
+ Mesa is a 3-D graphics library with an API which is very similar to
+ that of OpenGL.  To the extent that Mesa utilizes the OpenGL command
+ syntax or state machine, it is being used with authorization from
+ Silicon Graphics, Inc.  However, the author makes no claim that Mesa
+ is in any way a compatible replacement for OpenGL or associated with
+ Silicon Graphics, Inc.
+ .
+ This version of Mesa provides GLX and DRI capabilities: it is capable of
+ both direct and indirect rendering.  For direct rendering, it can use DRI
+ modules from the libgl1-mesa-dri package to accelerate drawing.
+ .
+ This package does not include the modules themselves: these can be found
+ in the libgl1-mesa-dri package.
+
+Package: libgl1-amdgpu-pro-appprofiles
+Source: appprofiles-amdgpu
+Version: 18.20-673703
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 141
+Depends: amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-appprofiles_18.20-673703_all.deb
+Size: 20716
+MD5sum: e00697004dfa1c053e9929c24c573a65
+SHA1: d6f4f6fe04b6bda3c031a31dd564f365441189ba
+SHA256: 75ce03a39f21c0e283696e9e5c2ff167bd702816469b97661d025d054f33dd1c
+Section: libs
+Priority: optional
+Multi-Arch: foreign
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenGL profiles configuration
+
+Package: libgl1-amdgpu-pro-dri
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 46519
+Depends: libc6 (>= 2.7), libgcc1 (>= 1:4.2), libstdc++6 (>= 4.4.0), libwayland-amdgpu-client0, libwayland-amdgpu-server0, libx11-6, libxext6, libxfixes3, amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-dri_18.20-673703_i386.deb
+Size: 10003024
+MD5sum: 15decf392e98a1b23dbab75a430d6732
+SHA1: 68fe2fd7cac152faf2e73ecbee97f2a27776b722
+SHA256: 1022cb0c14731ba3bd44a9a5744c39e46eba2bc274fd22f758e7ea12880becc3
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL API -- DRI modules
+
+Package: libgl1-amdgpu-pro-dri
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 37832
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 4.4.0), libwayland-amdgpu-client0, libwayland-amdgpu-server0, libx11-6, libxext6, libxfixes3, amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-dri_18.20-673703_amd64.deb
+Size: 8779076
+MD5sum: 74f9c926a148134dac12e9cd95e8605a
+SHA1: f5b00fb21e322c73638ad2659121dab27bbcd388
+SHA256: edf0252a0cdd28218f6363a7de5f97d7712c27739ec43cb63f95c1043bf93842
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL API -- DRI modules
+
+Package: libgl1-amdgpu-pro-ext
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 452
+Depends: libc6 (>= 2.14), libdrm2-amdgpu, libgl1-amdgpu-pro-glx, libx11-6, libx11-xcb1, libxcb-dri2-0, libxcb-glx0, libxcb1, libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxxf86vm1, libwayland-amdgpu-server0, libwayland-amdgpu-client0, amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-ext_18.20-673703_amd64.deb
+Size: 85572
+MD5sum: d9a74ae4261494243f4c3195ed700a70
+SHA1: 575d7a1fe4ec23390c0aa3ffdc83735d062ff803
+SHA256: ac2262afdfc6793b8740f8d756debed7e71d68b87575b6768fda89f347e19116
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: xorg GLX exetnsion
+
+Package: libgl1-amdgpu-pro-ext
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 416
+Depends: libc6 (>= 2.3.6-6~), libdrm2-amdgpu, libgl1-amdgpu-pro-glx, libx11-6, libx11-xcb1, libxcb-dri2-0, libxcb-glx0, libxcb1, libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxxf86vm1, libwayland-amdgpu-server0, libwayland-amdgpu-client0, amdgpu-pro-core
+Filename: ./libgl1-amdgpu-pro-ext_18.20-673703_i386.deb
+Size: 87528
+MD5sum: b01ed32a0a345078875ed254be7bfb09
+SHA1: dd607f65f6a2b0283e2b671c4b2924dd4df1676b
+SHA256: b445222fee17c1fc154057a8605ae9a0903d68c18492ed93cd0dd4296e463698
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: xorg GLX exetnsion
+
+Package: libgl1-amdgpu-pro-glx
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 973
+Depends: libc6 (>= 2.14), libx11-6 (>= 2:1.4.99.1), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-glx0 (>= 1.8), libxcb-present0, libxcb-sync1, libxcb1 (>= 1.9.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxshmfence1, libxxf86vm1, libwayland-amdgpu-server0, libwayland-amdgpu-client0, amdgpu-pro-core, libgl1-amdgpu-pro-appprofiles
+Recommends: libgl1-amdgpu-pro-dri (= 18.20-673703)
+Filename: ./libgl1-amdgpu-pro-glx_18.20-673703_amd64.deb
+Size: 174312
+MD5sum: 90fb5c4535f0fd79a523514e1399c67a
+SHA1: 5b72e43b697a07fff9d12c65fec2b4a188faa817
+SHA256: 72982d7622c72985f4d28b7d07e782e13dc7dd07506fa87f89a44f2d96c8845b
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL API -- GLX runtime
+
+Package: libgl1-amdgpu-pro-glx
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 800
+Depends: libc6 (>= 2.3.6-6~), libx11-6 (>= 2:1.4.99.1), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-glx0 (>= 1.8), libxcb-present0, libxcb-sync1, libxcb1 (>= 1.9.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxshmfence1, libxxf86vm1, libwayland-amdgpu-server0, libwayland-amdgpu-client0, amdgpu-pro-core, libgl1-amdgpu-pro-appprofiles
+Recommends: libgl1-amdgpu-pro-dri (= 18.20-673703)
+Filename: ./libgl1-amdgpu-pro-glx_18.20-673703_i386.deb
+Size: 174828
+MD5sum: 0e8e9c7884d04435cfc5f9d1583f7dfd
+SHA1: 3dcb11f485227702a3d67f5eacc6707a594e9279
+SHA256: d925efe6df1bf265c3befcaef94b8a67b9142ec528f8dc10e6cfe7d13622cfee
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL API -- GLX runtime
+
+Package: libglapi-amdgpu-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 214
+Depends: libc6 (>= 2.14), libselinux1 (>= 1.32), amdgpu-core
+Filename: ./libglapi-amdgpu-mesa_18.0.0-673703_amd64.deb
+Size: 22948
+MD5sum: 1d3966b05a36015248333f1e77a25a31
+SHA1: f80756dc212e0454b85a0c4cda0d85c2acc58d44
+SHA256: 08c4c5e1948c3a47fc67694c2b1f3858f978625b028a8ffd556ce969d96afcac
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the GL API -- shared library
+ The Mesa GL API module is responsible for dispatching all the gl*
+ functions. It is intended to be mainly used by both the libgles1-mesa
+ and libgles2-mesa packages.
+
+Package: libglapi-amdgpu-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 135
+Depends: libc6 (>= 2.4), libselinux1 (>= 1.32), amdgpu-core
+Filename: ./libglapi-amdgpu-mesa_18.0.0-673703_i386.deb
+Size: 23436
+MD5sum: 61533a4f04a6a1c5bda866b3b05dc9f1
+SHA1: 4d2e7e057e9496b926ee2cd68c03ec88eb0e1512
+SHA256: c02970b53c5c5dd6e47fa0a551ff64e852c63035700bebf56aae2ef7e6752e9d
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the GL API -- shared library
+ The Mesa GL API module is responsible for dispatching all the gl*
+ functions. It is intended to be mainly used by both the libgles1-mesa
+ and libgles2-mesa packages.
+
+Package: libgles1-amdgpu-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 41
+Depends: libglapi-amdgpu-mesa (= 1:18.0.0-673703)
+Filename: ./libgles1-amdgpu-mesa_18.0.0-673703_amd64.deb
+Size: 8520
+MD5sum: c74b263da432723586a721c59bfcca43
+SHA1: 92e78fb3bdd880854a415c88a5b2cc4289249789
+SHA256: 3f480175a00ad715ffa8579d6e2b5e6cd664d52e9cdb3f6ee691c48725b5a72b
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the OpenGL|ES 1.x API -- runtime
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 1.x provides an API for fixed-function hardware.
+
+Package: libgles1-amdgpu-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 35
+Depends: libglapi-amdgpu-mesa (= 1:18.0.0-673703)
+Filename: ./libgles1-amdgpu-mesa_18.0.0-673703_i386.deb
+Size: 8444
+MD5sum: 992380f1a499e385ed935c82bb925dca
+SHA1: 759da4354ff6bea3179ed2952b8bede81bde9bc2
+SHA256: b2473375360b219218cb1f79f9dbc955edef3528d66c6b3ac704747da70f0854
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the OpenGL|ES 1.x API -- runtime
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 1.x provides an API for fixed-function hardware.
+
+Package: libgles1-amdgpu-mesa-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 112
+Depends: libgles1-amdgpu-mesa (= 1:18.0.0-673703), libegl1-amdgpu-mesa-dev
+Filename: ./libgles1-amdgpu-mesa-dev_18.0.0-673703_i386.deb
+Size: 17152
+MD5sum: 4e09f43a373d41b4dc4abdb5375f7a8c
+SHA1: 4b66c3c7d76e0da633a63bafb1bcf7eac930eefe
+SHA256: dd54d83ded6578f224f6c67be0568643d08cf2b6546397b88aa4b4edcf0e270b
+Section: libdevel
+Priority: optional
+Description: free implementation of the OpenGL|ES 1.x API -- development files
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 1.x provides an API for fixed-function hardware.
+ .
+ This package provides a development environment for building programs using
+ the OpenGL|ES 1.x APIs.
+
+Package: libgles1-amdgpu-mesa-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 112
+Depends: libgles1-amdgpu-mesa (= 1:18.0.0-673703), libegl1-amdgpu-mesa-dev
+Filename: ./libgles1-amdgpu-mesa-dev_18.0.0-673703_amd64.deb
+Size: 17160
+MD5sum: e41dde29f92e71f4776e13275662432c
+SHA1: fddce2245fa4f856a5ab7736928f4710350e50b0
+SHA256: 7323738fa3c402f695953620acf09b2929507084ae04c2ebab7b790f39a1a884
+Section: libdevel
+Priority: optional
+Description: free implementation of the OpenGL|ES 1.x API -- development files
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 1.x provides an API for fixed-function hardware.
+ .
+ This package provides a development environment for building programs using
+ the OpenGL|ES 1.x APIs.
+
+Package: libgles2-amdgpu-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 57
+Depends: libglapi-amdgpu-mesa (= 1:18.0.0-673703)
+Filename: ./libgles2-amdgpu-mesa_18.0.0-673703_amd64.deb
+Size: 11992
+MD5sum: 5fddb862c9f2c242a4aaa75f8bb6f6fb
+SHA1: d0adb6cf0a28e06c66dbbc1171a722aed4a0e5a8
+SHA256: b3c3dacd39ec39296d42713cbbffb73b8e1043d686ba43f0f78d1a3c3562c6e5
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the OpenGL|ES 2.x API -- runtime
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 2.x provides an API for programmable hardware including vertex
+ and fragment shaders.
+
+Package: libgles2-amdgpu-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 50
+Depends: libglapi-amdgpu-mesa (= 1:18.0.0-673703)
+Filename: ./libgles2-amdgpu-mesa_18.0.0-673703_i386.deb
+Size: 11912
+MD5sum: 9d8e9b334a97abe4eaec4b4099deb62c
+SHA1: f2f78fa93b65f4b58d553613492da86b796b42b5
+SHA256: 9a0269c86282cb2e9faaf7123f817616c079e0b96119c10bde3d695c2f804071
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: free implementation of the OpenGL|ES 2.x API -- runtime
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 2.x provides an API for programmable hardware including vertex
+ and fragment shaders.
+
+Package: libgles2-amdgpu-mesa-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 591
+Depends: libgles2-amdgpu-mesa (= 1:18.0.0-673703), libegl1-amdgpu-mesa-dev
+Filename: ./libgles2-amdgpu-mesa-dev_18.0.0-673703_i386.deb
+Size: 41464
+MD5sum: dd4e87a37568d410d2680dc60fe698d1
+SHA1: 44b7d2b6fe8097581169570558018f1c297603db
+SHA256: 2011d7daffa6c7a69d5dd63b535f39f0baa974a6f753e802222fbb96db5f79cf
+Section: libdevel
+Priority: optional
+Description: free implementation of the OpenGL|ES 2.x API -- development files
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 2.x provides an API for programmable hardware including vertex
+ and fragment shaders.
+ .
+ This package provides a development environment for building applications
+ using the OpenGL|ES 2.x APIs.
+
+Package: libgles2-amdgpu-mesa-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 591
+Depends: libgles2-amdgpu-mesa (= 1:18.0.0-673703), libegl1-amdgpu-mesa-dev
+Filename: ./libgles2-amdgpu-mesa-dev_18.0.0-673703_amd64.deb
+Size: 41480
+MD5sum: 639d3b2acd643d428c78694cd2a5e54f
+SHA1: 79e8508e2a80a5820a2062a69800e97791f18dfa
+SHA256: ae8244a8a41c537dff5d556266a8ce6e3eda32fbe560295f183d90f17c1b5d90
+Section: libdevel
+Priority: optional
+Description: free implementation of the OpenGL|ES 2.x API -- development files
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 2.x provides an API for programmable hardware including vertex
+ and fragment shaders.
+ .
+ This package provides a development environment for building applications
+ using the OpenGL|ES 2.x APIs.
+
+Package: libgles2-amdgpu-pro
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 123
+Depends: libc6 (>= 2.1.3), libegl1-amdgpu-pro (= 18.20-673703), libstdc++6 (>= 4.1.1), libwayland-amdgpu-server0, libwayland-amdgpu-client0
+Filename: ./libgles2-amdgpu-pro_18.20-673703_i386.deb
+Size: 19820
+MD5sum: e6ffc95454fc3c05de260e4cca64d132
+SHA1: 29d72bfb8ee80d679297f4395feb09492d832b4d
+SHA256: b40b39c258ee30d38175151c91fe41214ca491db48153261433e807be41aa3fe
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL|ES 2.x API -- runtime
+
+Package: libgles2-amdgpu-pro
+Source: opengl-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 113
+Depends: libc6 (>= 2.2.5), libegl1-amdgpu-pro (= 18.20-673703), libstdc++6 (>= 4.1.1), libwayland-amdgpu-server0, libwayland-amdgpu-client0
+Filename: ./libgles2-amdgpu-pro_18.20-673703_amd64.deb
+Size: 19948
+MD5sum: 101ad308dc7f1ed1fd7ee5e57cc46a5a
+SHA1: 0c2af4da0ee879a0692827b8db6fecf6ad71fd70
+SHA256: ed900bb4abf0c0448b609ccd523093e2865ccfb7b4e0aef47ac143acc716be29
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the OpenGL|ES 2.x API -- runtime
+
+Package: libllvm6.0-amdgpu
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 46930
+Depends: libc6 (>= 2.15), libedit2 (>= 2.11-20080614), libgcc1 (>= 1:7), libstdc++6 (>= 6), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0), amdgpu-core
+Filename: ./libllvm6.0-amdgpu_6.0-673703_i386.deb
+Size: 12531740
+MD5sum: 02b61794252dabae4b7170ae6a3480dd
+SHA1: ee0c67fa12c2e73867a54293f31c283975df8d6d
+SHA256: 4e30ed78431ec1d56df339070930f403d1875bd9e2a9612d63615ebc6fb776fc
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Modular compiler and toolchain technologies, runtime library
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ This package contains the LLVM runtime library.
+
+Package: libllvm6.0-amdgpu
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 42500
+Depends: libc6 (>= 2.15), libedit2 (>= 2.11-20080614), libgcc1 (>= 1:3.4), libstdc++6 (>= 6), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0), amdgpu-core
+Filename: ./libllvm6.0-amdgpu_6.0-673703_amd64.deb
+Size: 11181808
+MD5sum: bf3d6384d2aed6c021c880b1f27ac1c8
+SHA1: bf0dbd55411eb4fc18eeca572f3e239cd3f96ccd
+SHA256: 9a77c81c607da8e4c7a002881ad4c8b53fe15498af8b0ae12259086f7c32a8de
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Modular compiler and toolchain technologies, runtime library
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ This package contains the LLVM runtime library.
+
+Package: libopencl1-amdgpu-pro
+Source: opencl-orca-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 54
+Depends: libc6 (>= 2.3.6-6~), amdgpu-pro-core
+Filename: ./libopencl1-amdgpu-pro_18.20-673703_i386.deb
+Size: 14152
+MD5sum: 47c3ce4da51c14c9bff9fb3d18fc97c2
+SHA1: 3e4ba45ef98dbcd3596d6fd679f22ad14aa4a72e
+SHA256: 3d0de43bd7a97124bb785f968331cc6fdb721861d304429c309e64e7cef9ef3b
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL ICD Loader library
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ This package contains the ICD Loader library provided by AMD.
+
+Package: libopencl1-amdgpu-pro
+Source: opencl-orca-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 51
+Depends: libc6 (>= 2.2.5), amdgpu-pro-core
+Filename: ./libopencl1-amdgpu-pro_18.20-673703_amd64.deb
+Size: 13248
+MD5sum: d7fc90ef533aa3cc59a349964ab6cf8f
+SHA1: 4089aa85564915a2f215fb4729ca72c72d037b04
+SHA256: 269def444da15a5efff1c5e479a1bf21584bbb0af7e92bb4b9c6bab92a53a9f1
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL ICD Loader library
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ This package contains the ICD Loader library provided by AMD.
+
+Package: libosmesa6-amdgpu
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 5729
+Depends: libc6 (>= 2.27), libgcc1 (>= 1:3.4), libglapi-amdgpu-mesa (= 1:18.0.0-673703), libselinux1 (>= 1.32), libstdc++6 (>= 4.9), zlib1g (>= 1:1.1.4)
+Filename: ./libosmesa6-amdgpu_18.0.0-673703_i386.deb
+Size: 1192192
+MD5sum: 2dab73566114d6f42587228485175ae6
+SHA1: f7b216171dad9a9fe62952d5c11cd636a2c982ec
+SHA256: f95327b6d21ed95c8cd46afdd9d23d5cb3545887f129ad66035adf833054d256
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa Off-screen rendering extension
+ OSmesa is a Mesa extension that allows programs to render to an
+ off-screen buffer using the OpenGL API without having to create a
+ rendering context on an X Server.  It uses a pure software renderer.
+ .
+ This package provides both 16-bit and 32-bit versions of the off-screen
+ renderer which do not require external libraries to work.
+
+Package: libosmesa6-amdgpu
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 6213
+Depends: libc6 (>= 2.27), libgcc1 (>= 1:3.4), libglapi-amdgpu-mesa (= 1:18.0.0-673703), libselinux1 (>= 1.32), libstdc++6 (>= 4.9), zlib1g (>= 1:1.1.4)
+Filename: ./libosmesa6-amdgpu_18.0.0-673703_amd64.deb
+Size: 1165932
+MD5sum: e721f59e1a9f1a1ddd809cbbe89eae76
+SHA1: 69f727eb5432c129a085bd876d6160fe1b996e70
+SHA256: 6348794ef2c4eeef3dcdba2fa8d1ee967a2a7d5098aefb9deef9a1c7ba58f5e3
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa Off-screen rendering extension
+ OSmesa is a Mesa extension that allows programs to render to an
+ off-screen buffer using the OpenGL API without having to create a
+ rendering context on an X Server.  It uses a pure software renderer.
+ .
+ This package provides both 16-bit and 32-bit versions of the off-screen
+ renderer which do not require external libraries to work.
+
+Package: libosmesa6-amdgpu-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 36
+Depends: libosmesa6-amdgpu (= 1:18.0.0-673703), mesa-amdgpu-common-dev (= 1:18.0.0-673703)
+Filename: ./libosmesa6-amdgpu-dev_18.0.0-673703_amd64.deb
+Size: 7784
+MD5sum: ebd084d39902ec1452d1ef1079c100df
+SHA1: 88ae8933edce3a87185c06919ece5389b2e2fb3a
+SHA256: d4bbb26347b709527f18209f1ddc2314de1ba9f00a220287c683791c66641fc8
+Section: libdevel
+Priority: optional
+Description: Mesa Off-screen rendering extension -- development files
+ This package provides the required environment for developing programs
+ that use the off-screen rendering extension of Mesa.
+ .
+ For more information on OSmesa see the libosmesa6 package.
+
+Package: libosmesa6-amdgpu-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 36
+Depends: libosmesa6-amdgpu (= 1:18.0.0-673703), mesa-amdgpu-common-dev (= 1:18.0.0-673703)
+Filename: ./libosmesa6-amdgpu-dev_18.0.0-673703_i386.deb
+Size: 7772
+MD5sum: 322062cf620b814756d594a1ccde87fd
+SHA1: 4592bc062b629479c9ad544afa6dc67230bf4c60
+SHA256: 865e9fccfbe65dd1f9433fdd5987db055e4dc2355f0e08f0522829376d16cab5
+Section: libdevel
+Priority: optional
+Description: Mesa Off-screen rendering extension -- development files
+ This package provides the required environment for developing programs
+ that use the off-screen rendering extension of Mesa.
+ .
+ For more information on OSmesa see the libosmesa6 package.
+
+Package: libwayland-amdgpu-client0
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 84
+Depends: libc6 (>= 2.14), libffi6 (>= 3.0.4), amdgpu-core
+Conflicts: libwayland0 (<< 1.1.0-1)
+Replaces: libwayland0 (<< 1.1.0-1)
+Filename: ./libwayland-amdgpu-client0_1.14.0-673703_amd64.deb
+Size: 20036
+MD5sum: 407fc917a8193e82edf0a1bac0daabc8
+SHA1: cc0d67e5747b919e66fe802d7dec806eeeff3825
+SHA256: ed8521934778d78c819cc5edf4784a2009f5cc9685d98c6720d32de81310fc13
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: wayland compositor infrastructure - client library
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package ships the library that implements the client side of
+ the Wayland protocol.
+
+Package: libwayland-amdgpu-client0
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 67
+Depends: libc6 (>= 2.10), libffi6 (>= 3.0.4), amdgpu-core
+Conflicts: libwayland0 (<< 1.1.0-1)
+Replaces: libwayland0 (<< 1.1.0-1)
+Filename: ./libwayland-amdgpu-client0_1.14.0-673703_i386.deb
+Size: 19228
+MD5sum: dad50a8e7e1c176bdc306249b70ee4e9
+SHA1: 222bebe505e6de78433614aa985fbe9e019de89b
+SHA256: 00a8014047ff999e20a7df171bbcd332621948f7d9e9e0837c3af1fbebbad6cd
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: wayland compositor infrastructure - client library
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package ships the library that implements the client side of
+ the Wayland protocol.
+
+Package: libwayland-amdgpu-cursor0
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 51
+Depends: libc6 (>= 2.14), libwayland-amdgpu-client0, amdgpu-core
+Conflicts: libwayland0 (<< 1.1.0-1)
+Replaces: libwayland0 (<< 1.1.0-1)
+Filename: ./libwayland-amdgpu-cursor0_1.14.0-673703_amd64.deb
+Size: 10392
+MD5sum: bbf2ac47617ddc043e2587d2fc0b3ed8
+SHA1: f62da692bb54a3cc3a6b5dc53f2b9a58a522f7ce
+SHA256: a4a690d000d4fa0502c4570aae59f28ec0e1c1f7daff741d4146a28fa4f84f05
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: wayland compositor infrastructure - cursor library
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package ships a helper library to manage cursors.
+
+Package: libwayland-amdgpu-cursor0
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 50
+Depends: libc6 (>= 2.7), libwayland-amdgpu-client0, amdgpu-core
+Conflicts: libwayland0 (<< 1.1.0-1)
+Replaces: libwayland0 (<< 1.1.0-1)
+Filename: ./libwayland-amdgpu-cursor0_1.14.0-673703_i386.deb
+Size: 10456
+MD5sum: 57e39d4aa8687e206884fb171e4cafc0
+SHA1: 7fab24af58c022a22417441501678ac70b3e6121
+SHA256: 862c10773d33004ab09c5af7785e5092c38cd49a739321749b30b257fdc0f3df
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: wayland compositor infrastructure - cursor library
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package ships a helper library to manage cursors.
+
+Package: libwayland-amdgpu-dev
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 862
+Depends: libwayland-amdgpu-client0 (= 1.14.0-673703), libwayland-amdgpu-server0 (= 1.14.0-673703), libwayland-amdgpu-cursor0 (= 1.14.0-673703), libc6 (>= 2.4), libexpat1 (>= 2.0.1), libxml2 (>= 2.7.4)
+Filename: ./libwayland-amdgpu-dev_1.14.0-673703_i386.deb
+Size: 95000
+MD5sum: 97ea812e1ff4649bc7dee0e170b3b793
+SHA1: c3370bc4571a7295b63d1f8f5db3c3d466460a2c
+SHA256: 27db5b3674cf1b5efd15e9fdb43faa26307156dc244e9946e380f6065417b7b0
+Section: libdevel
+Priority: optional
+Description: wayland compositor infrastructure - development files
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package contains the development headers for the Wayland libraries.
+ Non-developers likely have little use for this package.
+
+Package: libwayland-amdgpu-dev
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 867
+Depends: libwayland-amdgpu-client0 (= 1.14.0-673703), libwayland-amdgpu-server0 (= 1.14.0-673703), libwayland-amdgpu-cursor0 (= 1.14.0-673703), libc6 (>= 2.14), libexpat1 (>= 2.0.1), libxml2 (>= 2.7.4)
+Filename: ./libwayland-amdgpu-dev_1.14.0-673703_amd64.deb
+Size: 95156
+MD5sum: a52f6dcebba4a28bfb83c76268cc9030
+SHA1: 8bbe9bc24293136db109252edec1710d804a1303
+SHA256: 89594ddec5843ff5248b250f444159b324329a518cd86c79c1438c155f151723
+Section: libdevel
+Priority: optional
+Description: wayland compositor infrastructure - development files
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package contains the development headers for the Wayland libraries.
+ Non-developers likely have little use for this package.
+
+Package: libwayland-amdgpu-doc
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 598
+Depends: amdgpu-core
+Filename: ./libwayland-amdgpu-doc_1.14.0-673703_all.deb
+Size: 138364
+MD5sum: 7b94a544c9c41797ece4cccfba624329
+SHA1: 0f03f8df5ab3dba928113b2b5cdbbf7ec63bd83e
+SHA256: d964e8904d4a7b008bc04c6a56c824ad4cb6eb820fce0209855b83fcd7d93cbc
+Section: doc
+Priority: extra
+Description: wayland compositor infrastructure - documentation files
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package contains the documentation for the Wayland libraries.
+ Non-developers likely have little use for this package.
+
+Package: libwayland-amdgpu-egl1-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 29
+Depends: libc6 (>= 2.2.5), libegl1-amdgpu-mesa (= 1:18.0.0-673703)
+Recommends: libegl1-amdgpu-mesa-drivers
+Filename: ./libwayland-amdgpu-egl1-mesa_18.0.0-673703_amd64.deb
+Size: 6332
+MD5sum: d6ba7eed8f703013fa6258d05371d0d2
+SHA1: 14cef2b12ffacea62a1bc767d0b6fa25560fe8de
+SHA256: b40bd273251520aa9a0cc308ed1af948dd6ef0d19ab9a2cf589e98cccdb66bcf
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the Wayland EGL platform -- runtime
+ This package contains the mesa implementation of the Wayland EGL platform
+
+Package: libwayland-amdgpu-egl1-mesa
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 29
+Depends: libc6 (>= 2.1.3), libegl1-amdgpu-mesa (= 1:18.0.0-673703)
+Recommends: libegl1-amdgpu-mesa-drivers
+Filename: ./libwayland-amdgpu-egl1-mesa_18.0.0-673703_i386.deb
+Size: 6352
+MD5sum: 5f65728abe455dfd214571e1a37e917d
+SHA1: 1d0f8f6212f9e9f0497499356fb05339133180e2
+SHA256: 25acc533fd43a8959bf4c57b55f09e181c0db9c67366a93efed7adeb86bf7099
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: implementation of the Wayland EGL platform -- runtime
+ This package contains the mesa implementation of the Wayland EGL platform
+
+Package: libwayland-amdgpu-server0
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 100
+Depends: libc6 (>= 2.14), libffi6 (>= 3.0.4), amdgpu-core
+Conflicts: libwayland0 (<< 1.1.0-1)
+Breaks: weston (<< 1.2.0)
+Replaces: libwayland0 (<< 1.1.0-1)
+Filename: ./libwayland-amdgpu-server0_1.14.0-673703_amd64.deb
+Size: 25640
+MD5sum: de1d73a30a9471afa35f8fec63e1b36e
+SHA1: 7f0b48cf21b7e05e239f3aa58420495932112f1b
+SHA256: 0a86bad66d3a16afe0d6ea347a67c2364da7fae66d7fe4f991cc8287b474136d
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: wayland compositor infrastructure - server library
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package ships the library that implements the server side of
+ the Wayland protocol.
+
+Package: libwayland-amdgpu-server0
+Source: wayland-amdgpu
+Version: 1.14.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 83
+Depends: libc6 (>= 2.10), libffi6 (>= 3.0.4), amdgpu-core
+Conflicts: libwayland0 (<< 1.1.0-1)
+Breaks: weston (<< 1.2.0)
+Replaces: libwayland0 (<< 1.1.0-1)
+Filename: ./libwayland-amdgpu-server0_1.14.0-673703_i386.deb
+Size: 25236
+MD5sum: 4d9b8f85f4b0b52e83a52fbdedaa643c
+SHA1: 2c959935f498cbe37b309fa500ef32eaa8072a91
+SHA256: b91ba42f8ea74a04a127acb3ccd1c36a1a82ebb39b5d9711e77bea0c00afbb2b
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: wayland compositor infrastructure - server library
+ Wayland is a protocol for a compositor to talk to its clients as well
+ as a C library implementation of that protocol. The compositor can be
+ a standalone display server running on Linux kernel modesetting and
+ evdev input devices, an X application, or a wayland client
+ itself. The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
+ .
+ This package ships the library that implements the server side of
+ the Wayland protocol.
+
+Package: libxatracker-amdgpu-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 39
+Depends: libxatracker2-amdgpu (= 1:18.0.0-673703)
+Filename: ./libxatracker-amdgpu-dev_18.0.0-673703_amd64.deb
+Size: 7788
+MD5sum: 0f2b198d635f56e9d654e9431d0c10ea
+SHA1: be6ac50e364cb829c05afc94d03895b6a59eb25f
+SHA256: c0bba97b5465cc58f4bd85b3c293e526af1c57f733c39ad73d8660f5a0f86346
+Section: libdevel
+Priority: optional
+Description: X acceleration library -- development files
+ This package contains the XA (X acceleration) library.  It is used exclusively
+ by the X server to do render, copy and video acceleration.
+ .
+ XA is intended to be used by the vmware driver for virtualized X acceleration.
+ .
+ This package provides the development environment for compiling programs
+ against the xatracker library.
+
+Package: libxatracker-amdgpu-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 39
+Depends: libxatracker2-amdgpu (= 1:18.0.0-673703)
+Filename: ./libxatracker-amdgpu-dev_18.0.0-673703_i386.deb
+Size: 7784
+MD5sum: 31b8e28b092f60a69197a61947162745
+SHA1: be271a26addd37e5008e0faf5018f3fc8e44265d
+SHA256: eaa6b4bcf676289ebea5bb2f689be3c559e7a270dfd94aa972227bfebc228c88
+Section: libdevel
+Priority: optional
+Description: X acceleration library -- development files
+ This package contains the XA (X acceleration) library.  It is used exclusively
+ by the X server to do render, copy and video acceleration.
+ .
+ XA is intended to be used by the vmware driver for virtualized X acceleration.
+ .
+ This package provides the development environment for compiling programs
+ against the xatracker library.
+
+Package: libxatracker2-amdgpu
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 963
+Depends: libc6 (>= 2.14), libdrm2-amdgpu, libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.0), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
+Filename: ./libxatracker2-amdgpu_18.0.0-673703_amd64.deb
+Size: 177164
+MD5sum: a077e3a86783b902e148faf9ad79a477
+SHA1: 07e2ab89000066bbd185309e7ee5b364d13fd924
+SHA256: 5726f76548b9f1e2756f24aee4fb8e84cb2d20f96fff613a6f677fd360e0a849
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: X acceleration library -- runtime
+ This package contains the XA (X acceleration) library.  It is used exclusively
+ by the X server to do render, copy and video acceleration.
+ .
+ XA is intended to be used by the vmware driver for virtualized X acceleration.
+
+Package: libxatracker2-amdgpu
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 862
+Depends: libc6 (>= 2.4), libdrm2-amdgpu, libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.0), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
+Filename: ./libxatracker2-amdgpu_18.0.0-673703_i386.deb
+Size: 186964
+MD5sum: 723ae2de19be7a4acef6f1568b9e0e53
+SHA1: 59b77149ae75949f5fa934928f3bc64b1447ca37
+SHA256: 44e2ab858912509086ea7e779bbc047ef952125b6be1a7e5626c49988dd76a59
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: X acceleration library -- runtime
+ This package contains the XA (X acceleration) library.  It is used exclusively
+ by the X server to do render, copy and video acceleration.
+ .
+ XA is intended to be used by the vmware driver for virtualized X acceleration.
+
+Package: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 103
+Depends: llvm-amdgpu-runtime (= 1:6.0-673703), llvm-amdgpu-6.0 (= 1:6.0-673703)
+Filename: ./llvm-amdgpu_6.0-673703_i386.deb
+Size: 5560
+MD5sum: 4bede3730cf2125c93cefbcfad621bce
+SHA1: 0c64a92b4519f6d4f8bb4d536bee6178de89f324
+SHA256: fa55132c695c6790657c13ab86d044a07e844ef4108edfe07d0ffd5f28223e4f
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM)
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default llvm package.
+
+Package: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 103
+Depends: llvm-amdgpu-runtime (= 1:6.0-673703), llvm-amdgpu-6.0 (= 1:6.0-673703)
+Filename: ./llvm-amdgpu_6.0-673703_amd64.deb
+Size: 5524
+MD5sum: 397fbddeeec7d9649ab81fdd045fe8a7
+SHA1: 9bc437e67247995237ffe4e7808c1c02d24e359a
+SHA256: de77baff3bf2d4f24b308912cca3e2e6e45bdd7580e9409e83da28056e6e9b44
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM)
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default llvm package.
+
+Package: llvm-amdgpu-6.0
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 10400
+Depends: libllvm6.0-amdgpu (= 1:6.0-673703), llvm-amdgpu-6.0-runtime (= 1:6.0-673703), libc6 (>= 2.15), libgcc1 (>= 1:4.2), libstdc++6 (>= 5.2), libtinfo5 (>= 6)
+Recommends: llvm-amdgpu-6.0-dev
+Suggests: llvm-amdgpu-6.0-doc
+Filename: ./llvm-amdgpu-6.0_6.0-673703_i386.deb
+Size: 2966836
+MD5sum: b207884335a7124d43377c388b49216f
+SHA1: b96fb3fa9f1d6db1e046ad537398e1b545d3a7dd
+SHA256: 1a2aa4cf22cfed6b322810814653383f87f9a4629dd5f6d725dd3c331ca38699
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ The strengths of the LLVM infrastructure are its extremely
+ simple design (which makes it easy to understand and use),
+ source-language independence, powerful mid-level optimizer, automated
+ compiler debugging support, extensibility, and its stability and
+ reliability. LLVM is currently being used to host a wide variety of
+ academic research projects and commercial projects. LLVM includes C
+ and C++ front-ends, a front-end for a Forth-like language (Stacker),
+ a young scheme front-end, and Java support is in development. LLVM can
+ generate code for X86, SparcV9, PowerPC or many other architectures.
+ .
+ LLVM is the key component of the clang compiler and the gcc plugin called
+ dragonegg.
+
+Package: llvm-amdgpu-6.0
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 9269
+Depends: libllvm6.0-amdgpu (= 1:6.0-673703), llvm-amdgpu-6.0-runtime (= 1:6.0-673703), libc6 (>= 2.15), libgcc1 (>= 1:3.4), libstdc++6 (>= 5.2), libtinfo5 (>= 6)
+Recommends: llvm-amdgpu-6.0-dev
+Suggests: llvm-amdgpu-6.0-doc
+Filename: ./llvm-amdgpu-6.0_6.0-673703_amd64.deb
+Size: 2657436
+MD5sum: b62f32a16a3ef2a3dff13d0a7c05f6c6
+SHA1: 749ad2149bf81a29106188c691d3ecd7f5491f92
+SHA256: 6413efdd561985facf54967c0bab521d4ee8111b3f12243672b392512a434985
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ The strengths of the LLVM infrastructure are its extremely
+ simple design (which makes it easy to understand and use),
+ source-language independence, powerful mid-level optimizer, automated
+ compiler debugging support, extensibility, and its stability and
+ reliability. LLVM is currently being used to host a wide variety of
+ academic research projects and commercial projects. LLVM includes C
+ and C++ front-ends, a front-end for a Forth-like language (Stacker),
+ a young scheme front-end, and Java support is in development. LLVM can
+ generate code for X86, SparcV9, PowerPC or many other architectures.
+ .
+ LLVM is the key component of the clang compiler and the gcc plugin called
+ dragonegg.
+
+Package: llvm-amdgpu-6.0-dev
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 99780
+Depends: libc6 (>= 2.4), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), libffi-dev (>= 3.0.9), llvm-amdgpu-6.0 (= 1:6.0-673703), libtinfo-dev
+Replaces: llvm (<< 2.2-3)
+Filename: ./llvm-amdgpu-6.0-dev_6.0-673703_i386.deb
+Size: 18101744
+MD5sum: b7f135576c37e57102a108ee00cb64eb
+SHA1: a5c56a775bfc0df22132a3d82adc1102c8aea01b
+SHA256: 487b2dc9e0898b3e56c06b9d0a1da89d04405ef99dac9b6e53b58f57d6014e02
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies, libraries and headers
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the libraries and headers to develop applications
+ using llvm.
+
+Package: llvm-amdgpu-6.0-dev
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 108786
+Depends: libc6 (>= 2.14), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), libffi-dev (>= 3.0.9), llvm-amdgpu-6.0 (= 1:6.0-673703), libtinfo-dev
+Replaces: llvm (<< 2.2-3)
+Filename: ./llvm-amdgpu-6.0-dev_6.0-673703_amd64.deb
+Size: 16560868
+MD5sum: e3edb50aeac6114f018f6c3f80bf7567
+SHA1: 6ea46499519609cc4b841b477338df4387bc5e63
+SHA256: e9e70642f0a350a01650f68d268ff054cd838c21d8924b1f9499be9ceb4a87e0
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies, libraries and headers
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the libraries and headers to develop applications
+ using llvm.
+
+Package: llvm-amdgpu-6.0-doc
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: all
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 14343
+Depends: libjs-jquery, libjs-underscore, amdgpu-core
+Filename: ./llvm-amdgpu-6.0-doc_6.0-673703_all.deb
+Size: 1881636
+MD5sum: d5f26d8880eb6984b6adb852cf6fb21f
+SHA1: aa8c685203283d7545f4636f08c3b7d0fa6bb60c
+SHA256: f758adc2ac296d7dc5dcbfb9da97e9cb341a26bc3e9a25727e80a611b2a712f4
+Section: doc
+Priority: optional
+Description: Modular compiler and toolchain technologies, documentation
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package contains all documentation (extensive).
+
+Package: llvm-amdgpu-6.0-runtime
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 385
+Depends: binfmt-support, libc6 (>= 2.4), libgcc1 (>= 1:4.2), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), amdgpu-core
+Conflicts: llvm (<< 2.7-1)
+Replaces: llvm (<< 2.7-1)
+Filename: ./llvm-amdgpu-6.0-runtime_6.0-673703_i386.deb
+Size: 110156
+MD5sum: 64ac4f6dc968ed1319f12a30841e634c
+SHA1: 5f86eeff86834bb0728d5237c126a9aade529d43
+SHA256: d381e0e6beeadb1dbbfa5afc646d1d331c7c0404662807a55933ff9dc381629a
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies, IR interpreter
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the minimal required to execute programs in LLVM
+ format.
+
+Package: llvm-amdgpu-6.0-runtime
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 374
+Depends: binfmt-support, libc6 (>= 2.14), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), amdgpu-core
+Conflicts: llvm (<< 2.7-1)
+Replaces: llvm (<< 2.7-1)
+Filename: ./llvm-amdgpu-6.0-runtime_6.0-673703_amd64.deb
+Size: 103604
+MD5sum: eb4cfebe326093625e2cbd7efc155e46
+SHA1: 0400a95c8393f28db5fe0013ea175e7e0b18c52d
+SHA256: 1e0568fb22bba5a8758015c61b27c589d9327692e14a34e046edae265a705444
+Section: devel
+Priority: optional
+Description: Modular compiler and toolchain technologies, IR interpreter
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the minimal required to execute programs in LLVM
+ format.
+
+Package: llvm-amdgpu-dev
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 1258
+Depends: llvm-amdgpu-runtime (= 1:6.0-673703), llvm-amdgpu-6.0-dev
+Filename: ./llvm-amdgpu-dev_6.0-673703_i386.deb
+Size: 22660
+MD5sum: 44313d2584be0ac1bfb261a276e0a4ce
+SHA1: e0fa2262549aef302988d11063120f7eda432f48
+SHA256: 134bf90bfed7947c32ec4ac8998b7db34d63d865a9b5ad2f5771ba262b3c67fb
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM), libraries and headers
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default libraries and headers.
+
+Package: llvm-amdgpu-dev
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 1258
+Depends: llvm-amdgpu-runtime (= 1:6.0-673703), llvm-amdgpu-6.0-dev
+Filename: ./llvm-amdgpu-dev_6.0-673703_amd64.deb
+Size: 23156
+MD5sum: a44f988927d4f473416f9a2f28521523
+SHA1: 07b20efed1d30b75036a0aa9a5796d4bf6b1165d
+SHA256: d381f156d1d8643fd47623f1f18b096629e7b56735526c31f6a98c4d3b15e5af
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM), libraries and headers
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default libraries and headers.
+
+Package: llvm-amdgpu-runtime
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: amd64
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 29
+Depends: llvm-amdgpu-6.0-runtime
+Filename: ./llvm-amdgpu-runtime_6.0-673703_amd64.deb
+Size: 4612
+MD5sum: 842a63c0583e8b477f1c87f3ef73a4b5
+SHA1: 5a8667e02abae333a38c8a2d6208e2eca3ea2097
+SHA256: 36bba9015865573dd0f53465a96c74931a0ce0e615557b40e013ebab3d3a4530
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM), bytecode interpreter
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default bytecode interpreter.
+
+Package: llvm-amdgpu-runtime
+Source: llvm-amdgpu
+Version: 1:6.0-673703
+Architecture: i386
+Maintainer: Advenced Micro Devices (AMD) <slava.grigorev@amd.com>
+Installed-Size: 29
+Depends: llvm-amdgpu-6.0-runtime
+Filename: ./llvm-amdgpu-runtime_6.0-673703_i386.deb
+Size: 4604
+MD5sum: 1a2b4b6ec3b81d297133e36fd66174f4
+SHA1: 88b38536466433fb7692ed564e3a56c4eb48fcd9
+SHA256: bc96bd73f2c32c66f3a7b7ad6a89111213793d6aad76f709cf352ad0439c7c4f
+Section: devel
+Priority: optional
+Description: Low-Level Virtual Machine (LLVM), bytecode interpreter
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default bytecode interpreter.
+
+Package: mesa-amdgpu-common-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 3135
+Depends: libx11-dev, libdrm-amdgpu-dev (>= 2.4.52)
+Filename: ./mesa-amdgpu-common-dev_18.0.0-673703_amd64.deb
+Size: 400412
+MD5sum: 82a92d93093a50be267374918de8b5d5
+SHA1: 794ee7054a8c70814e5c6d6a3ef72c5d0f2a64d0
+SHA256: 873a90fdb47230b3606eb2c393c76120d26e2025fdbb909302a3744fd6a8e05d
+Section: libdevel
+Priority: optional
+Description: Developer documentation for Mesa
+ This package includes the specifications for the Mesa-specific OpenGL
+ extensions, the complete set of release notes and the development header
+ files common to all Mesa packages.
+
+Package: mesa-amdgpu-common-dev
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 3135
+Depends: libx11-dev, libdrm-amdgpu-dev (>= 2.4.52)
+Filename: ./mesa-amdgpu-common-dev_18.0.0-673703_i386.deb
+Size: 400464
+MD5sum: e50ed329daed57e6f3b86aa703e72482
+SHA1: b912599247f6473baa48490619b84007fe22fb86
+SHA256: 2cd92f3a4ab506d58917dcbdb3d159ee32d9ecae2a84a1114d3c757541431dd0
+Section: libdevel
+Priority: optional
+Description: Developer documentation for Mesa
+ This package includes the specifications for the Mesa-specific OpenGL
+ extensions, the complete set of release notes and the development header
+ files common to all Mesa packages.
+
+Package: mesa-amdgpu-omx-drivers
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 5175
+Depends: libc6 (>= 2.27), libdrm-amdgpu-amdgpu1, libdrm2-amdgpu, libelf1 (>= 0.142), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.4), libllvm6.0-amdgpu, libomxil-bellagio0, libstdc++6 (>= 5.2), libx11-6, libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-present0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, zlib1g (>= 1:1.1.4)
+Filename: ./mesa-amdgpu-omx-drivers_18.0.0-673703_amd64.deb
+Size: 1036212
+MD5sum: 10f8d2a215bde3d93ec8dec7851ade30
+SHA1: 4cf7b6c44d89686819c95242c539f511385d31fb
+SHA256: 1aa052411de4b3956dba836fac0213c5117f45d83a43aac32e195be13e921aa5
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa OpenMAX video drivers
+ .
+ This package enables support for OpenMAX.
+
+Package: mesa-amdgpu-omx-drivers
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 4819
+Depends: libc6 (>= 2.27), libdrm-amdgpu-amdgpu1, libdrm2-amdgpu, libelf1 (>= 0.142), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.4), libllvm6.0-amdgpu, libomxil-bellagio0, libstdc++6 (>= 5.2), libx11-6, libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-present0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, zlib1g (>= 1:1.1.4)
+Filename: ./mesa-amdgpu-omx-drivers_18.0.0-673703_i386.deb
+Size: 1108380
+MD5sum: 15d9bea3425b5f23a8aa504440d3663d
+SHA1: 308d6ab4c6b5e740852d781439b89d16c41e85ff
+SHA256: 94d92e920e9807e32aface75a7e12c1bd57f7684ef50e48498d73f76b46aaf47
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa OpenMAX video drivers
+ .
+ This package enables support for OpenMAX.
+
+Package: mesa-amdgpu-va-drivers
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 9655
+Depends: libva1-amdgpu | libva2-amdgpu | libva1 | libva2, libc6 (>= 2.27), libdrm-amdgpu-amdgpu1, libdrm2-amdgpu, libelf1 (>= 0.142), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.4), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-present0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, zlib1g (>= 1:1.1.4), amdgpu-core
+Breaks: vdpau-va-driver (<< 0.7.4-5)
+Replaces: vdpau-va-driver (<< 0.7.4-5)
+Provides: va-driver
+Filename: ./mesa-amdgpu-va-drivers_18.0.0-673703_i386.deb
+Size: 1112672
+MD5sum: 7469cef212843acc244c6039bf4ccaf8
+SHA1: 726640204fe67c4bca95ac4154a09720600b83f0
+SHA256: 893fd1ff2be05fac6eca7e9a5a022ab935c1ba3d005179a0c8e49453cd84b575
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa VA-API video acceleration drivers
+ These libraries provide the Video Acceleration API (VA-API) for Unix.
+ They provide accelerated video playback (incl. H.264) and video
+ post-processing for the supported graphics cards.
+ .
+ This package enables support for VA-API for some gallium drivers.
+
+Package: mesa-amdgpu-va-drivers
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 10367
+Depends: libva1-amdgpu | libva2-amdgpu | libva1 | libva2, libc6 (>= 2.27), libdrm-amdgpu-amdgpu1, libdrm2-amdgpu, libelf1 (>= 0.142), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.4), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-present0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, zlib1g (>= 1:1.1.4), amdgpu-core
+Breaks: vdpau-va-driver (<< 0.7.4-5)
+Replaces: vdpau-va-driver (<< 0.7.4-5)
+Provides: va-driver
+Filename: ./mesa-amdgpu-va-drivers_18.0.0-673703_amd64.deb
+Size: 1040112
+MD5sum: 5e5727d1bdf6d7a7c1b9bdb718e61c88
+SHA1: 581cbf29027ce1bb321c94239df9b8d6230a252b
+SHA256: c6b0176a810d7296744174ceb60c811880f9bbf43693e12fcf562139124c776a
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa VA-API video acceleration drivers
+ These libraries provide the Video Acceleration API (VA-API) for Unix.
+ They provide accelerated video playback (incl. H.264) and video
+ post-processing for the supported graphics cards.
+ .
+ This package enables support for VA-API for some gallium drivers.
+
+Package: mesa-amdgpu-vdpau-drivers
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 18410
+Depends: libvdpau1-amdgpu | libvdpau1, libc6 (>= 2.27), libdrm-amdgpu-amdgpu1, libdrm2-amdgpu, libelf1 (>= 0.142), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.4), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-present0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, zlib1g (>= 1:1.1.4), amdgpu-core
+Filename: ./mesa-amdgpu-vdpau-drivers_18.0.0-673703_amd64.deb
+Size: 1261776
+MD5sum: b2991a50a663c7394dbb88c2c57eb73d
+SHA1: 18edf883dd0d273c827c8c51df9a006e55f4b73c
+SHA256: f06c4366f8f450214a888ea045a63e84faf6c7a36f0f40eccc759923e357e1ff
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa VDPAU video acceleration drivers
+ These libraries provide the Video Decode and Presentation API for Unix.
+ They provide accelerated video playback (incl. H.264) and video
+ post-processing for the supported graphics cards.
+ .
+ This package enables support for VDPAU for some gallium drivers.
+
+Package: mesa-amdgpu-vdpau-drivers
+Source: mesa-amdgpu
+Version: 1:18.0.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 17144
+Depends: libvdpau1-amdgpu | libvdpau1, libc6 (>= 2.27), libdrm-amdgpu-amdgpu1, libdrm2-amdgpu, libelf1 (>= 0.142), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.4), libllvm6.0-amdgpu, libstdc++6 (>= 5.2), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-dri3-0, libxcb-present0, libxcb-sync1, libxcb-xfixes0, libxcb1 (>= 1.9.2), libxshmfence1, zlib1g (>= 1:1.1.4), amdgpu-core
+Filename: ./mesa-amdgpu-vdpau-drivers_18.0.0-673703_i386.deb
+Size: 1344156
+MD5sum: 5de60b679bb82141aaf132afea78ae60
+SHA1: 3036beaafecb3fb506e4243a2ee6c83fb8156540
+SHA256: fcd59dcb9f8305cac6773b3bf406dde3d7c9f3ab4368e1da2beb4cfe1fabebbf
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Mesa VDPAU video acceleration drivers
+ These libraries provide the Video Decode and Presentation API for Unix.
+ They provide accelerated video playback (incl. H.264) and video
+ post-processing for the supported graphics cards.
+ .
+ This package enables support for VDPAU for some gallium drivers.
+
+Package: opencl-amdgpu-pro
+Source: opencl-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 17
+Depends: amdgpu-core (= 18.20-673703), amdgpu-pro-core (= 18.20-673703), amdgpu-dkms (= 18.20-673703), libdrm2-amdgpu (= 1:2.4.91-673703), libdrm-amdgpu-amdgpu1 (= 1:2.4.91-673703), ids-amdgpu (= 1.0.0-673703), clinfo-amdgpu-pro (= 18.20-673703), opencl-orca-amdgpu-pro-icd (= 18.20-673703), libopencl1-amdgpu-pro (= 18.20-673703), opencl-amdgpu-pro-icd (= 18.20-673703)
+Filename: ./opencl-amdgpu-pro_18.20-673703_amd64.deb
+Size: 5720
+MD5sum: ca1461717ee28933a2de545f9054513e
+SHA1: 9712a07860487d3e031cd9ee10ec349a89c1061b
+SHA256: 987a870a9bbacdab25274a361a8ccaaa61ca5e86a66ab04aa1a2b26bc4502244
+Section: metapackages
+Priority: optional
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ Meta package to install OpenCL components
+
+Package: opencl-amdgpu-pro-dev
+Source: opencl-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 1464
+Depends: libc6 (>= 2.3.3), libgcc1 (>= 1:4.2), libopencl1-amdgpu-pro (= 18.20-673703)
+Filename: ./opencl-amdgpu-pro-dev_18.20-673703_amd64.deb
+Size: 247768
+MD5sum: 990e342bd183fc8e8ff88c23bf9dbb49
+SHA1: 5c95b4973d59a2888ee3faa3cce31ac0df6cd6ab
+SHA256: 6a69158ea06504c8ea552c001a4bc4c115950205c3566f17eab313a2f038b734
+Section: libs
+Priority: optional
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: AMD OpenCL SDK
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ This package contains the OpenCL SDK
+
+Package: opencl-amdgpu-pro-icd
+Source: opencl-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 71509
+Depends: libc6 (>= 2.7), amdgpu-pro-core
+Filename: ./opencl-amdgpu-pro-icd_18.20-673703_amd64.deb
+Size: 17992676
+MD5sum: 2e9714a171775b6a6b7eb1704ed3a718
+SHA1: 00d7ff6bb0fae360d19fd69f56d02990da5334cd
+SHA256: 08dfd09a89059a395b66579d4faf89f63f1b0309525dfce2db575f0a0e3572c1
+Section: libs
+Priority: optional
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: non-free AMD OpenCL ICD Loaders
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package provides the AMD installable client driver (ICD) for OpenCL
+ which supports AMD GPUs (requires the amdgpu-pro driver) as well as CPUs (from
+ any vendor, no driver required).
+ .
+ This package contains the ICD Loader library
+
+Package: opencl-orca-amdgpu-pro-icd
+Source: opencl-orca-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 100717
+Depends: libc6 (>= 2.3.6-6~), libgcc1 (>= 1:4.2), amdgpu-pro-core
+Filename: ./opencl-orca-amdgpu-pro-icd_18.20-673703_i386.deb
+Size: 27520944
+MD5sum: 68be9c7dc4112d59d1ceeb2999d3f696
+SHA1: 57b710ad178f41feff3a2d16a3eb14bf89a8a622
+SHA256: f606aded28827f98192c22ba82d05c92e1d2f665095e5e5fbf018bbefa2a5ef9
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: non-free AMD OpenCL ICD Loaders
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package provides the AMD installable client driver (ICD) for OpenCL
+ which supports AMD GPUs (requires the amdgpu-pro driver) as well as CPUs (from
+ any vendor, no driver required).
+
+Package: opencl-orca-amdgpu-pro-icd
+Source: opencl-orca-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 105193
+Depends: libc6 (>= 2.3.4), libgcc1 (>= 1:4.2), amdgpu-pro-core
+Filename: ./opencl-orca-amdgpu-pro-icd_18.20-673703_amd64.deb
+Size: 27213268
+MD5sum: b14bb400a817521bd92a2d65b187c911
+SHA1: 2fafc6672aeb8388cbb05aec5201dc4590dd93f5
+SHA256: 7bc30b1d0a99aeef65b4fba91d841b783577f1adbde7c859535a65e59d8c96ea
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage:
+ http://developer.amd.com/resources/heterogeneous-computing/opencl-zone/
+Description: non-free AMD OpenCL ICD Loaders
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package provides the AMD installable client driver (ICD) for OpenCL
+ which supports AMD GPUs (requires the amdgpu-pro driver) as well as CPUs (from
+ any vendor, no driver required).
+
+Package: roct-amdgpu-pro
+Source: roct-amdgpu
+Version: 1.0.8-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 150
+Depends: libc6 (>= 2.14), libnuma1 (>= 2.0.11), libpci3 (>= 1:3.5.2-1), amdgpu-pro-core
+Filename: ./roct-amdgpu-pro_1.0.8-673703_amd64.deb
+Size: 43564
+MD5sum: 0e2b3db2a073b74785c9aa5a50bbe140
+SHA1: 6a6538d5c5d9da7c6a82b34782c708144e53032a
+SHA256: 4aa73d081f89754ef82c4c0233d7f94e2eb5d32fa49f04747bf54961c345f787
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: The user-mode API interfaces used to interact with the Boltzmann
+ KFD driver. Currently supported agents include only the AMD/ATI Fiji family of
+ discrete GPUs. Support for AMD/ATI Hawaii discrete GPUs was added in the 1.2.0
+ release.
+ .
+ This package provides the development environment for hsakmt-roct.
+
+Package: roct-amdgpu-pro-dev
+Source: roct-amdgpu
+Version: 1.0.8-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 105
+Depends: roct-amdgpu-pro (= 1.0.8-673703)
+Filename: ./roct-amdgpu-pro-dev_1.0.8-673703_amd64.deb
+Size: 21384
+MD5sum: ad4ee5cd160a4a274257e3ac2888ae98
+SHA1: ed97d6184d6093b5abace2fae60c8d3777065c44
+SHA256: b8d1cede77d461994e3bce48afa797c42c058caf32f436c175de7ece850a6d3e
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: The user-mode API interfaces used to interact with the Boltzmann
+ KFD driver. Currently supported agents include only the AMD/ATI Fiji family of
+ discrete GPUs. Support for AMD/ATI Hawaii discrete GPUs was added in the 1.2.0
+ release.
+ .
+ This package provides the development environment for hsakmt-roct.
+
+Package: vulkan-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 38932
+Depends: libc6 (>= 2.27), libgcc1 (>= 1:7), libstdc++6 (>= 5.2), wsa-amdgpu, amdgpu-core
+Conflicts: vulkan-amdgpu-pro
+Replaces: vulkan-amdgpu-pro
+Filename: ./vulkan-amdgpu_18.20-673703_i386.deb
+Size: 10437724
+MD5sum: f6c814565f1492707d1ec31e8530f126
+SHA1: 1498f184df166731b54bd3d8cadf06b95dc5806c
+SHA256: 68687be0adf16515417e85e3897e07ccf6d314ba9911d6f8805cee821b781ae6
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: AMDGPU Vulkan driver
+
+Package: vulkan-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 35376
+Depends: libc6 (>= 2.27), libgcc1 (>= 1:3.4), libstdc++6 (>= 5.2), wsa-amdgpu, amdgpu-core
+Conflicts: vulkan-amdgpu-pro
+Replaces: vulkan-amdgpu-pro
+Filename: ./vulkan-amdgpu_18.20-673703_amd64.deb
+Size: 9315672
+MD5sum: e513de84acb5af50cab711a0123ba607
+SHA1: 78f6e49f93fd4560f7438ec0e5a8310e62681ccb
+SHA256: ee4403ce76290bbc3d9a6f876ffb34408b43464ab0d55e1c11954e293baa07fe
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: AMDGPU Vulkan driver
+
+Package: vulkan-amdgpu-pro
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 15723
+Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.3.1), libstdc++6 (>= 4.8), wsa-amdgpu, amdgpu-pro-core
+Conflicts: vulkan-amdgpu
+Replaces: vulkan-amdgpu
+Filename: ./vulkan-amdgpu-pro_18.20-673703_i386.deb
+Size: 3933776
+MD5sum: 30428643946a9b2f8488797cd62690cb
+SHA1: 0703be49f15619ca50c08969694fc1776dd83c00
+SHA256: 04e09b2749dd2bf0d998007e4ab5752a8e83c55fc77d9df0d9d2bd7aa4583888
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: AMDGPU Pro Vulkan driver
+
+Package: vulkan-amdgpu-pro
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 16987
+Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.3.1), libstdc++6 (>= 4.8), wsa-amdgpu, amdgpu-pro-core
+Conflicts: vulkan-amdgpu
+Replaces: vulkan-amdgpu
+Filename: ./vulkan-amdgpu-pro_18.20-673703_amd64.deb
+Size: 3880256
+MD5sum: 8589285cbbbb1e6bb5aa5b4204d95df1
+SHA1: ec5d27cfad7d32f463ed468bc6476d5fbd62356c
+SHA256: dd38b54fae192f80004fb424012b54c1369a4a0ea5f44c33737380bd30dc2587
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: AMDGPU Pro Vulkan driver
+
+Package: wayland-protocols-amdgpu
+Version: 1.13-673703
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 394
+Filename: ./wayland-protocols-amdgpu_1.13-673703_all.deb
+Size: 49836
+MD5sum: c65e4643bc8bf5d0a7acbd7a98e86148
+SHA1: 3abf0a15afe3c6b3a88a2b07a00412c651a96f6f
+SHA256: e73fdb711fbbcf307ea7d1329301135c4725efedbdb0411ed34b5c28e5139a6b
+Section: libdevel
+Priority: extra
+Homepage: http://wayland.freedesktop.org/
+Description: wayland compositor protocols
+ Wayland protocols that add functionality not available in the Wayland core
+ protocol. Such protocols either add completely new functionality, or extend
+ the functionality of some other protocol either in Wayland core, or some other
+ protocol in wayland-protocols.
+
+Package: wsa-amdgpu
+Version: 18.20-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 21
+Depends: libc6 (>= 2.1.3), amdgpu-core, libwayland-amdgpu-client0
+Filename: ./wsa-amdgpu_18.20-673703_i386.deb
+Size: 5108
+MD5sum: 93c88b1707ada1cda80edb0aaf16a54c
+SHA1: 6f34c427599216eba0b8acdf54a53774f91cdb67
+SHA256: f64b2bd36949c97b3085041f465107836ce528f5632f9a2229f9444d099a80bf
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Wayland support for AMD Vulkan driver
+
+Package: wsa-amdgpu
+Version: 18.20-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 26
+Depends: libc6 (>= 2.2.5), amdgpu-core, libwayland-amdgpu-client0
+Filename: ./wsa-amdgpu_18.20-673703_amd64.deb
+Size: 5004
+MD5sum: bdc179c3fb2c876145cdc5e02862d5d7
+SHA1: fab3702a434cd9d25927d893084d905ec2fd56a4
+SHA256: 56e44197fbce1fe2e68416154bbb405f7c2d6443012825d91bfb7dc6ce91d856
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Wayland support for AMD Vulkan driver
+
+Package: xserver-xorg-amdgpu-video-amdgpu
+Version: 1:1.4.0-673703
+Architecture: amd64
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 195
+Depends: amdgpu-core, libc6 (>= 2.17), libdrm-amdgpu-amdgpu1, glamor-amdgpu, libudev1 (>= 183)
+Suggests: linux-firmware
+Filename: ./xserver-xorg-amdgpu-video-amdgpu_1.4.0-673703_amd64.deb
+Size: 52756
+MD5sum: ddb1dd25d9f0fb894691ba21989eea19
+SHA1: 5196836f5b4e027fe8369614b47c066fafba7d12
+SHA256: bc75014adcc5226dc296a55762dfe66d65f2ee8c0f8820f58939bef9f5b3cd62
+Section: x11
+Priority: optional
+Description: X.Org X server -- AMD/ATI Radeon display driver
+ This package provides the 'amdgpu' driver for the AMD/ATI cards. The
+ following chips should be supported: KAVERY, KABINI, CZ.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This package is built from the X.org xf86-video-amdgpu driver module.
+
+Package: xserver-xorg-amdgpu-video-amdgpu
+Version: 1:1.4.0-673703
+Architecture: i386
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 181
+Depends: amdgpu-core, libc6 (>= 2.17), libdrm-amdgpu-amdgpu1, glamor-amdgpu, libudev1 (>= 183)
+Suggests: linux-firmware
+Filename: ./xserver-xorg-amdgpu-video-amdgpu_1.4.0-673703_i386.deb
+Size: 55332
+MD5sum: 805347ee70d8cb05209a4bd78adab1b1
+SHA1: 0f8a4bb76f8a1f3990d4e2fbf22896d8c75544a8
+SHA256: de5afb0c5b876d161e81adf9dfb700823d46eae9cf460bf6dba9020e665bfc0f
+Section: x11
+Priority: optional
+Description: X.Org X server -- AMD/ATI Radeon display driver
+ This package provides the 'amdgpu' driver for the AMD/ATI cards. The
+ following chips should be supported: KAVERY, KABINI, CZ.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This package is built from the X.org xf86-video-amdgpu driver module.
+

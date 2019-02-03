@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using the amdgpu-install Script &mdash; amdgpu graphics and compute stack 18.50-708488 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="amdgpu graphics and compute stack 18.50-708488 documentation" href="index.html"/>
+        <link rel="next" title="Installing or Uninstalling AMDGPU" href="install-installing.html"/>
+        <link rel="prev" title="Prerequisites" href="install-prereq.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> amdgpu graphics and compute stack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                18.50
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-prereq.html">Prerequisites</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using the <code class="docutils literal"><span class="pre">amdgpu-install</span></code> Script</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#script-types">Script Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#invoking-the-amdgpu-install-script">Invoking the <code class="docutils literal"><span class="pre">amdgpu-install</span></code> Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scenarios">Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#specifying-an-opencl-implementation">Specifying an OpenCL Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-help-or-usage-output">Viewing Help or Usage Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-non-interactively">Installing Non-Interactively</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-advanced-package-management-functionality">Adding Advanced Package Management Functionality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install-installing.html">Installing or Uninstalling AMDGPU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-bugrep.html">Reporting Bugs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">amdgpu graphics and compute stack</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Using the <code class="docutils literal"><span class="pre">amdgpu-install</span></code> Script</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/install-script.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-the-amdgpu-install-script">
+<h1><a class="toc-backref" href="#id1">Using the <code class="docutils literal"><span class="pre">amdgpu-install</span></code> Script</a><a class="headerlink" href="#using-the-amdgpu-install-script" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#using-the-amdgpu-install-script" id="id1">Using the <code class="docutils literal"><span class="pre">amdgpu-install</span></code> Script</a><ul>
+<li><a class="reference internal" href="#script-types" id="id2">Script Types</a></li>
+<li><a class="reference internal" href="#purpose" id="id3">Purpose</a></li>
+<li><a class="reference internal" href="#invoking-the-amdgpu-install-script" id="id4">Invoking the <code class="docutils literal"><span class="pre">amdgpu-install</span></code> Script</a></li>
+<li><a class="reference internal" href="#scenarios" id="id5">Scenarios</a><ul>
+<li><a class="reference internal" href="#specifying-an-opencl-implementation" id="id6">Specifying an OpenCL Implementation</a></li>
+<li><a class="reference internal" href="#viewing-help-or-usage-output" id="id7">Viewing Help or Usage Output</a></li>
+<li><a class="reference internal" href="#installing-non-interactively" id="id8">Installing Non-Interactively</a></li>
+<li><a class="reference internal" href="#adding-advanced-package-management-functionality" id="id9">Adding Advanced Package Management Functionality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="script-types">
+<h2><a class="toc-backref" href="#id2">Script Types</a><a class="headerlink" href="#script-types" title="Permalink to this headline">¶</a></h2>
+<p>The AMDGPU graphics stack offers the following scripts to help you install
+a coherent set of stack components:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">amdgpu-install</span></code></li>
+<li><code class="docutils literal"><span class="pre">amdgpu-pro-install</span></code></li>
+</ul>
+<p>Each of these scripts support the same set of arguments that are
+explained in the following sections of this page.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Although examples on this page show <code class="docutils literal"><span class="pre">amdgpu-install</span></code> script being
+invoked, you can use same arguments with <code class="docutils literal"><span class="pre">amdgpu-pro-install</span></code> script.</li>
+<li>Running the script <code class="docutils literal"><span class="pre">amdgpu-pro-install</span></code> is synonymous to running the
+script as <code class="docutils literal"><span class="pre">amdgpu-install</span> <span class="pre">--pro</span></code>.</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="purpose">
+<h2><a class="toc-backref" href="#id3">Purpose</a><a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">amdgpu-install</span></code> script does the following:</p>
+<ul>
+<li><p class="first">Simplifies the installation of the AMDGPU graphics and compute stack by
+encapsulating the distribution specific package installation logic and by
+using command line options that allow to specify the:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Variant of the AMDGPU stack to be installed (All-Open or Pro)</li>
+<li>Combination of components (in case of the Pro stack)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Performs post-install checks to verify whether the installation was performed
+successfully.</p>
+</li>
+<li><p class="first">Installs the uninstallation script to allow you to remove the whole
+AMDGPU stack from the system by using a single command.</p>
+</li>
+</ul>
+<p>The script is packaged into the AMDGPU-Pro tar archive.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="invoking-the-amdgpu-install-script">
+<h2><a class="toc-backref" href="#id4">Invoking the <code class="docutils literal"><span class="pre">amdgpu-install</span></code> Script</a><a class="headerlink" href="#invoking-the-amdgpu-install-script" title="Permalink to this headline">¶</a></h2>
+<p>Once you have downloaded and extracted the AMDGPU-Pro tar archive, access the
+directory where you extracted it. Invoke the script as <code class="docutils literal"><span class="pre">./amdgpu-install</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use of the <code class="docutils literal"><span class="pre">-y</span></code> option is recommended to avoid prompts from the
+package manager.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="scenarios">
+<h2><a class="toc-backref" href="#id5">Scenarios</a><a class="headerlink" href="#scenarios" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="specifying-an-opencl-implementation">
+<h3><a class="toc-backref" href="#id6">Specifying an OpenCL Implementation</a><a class="headerlink" href="#specifying-an-opencl-implementation" title="Permalink to this headline">¶</a></h3>
+<p>There are two OpenCL implementations available:</p>
+<ul class="simple">
+<li><strong>PAL</strong>: Provides support for <em>Vega 10</em> and newer hardware.</li>
+<li><strong>Legacy</strong>: Provides support for hardware older than <em>Vega 10</em>.</li>
+</ul>
+<p>You can either install one or both implementations.</p>
+<p>OpenCL is installed using the <code class="docutils literal"><span class="pre">--opencl</span></code> option, as follows:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Option</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">--opencl=pal</span></code></td>
+<td>Installs PAL OpenCL.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">--opencl=legacy</span></code></td>
+<td>Installs legacy OpenCL.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">--opencl=pal,legacy</span></code></td>
+<td>Installs both PAL and legacy OpenCL.</td>
+</tr>
+</tbody>
+</table>
+<p>Applicable examples on this page demonstrate installation of both OpenCL
+implementations.</p>
+</div>
+<div class="section" id="viewing-help-or-usage-output">
+<h3><a class="toc-backref" href="#id7">Viewing Help or Usage Output</a><a class="headerlink" href="#viewing-help-or-usage-output" title="Permalink to this headline">¶</a></h3>
+<p>Executing the script with <code class="docutils literal"><span class="pre">-h</span></code> or <code class="docutils literal"><span class="pre">--help</span></code> argument provides the help or
+usage output.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ./amdgpu-install -h
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-non-interactively">
+<h3><a class="toc-backref" href="#id8">Installing Non-Interactively</a><a class="headerlink" href="#installing-non-interactively" title="Permalink to this headline">¶</a></h3>
+<p>Using the argument <code class="docutils literal"><span class="pre">-y</span></code> informs the package management system to assume
+the answer <em>yes</em> for any interactive question. This option allows the
+install script to embed itself inside other automated scripts.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ./amdgpu-install -y
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-advanced-package-management-functionality">
+<h3><a class="toc-backref" href="#id9">Adding Advanced Package Management Functionality</a><a class="headerlink" href="#adding-advanced-package-management-functionality" title="Permalink to this headline">¶</a></h3>
+<p>More advanced functionality can be obtained by providing the installation
+script with arguments to pass through to the package management software of the
+distribution you are using.</p>
+<ul class="simple">
+<li>On Ubuntu, refer to the <a class="reference external" href="https://linux.die.net/man/8/apt">apt man page</a> for more information.</li>
+<li>On Red Hat, refer to <a class="reference external" href="https://linux.die.net/man/8/yum">yum man page</a> for more information.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install-installing.html" class="btn btn-neutral float-right" title="Installing or Uninstalling AMDGPU" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install-prereq.html" class="btn btn-neutral" title="Prerequisites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Advanced Micro Devices 2017, 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'18.50-708488',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
