@@ -4,10 +4,7 @@ FROM twobombs/deploy-nvidia-docker
 COPY 90forceyes /etc/apt/apt.conf.d/
 
 # add NV graphics drivers PPA
-RUN add-apt-repository -y ppa:graphics-drivers/dev
-RUN echo "deb http://ppa.launchpad.net/graphics-drivers/dev/ubuntu bionic main" >> /etc/apt/sources.list
-RUN echo "deb-src http://ppa.launchpad.net/graphics-drivers/dev/ubuntu bionic main" >> /etc/apt/sources.list
-RUN apt-get update
+RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
 
 # RUN apt-get install nvidia-driver-390 nvidia-cuda-toolkit  
 
