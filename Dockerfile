@@ -9,6 +9,8 @@ RUN echo "deb http://ppa.launchpad.net/graphics-drivers/dev/ubuntu bionic main" 
 RUN echo "deb-src http://ppa.launchpad.net/graphics-drivers/dev/ubuntu bionic main" >> /etc/apt/sources.list
 RUN apt-get update
 
+# RUN apt-get install nvidia-driver-390 nvidia-cuda-toolkit  
+
 # add cl apps
 RUN apt-get update && apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 python-setuptools python3-setuptools python-migrate dkms && apt-get clean all && apt -y autoremove
 
