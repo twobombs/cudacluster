@@ -3,6 +3,10 @@ FROM twobombs/deploy-nvidia-docker
 # force yes, force install 
 COPY 90forceyes /etc/apt/apt.conf.d/
 
+# add NV graphics drivers PPA
+RUN echo "deb http://ppa.launchpad.net/graphics-drivers/dev/ubuntu bionic main" >> /etc/apt/sources.list
+RUN echo "deb-src http://ppa.launchpad.net/graphics-drivers/dev/ubuntu bionic main" >> /etc/apt/sources.list
+
 # add cl apps
 RUN apt-get update && apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 python-setuptools python3-setuptools python-migrate dkms && apt-get clean all && apt -y autoremove
 
