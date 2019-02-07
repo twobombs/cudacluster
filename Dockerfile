@@ -12,7 +12,7 @@ RUN cd /root && wget -q http://upload.aspeedtech.com/BIOS/v103_linux_freebsd_sol
 # Intel
 RUN cd /root && mkdir compute && cd compute && wget -q https://github.com/intel/compute-runtime/releases/download/19.03.12192/intel-gmmlib_18.4.1_amd64.deb && wget -q https://github.com/intel/compute-runtime/releases/download/19.03.12192/intel-igc-core_19.02.1330_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.03.12192/intel-igc-opencl_19.02.1330_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.03.12192/intel-opencl_19.03.12192_amd64.deb && dpkg -i --force-all *.deb
 # AMD
-RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd1850 && ./amdgpu-install --headless && apt-get clean all & apt-get -y autoremove && cd / 
+RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd1850 && ./amdgpu-install --opencl=legacy -y --headless && apt-get clean all & apt-get -y autoremove && cd / 
 # NVidia
 RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
 # RUN apt-get install nvidia-driver-390 nvidia-cuda-toolkit  
