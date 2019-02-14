@@ -15,7 +15,7 @@ RUN cd /root && mkdir compute && cd compute && wget -q https://github.com/intel/
 RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd1850 && ./amdgpu-install -y --opencl=legacy && cd / 
 # NVidia
 RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
-RUN apt-get install nvidia-driver-396 xserver-xorg-video-nvidia-396 libnvidia-cfg1-396 nvidia-cuda-toolkit nvidia-opencl-dev && apt-get clean all
+RUN apt-get install cuda nvidia-opencl-dev && apt-get clean all
 
 # Ubuntu boot-iso & testsuite
 RUN cd /root && wget -q http://archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/mini.iso && wget -q http://www.luxrender.net/release/luxmark/v3.1/luxmark-linux64-v3.1.tar.bz2 && cd /
