@@ -16,7 +16,19 @@ RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd 
 # NVidia
 RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
 RUN apt-get -o Dpkg::Options::="--force-overwrite" install cuda nvidia-opencl-dev && apt-get clean all
-
+# the ROCm party source: https://github.com/RadeonOpenCompute/ROCm-docker/blob/master/dev/Dockerfile-ubuntu-18.04
+# Register the ROCM package repository, and install rocm-dev package
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends curl libnuma-dev gnupg \
+  && curl -sL http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | apt-key add - \
+  && printf "deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main" | tee /etc/apt/sources.list.d/rocm.list \
+  && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+  sudo \
+  libelf1 \
+  rocm-dev \
+  build-essential && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
+ 
 # Ubuntu luxmark testsuite
 RUN cd /root && wget -q http://www.luxrender.net/release/luxmark/v3.1/luxmark-linux64-v3.1.tar.bz2 && cd /
 
