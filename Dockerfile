@@ -25,7 +25,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 # moar AMD ( POCL )
-# RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd1850 && ./amdgpu-install -y --opencl=legacy && cd / && rm -rf cudacluster/
+RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd1850 && ./amdgpu-install -y --opencl=legacy && cd / && rm -rf cudacluster/
 # NVidia
 RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
 RUN apt-get -o Dpkg::Options::="--force-overwrite" install cuda nvidia-opencl-dev && apt-get clean all
