@@ -18,7 +18,7 @@ RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
 RUN apt-get -o Dpkg::Options::="--force-overwrite" install cuda nvidia-opencl-dev && apt-get clean all
  
 # Ubuntu luxmark testsuite
-RUN cd /root && wget -q http://www.luxrender.net/release/luxmark/v3.1/luxmark-linux64-v3.1.tar.bz2 && cd /
+RUN cd /root && wget -q https://github.com/LuxCoreRender/LuxMark/releases/download/luxmark_v3.1/luxmark-linux64-v3.1.tar.bz2 && cd /
 
 EXPOSE 6080
 
