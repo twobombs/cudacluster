@@ -4,7 +4,7 @@ FROM twobombs/deploy-nvidia-docker
 COPY 90forceyes /etc/apt/apt.conf.d/
 
 # add cl dev apps & dependancies
-RUN apt-get update && apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 ocl-icd-opencl-dev python-setuptools python3-setuptools python-migrate dkms && apt-get clean all && apt -y autoremove
+RUN apt-get update && apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 ocl-icd-opencl-dev beignet python-setuptools python3-setuptools python-migrate dkms && apt-get clean all && apt -y autoremove
 
 # add CL drivers
 # Aspeed onboard
