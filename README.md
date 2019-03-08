@@ -17,12 +17,12 @@ This container image has drivers for
 
 - AMD ( POCL & ROCm )
 - Nvidia ( CUDA & OpenCL )
-- Intel ( Beignet & Compute )
+- Intel ( OCLgrind & Compute )
 
 This docker image serves as the base for applications that use Compute abstractions.
 
 Done:
-- v2019 iteration: upgraded to CUDA 9.2 @ Ubuntu 18.04
+- v2019 iteration: upgraded to CUDA 9.2+ @ Ubuntu 18.04
 - OpenCL 1.2+ drivers for the 3 main Compute vendors
 
 Todo:
