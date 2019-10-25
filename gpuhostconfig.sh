@@ -24,8 +24,5 @@ sudo apt-get update
 sudo apt-get install nvidia-docker2
 sudo pkill -SIGHUP dockerd
 
-# fetch rancher 2.0 for controlling the infra nodes ( todo: add the node[s)
-docker run -d --restart=unless-stopped -p 80:8080 rancher/server:preview
-
 # fetch zerotier client for secure access to the controller ( todo: add the client to a ZT network )
 curl -s https://install.zerotier.com/ | sudo bash
