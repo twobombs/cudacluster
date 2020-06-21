@@ -15,7 +15,7 @@ RUN cd /root && mkdir compute && cd compute && wget https://github.com/intel/com
 
 RUN git clone https://github.com/intel/clGPU.git && cd /clGPU && chmod 755 make.sh && /bin/bash ./make.sh
 # AMD ( AMDGPU & ROCm )
-RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd1604 && ./amdgpu-pro-install -y --headless --opencl=legacy && cd / && rm -rf cudacluster/
+RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd1640 && ./amdgpu-pro-install -y --headless --opencl=legacy && cd / && rm -rf cudacluster/
 RUN apt install libnuma-dev && wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add - && echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list && apt update && apt -o Dpkg::Options::="--force-overwrite" install rocm-dkms && usermod -a -G video root && apt clean all
 # NVidia
 RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
