@@ -1,0 +1,383 @@
+#!/bin/bash
+#
+# Copyright 2016-2017 Advanced Micro Devices, Inc.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+# THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR
+# OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+# ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+shopt -s nullglob
+
+REPOSITORY="/var/opt/amdgpu-pro-local"
+
+BASE_PACKAGE=amdgpu-core
+META_PACKAGE=amdgpu
+META_LIB_PACKAGE=amdgpu-lib
+METAHWE_PACKAGE=amdgpu-hwe
+METAHWE_LIB_PACKAGE=amdgpu-lib-hwe
+DKMS_PACKAGE=amdgpu-dkms
+VERSION_REQUIRED=false
+VERSIONLIST_PACKAGE=amdgpu-pin
+VERSIONLIST_PRO_PACKAGE=amdgpu-pro-pin
+OPENGL_META_PACKAGE=amdgpu-pro
+OPENGLHWE_META_PACKAGE=amdgpu-pro-hwe
+OPENCL_LEGACY_META_PACKAGES=(clinfo-amdgpu-pro opencl-orca-amdgpu-pro-icd)
+OPENCL_PAL_META_PACKAGES=(clinfo-amdgpu-pro opencl-amdgpu-pro-icd)
+VULKAN_META_PACKAGE=vulkan-amdgpu-pro
+LIB32_META_PACKAGE=amdgpu-lib32
+LIB32_OPENGL_META_PACKAGE=amdgpu-pro-lib32
+LIB32_VULKAN_META_PACKAGE=vulkan-amdgpu-pro:i386
+PX_PACKAGE=xserver-xorg-video-modesetting-amdgpu-pro
+
+usage() {
+	cat <<END_USAGE
+Usage: $PROG [options...]
+
+Options:
+  -h|--help                Display this help message
+  --dryrun                 Print list of packages to install and exit
+  --px                     (DEPRECATED) PX platform support
+  --version=VERSION        Install the specified driver VERSION
+  --pro                    Install "pro" support (legacy OpenGL and Vulkan)
+  --opencl=legacy          Install legacy OpenCL support
+  --opencl=pal             Install PAL OpenCL support
+  --opencl=legacy,pal      Install both legacy and PAL OpenCL support
+  --headless               Headless installation (only OpenCL support)
+  --no-dkms                Do not install amdgpu-dkms package
+  --no-32                  Do not install 32 bit support
+  --compute                (DEPRECATED) Equal to --opencl=legacy --headless
+  --uninstall		   Uninstall the amdgpu driver
+
+  Unless the -h|--help option is given, 'apt-get' or 'aptitude' options
+  may be present.
+
+  Unless headless installation is requested, pro support will be installed.
+
+END_USAGE
+}
+
+function stderr() {
+	cat - 1>&2
+}
+
+function check_for_absence_of_nomodeset() {
+	if grep -q nomodeset "/proc/cmdline"; then
+		echo "WARNING: nomodeset detected in kernel parameters, "`
+			`"amdgpu requires KMS" | stderr
+	fi
+}
+
+function check_dkms_succeeded_for_running_kernel() {
+	if [ "$DKMS_PACKAGE" != "" ] && ! /usr/sbin/dkms status amdgpu | \
+			grep `uname -r` | grep -q installed; then
+		echo "WARNING: amdgpu dkms failed for running kernel" | stderr
+	fi
+}
+
+function check_install() {
+	check_for_absence_of_nomodeset
+	check_dkms_succeeded_for_running_kernel
+}
+
+function check_driver_install_status(){
+        if dpkg -s "$BASE_PACKAGE" &>/dev/null || \
+                dpkg -l | grep -q "$DKMS_PACKAGE" || \
+                dpkg -s "$VERSIONLIST_PACKAGE" &>/dev/null || \
+                dpkg -s "$VERSIONLIST_PRO_PACKAGE" &>/dev/null || \
+                [ -e /usr/bin/amdgpu-uninstall ] || \
+                [ -e /usr/bin/amdgpu-pro-uninstall ]; then
+                return 0
+        else
+                return 1
+        fi
+}
+
+function check_previous_install() {
+	if check_driver_install_status; then
+		echo -e "The amdgpu driver is already installed or was not "`
+			`"uninstalled correctly.\nPlease fully uninstall "`
+			`"the driver before proceeding with "`
+			`"installation" | stderr
+		if [ -e /usr/bin/amdgpu-uninstall ] || \
+			[ -e /usr/bin/amdgpu-pro-uninstall ]; then
+			echo -e "You can try running the amdgpu-uninstall or "`
+				`"amdgpu-pro-uninstall script \npresent in "`
+				`"/usr/bin to clean up the previous "`
+				`"installation" | stderr
+		else
+			echo -e "You can try running this install script with "`
+                               `"the --uninstall option \n to clean up the "`
+                               `"previous installation" | stderr
+		fi
+		exit 1
+	fi
+}
+
+function check_options() {
+	if [[ "${OPTIONS[*]}" =~ "no-dkms" ]] && \
+		[[ "${OPTIONS[*]}" =~ "pro" ]]; then
+		echo -e "ERROR: using --no-dkms with a pro install is "`
+			`"invalid.\nDid you want to run the following`
+			` instead?\namdgpu-install --no-dkms" | stderr
+		exit 1
+	fi
+}
+
+function os_release() {
+	if [[ -r  /etc/os-release ]]; then
+		. /etc/os-release
+
+		case "$ID" in
+		ubuntu|linuxmint|debian)
+			:
+			;;
+		*)
+			echo "Unsupported DEB-based OS: `
+				`/etc/os-release ID '$ID'" | stderr
+			exit 1
+			;;
+		esac
+	else
+		echo "Unsupported OS" | stderr
+		exit 1
+	fi
+}
+
+function etc_apt() {
+	local dir etc
+	eval $(apt-config shell dir Dir)
+	eval $(apt-config shell etc Dir::Etc)
+	echo ${dir%/}/${etc%/}
+}
+
+function source_list() {
+	local sourceparts
+	eval $(apt-config shell sourceparts Dir::Etc::sourceparts)
+	echo $(etc_apt)/${sourceparts%/}/${REPOSITORY##*/}.list
+}
+
+function install_version_list() {
+	local build_id=${VER#*-}
+	build_id=${build_id:+=*-$build_id}
+
+	if [[ "${OPTIONS[*]}" =~ "pro" ]] || ! $SUDO $APT ${1+"$@"} install \
+		"$VERSIONLIST_PACKAGE$build_id"; then
+		if ! $SUDO $APT ${1+"$@"} install \
+			"$VERSIONLIST_PRO_PACKAGE$build_id"; then
+			echo -e "ERROR: Unable to install pin package.\n`
+				`This driver may not support `
+				`the running operating system." | stderr
+			exit 1
+		elif [ -e /etc/apt/preferences.d/$VERSIONLIST_PACKAGE ]; then
+			$SUDO $APT ${1+"$@"} install "$VERSIONLIST_PACKAGE"
+		fi
+	fi
+}
+
+function local_repo_version() {
+	local index1="$PROG_DIR/Packages"
+	local index2="$PROG_DIR/Release"
+	local sentinel=($PROG_DIR/$VERSIONLIST_PACKAGE*_all.deb)
+
+	if [[ "${OPTIONS[*]}" =~ "pro" ]]; then
+		sentinel=($PROG_DIR/$VERSIONLIST_PRO_PACKAGE*_all.deb)
+	fi
+
+	if [[ -r "$index1" && -r "$index2" && ${#sentinel[*]} -gt 0 ]]; then
+		VER=$(dpkg-deb -f $sentinel Version)
+		OPTIONS+=(version)
+		SCRIPT_DIR=$REPOSITORY
+		$SUDO mkdir -p $REPOSITORY && \
+			$SUDO cp -af "$PROG_DIR"/* $REPOSITORY
+		echo "deb [ trusted=yes ] file:$REPOSITORY/ ./" | \
+			$SUDO tee $(source_list)
+		$SUDO apt-get update ||:
+	fi
+}
+
+function build_package_list() {
+	local opencl_meta_packages=()
+	local pro_meta_packages=()
+
+	if apt-cache show $METAHWE_PACKAGE &>/dev/null; then
+		if dpkg -s "xserver-xorg-hwe-18.04" &>/dev/null; then
+			META_PACKAGE=$METAHWE_PACKAGE
+			META_LIB_PACKAGE=$METAHWE_LIB_PACKAGE
+			OPENGL_META_PACKAGE=$OPENGLHWE_META_PACKAGE
+		fi
+	fi
+
+	if [[ "$VERSION_ID" == "16.04" ]]; then
+		VULKAN_META_PACKAGE=
+		LIB32_VULKAN_META_PACKAGE=
+		echo -e "WARNING: Vulkan has been dropped for Ubuntu 16.04."
+	fi
+
+	if [[ "${OPTIONS[*]}" =~ "no-dkms" ]]; then
+		DKMS_PACKAGE=
+		META_PACKAGE=$META_LIB_PACKAGE
+	fi
+
+	if [[ "${OPTIONS[*]}" =~ "no-32" ]]; then
+		LIB32_META_PACKAGE=
+		LIB32_OPENGL_META_PACKAGE=
+		LIB32_VULKAN_META_PACKAGE=
+	fi
+
+	[[ "${OPTIONS[*]}" =~ "pro" ]] \
+		&& pro_meta_packages=($OPENGL_META_PACKAGE \
+				$VULKAN_META_PACKAGE \
+				$LIB32_OPENGL_META_PACKAGE \
+				$LIB32_VULKAN_META_PACKAGE)
+
+	if [[ "${OPTIONS[*]}" =~ "opencl" ]]; then
+		[[ "${OPENCL_OPTIONS[*]}" =~ "legacy" ]] \
+			&& opencl_meta_packages=(${OPENCL_LEGACY_META_PACKAGES[*]})
+
+		if [[ "${OPENCL_OPTIONS[*]}" =~ "pal" ]]; then
+			opencl_meta_packages=(${opencl_meta_packages[*]} \
+				${OPENCL_PAL_META_PACKAGES[*]})
+		fi
+
+		if [[ "${OPTIONS[*]}" =~ "headless" ]]; then
+			PACKAGES=($DKMS_PACKAGE ${opencl_meta_packages[*]})
+		else
+			PACKAGES=($DKMS_PACKAGE $META_PACKAGE \
+				$LIB32_META_PACKAGE \
+				${pro_meta_packages[*]} \
+				${opencl_meta_packages[*]})
+		fi
+	else
+		PACKAGES=($DKMS_PACKAGE $META_PACKAGE $LIB32_META_PACKAGE \
+				${pro_meta_packages[*]})
+	fi
+
+	[[ "${OPTIONS[*]}" =~ "px" ]] \
+		&& PACKAGES=(${PACKAGES[*]} $PX_PACKAGE)
+
+	return 0
+}
+
+function amdgpu_pro_install() {
+	check_previous_install
+	check_options
+	build_package_list
+
+	if [[ "${OPTIONS[*]}" =~ "dryrun" ]]; then
+		echo PACKAGES: ${PACKAGES[*]}
+		amdgpu_pro_uninstall
+		return 0
+	fi
+
+	if [[ "${OPTIONS[*]}" =~ "version" ]] || ! $VERSION_REQUIRED; then
+		install_version_list ${1+"$@"}
+	else
+		echo "ERROR: argument '--version' must be set" | stderr
+		return 1
+	fi
+
+	$SUDO ln -sf $SCRIPT_DIR/$PROG $SBIN/${PROG%-*}-uninstall
+
+	$SUDO $APT ${1+"$@"} install ${PACKAGES[*]}
+
+	check_install
+}
+
+function amdgpu_pro_uninstall() {
+	local list=""
+	dpkg -l $BASE_PACKAGE >/dev/null 2>&1 && list="$list $BASE_PACKAGE"
+	dpkg -l $VERSIONLIST_PACKAGE >/dev/null 2>&1 && \
+		list="$list $VERSIONLIST_PACKAGE"
+	list="$list$(dpkg -l | awk /$DKMS_PACKAGE/' { printf " %s",$2 }')"
+	dpkg -l $VERSIONLIST_PRO_PACKAGE >/dev/null 2>&1 && \
+		list="$list $VERSIONLIST_PRO_PACKAGE"
+	[[ "$list" = "" ]] || $SUDO $APT ${1+"$@"} purge $list
+	$SUDO rm -rf $SBIN/${PROG%-*}-uninstall $(source_list) $REPOSITORY
+	$SUDO apt-get update ||:
+}
+
+PROG=${0##*/}
+PROG_DIR=$(cd ${0%/*} && pwd -P)
+SUDO=$([[ $(id -u) -ne 0 ]] && echo "sudo" ||:)
+SBIN="/usr/bin"
+SCRIPT_DIR=$SBIN
+VER=""
+APT="apt"
+OPTIONS=()
+OPENCL_OPTIONS=()
+
+os_release
+
+[[ "$PROG" =~ "pro" ]] && OPTIONS+=(pro)
+
+while (($#))
+do
+	case "$1" in
+	-h|--help)
+		usage
+		exit 0
+		;;
+	--px)
+		echo -e "WARNING: --px option is deprecated\n"`
+			`"All-Open with PRIME is recommended for for "`
+			`"all mobile variants with hybrid graphics"
+		OPTIONS+=(${1#--})
+		shift
+		;;
+	--headless|--pro|--dryrun|--no-dkms|--no-32)
+		OPTIONS+=(${1#--})
+		shift
+		;;
+	--version*)
+		OPTIONS+=(version)
+		VER=${1#--version=}
+		shift
+		;;
+	--opencl*)
+		OPTIONS+=(opencl)
+		OPENCL_OPTIONS=${1#--opencl=}
+		OPENCL_OPTIONS=(${OPENCL_OPTIONS/,/ })
+		shift
+		;;
+	--compute)
+		echo "WARNING: --compute option is deprecated"
+		OPTIONS+=(opencl headless)
+		OPENCL_OPTIONS=(legacy)
+		shift
+		;;
+	--uninstall)
+                amdgpu_pro_uninstall
+                if check_driver_install_status; then
+                        echo -e "Errors were encountered when attempting to "`
+                                `" uninstall the driver" | stderr
+                else
+                        echo -e "Uninstall was completed sucessfully"| stderr
+                fi
+                exit 1
+                ;;
+	*)
+		ARGS+="$1 "
+		shift
+		;;
+	esac
+done
+
+local_repo_version
+
+set -- $ARGS
+amdgpu_pro_${0##*-} ${1+"$@"}

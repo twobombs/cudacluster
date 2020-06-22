@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installing or Uninstalling AMDGPU &mdash; amdgpu graphics and compute stack 20.20-1089974 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="amdgpu graphics and compute stack 20.20-1089974 documentation" href="index.html"/>
+        <link rel="next" title="Reporting Bugs" href="install-bugrep.html"/>
+        <link rel="prev" title="Using the amdgpu-install Script" href="install-script.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> amdgpu graphics and compute stack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                20.20
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-prereq.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-script.html">Using the <code class="docutils literal"><span class="pre">amdgpu-install</span></code> Script</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing or Uninstalling AMDGPU</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-all-open-variant">Installing the All-Open Variant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-pro-variant">Installing the Pro Variant</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#opengl-default-component">OpenGL (Default Component)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opencl-optional-component">OpenCL (Optional Component)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vulkan-default-component">Vulkan (Default Component)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#px-platform-support-ubuntu-only">PX Platform Support (Ubuntu only)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#uninstalling-the-amdgpu-graphics-stack">Uninstalling the AMDGPU Graphics Stack</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install-bugrep.html">Reporting Bugs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">amdgpu graphics and compute stack</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installing or Uninstalling AMDGPU</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/install-installing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installing-or-uninstalling-amdgpu">
+<h1><a class="toc-backref" href="#id1">Installing or Uninstalling AMDGPU</a><a class="headerlink" href="#installing-or-uninstalling-amdgpu" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#installing-or-uninstalling-amdgpu" id="id1">Installing or Uninstalling AMDGPU</a><ul>
+<li><a class="reference internal" href="#installing-the-all-open-variant" id="id2">Installing the All-Open Variant</a></li>
+<li><a class="reference internal" href="#installing-the-pro-variant" id="id3">Installing the Pro Variant</a><ul>
+<li><a class="reference internal" href="#opengl-default-component" id="id4">OpenGL (Default Component)</a></li>
+<li><a class="reference internal" href="#opencl-optional-component" id="id5">OpenCL (Optional Component)</a></li>
+<li><a class="reference internal" href="#vulkan-default-component" id="id6">Vulkan (Default Component)</a></li>
+<li><a class="reference internal" href="#px-platform-support-ubuntu-only" id="id7">PX Platform Support (Ubuntu only)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uninstalling-the-amdgpu-graphics-stack" id="id8">Uninstalling the AMDGPU Graphics Stack</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="installing-the-all-open-variant">
+<h2><a class="toc-backref" href="#id2">Installing the All-Open Variant</a><a class="headerlink" href="#installing-the-all-open-variant" title="Permalink to this headline">¶</a></h2>
+<p>Run the following command to install the All-Open variant:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ./amdgpu-install -y
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">-y</span></code> option installs non-interactively. See
+<a class="reference internal" href="install-script.html"><span class="doc">Using the amdgpu-install script</span></a> for more
+information.</p>
+</div>
+<hr class="docutils" />
+<p>Reboot the target system after running <code class="docutils literal"><span class="pre">amdgpu-install</span></code>.</p>
+</div>
+<div class="section" id="installing-the-pro-variant">
+<h2><a class="toc-backref" href="#id3">Installing the Pro Variant</a><a class="headerlink" href="#installing-the-pro-variant" title="Permalink to this headline">¶</a></h2>
+<p>Refer to the following table to understand how to install a combination of Pro
+components:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="78%" />
+<col width="22%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Command</strong></td>
+<td><strong>Installed
+Components</strong></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">./amdgpu-pro-install</span> <span class="pre">-y</span></code></td>
+<td><ul class="first last simple">
+<li>Base kernel</li>
+<li>Accelerated
+graphics</li>
+<li>Mesa
+multimedia</li>
+<li>Pro OpenGL</li>
+<li>Pro Vulkan</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">./amdgpu-pro-install</span> <span class="pre">-y</span> <span class="pre">--opencl=pal,legacy</span></code></td>
+<td><ul class="first last simple">
+<li>Base kernel</li>
+<li>Accelerated
+graphics</li>
+<li>Mesa
+multimedia</li>
+<li>Pro OpenGL</li>
+<li>Pro Vulkan</li>
+<li>Pro OpenCL</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">./amdgpu-pro-install</span> <span class="pre">-y</span> <span class="pre">--opencl=pal,legacy</span> <span class="pre">--headless</span></code></td>
+<td><ul class="first last simple">
+<li>Only base
+kernel</li>
+<li>Pro OpenCL
+(headless mode)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Reboot the target system after running <code class="docutils literal"><span class="pre">amdgpu-pro-install</span></code>.</p>
+<p>For more information, refer to the following sections to understand how to
+install individual components.</p>
+<div class="section" id="opengl-default-component">
+<h3><a class="toc-backref" href="#id4">OpenGL (Default Component)</a><a class="headerlink" href="#opengl-default-component" title="Permalink to this headline">¶</a></h3>
+<p>OpenGL is a default component of the Pro variant.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Unless a headless installation is requested, OpenGL is installed.</p>
+</div>
+</div>
+<div class="section" id="opencl-optional-component">
+<h3><a class="toc-backref" href="#id5">OpenCL (Optional Component)</a><a class="headerlink" href="#opencl-optional-component" title="Permalink to this headline">¶</a></h3>
+<p>OpenCL is an optional component of the Pro variant and is installed only if it is
+specifically requested.</p>
+<p>Two different implementations of OpenCL (legacy and PAL) are provided.
+Either of these implementations or both of them can be installed
+on the target system.</p>
+<p>In some scenarios, it may be desirable to install <strong>only</strong> the OpenCL portion
+of the Pro variant (omitting the OpenGL portion), which can be accomplished
+by adding the <code class="docutils literal"><span class="pre">--headless</span></code> option. The typical use case is headless compute.</p>
+</div>
+<div class="section" id="vulkan-default-component">
+<h3><a class="toc-backref" href="#id6">Vulkan (Default Component)</a><a class="headerlink" href="#vulkan-default-component" title="Permalink to this headline">¶</a></h3>
+<p>Vulkan is a default component of the Pro variant.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Unless a headless installation is requested, Vulkan is installed.</p>
+</div>
+</div>
+<div class="section" id="px-platform-support-ubuntu-only">
+<h3><a class="toc-backref" href="#id7">PX Platform Support (Ubuntu only)</a><a class="headerlink" href="#px-platform-support-ubuntu-only" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">PX is deprecated in the latest version of the AMDGPU Graphics Stack.
+The All-Open variant with PRIME GPU offloading is recommend for all
+mobile variants with hybrid graphics, which allows GPU workloads to
+be offloaded to a discrete GPU on demand.</p>
+</div>
+<p>For PX (<em>PowerExpress</em>) platform support, use the <code class="docutils literal"><span class="pre">--px</span></code> option as shown in
+the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ./amdgpu--pro-install --px
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="uninstalling-the-amdgpu-graphics-stack">
+<h2><a class="toc-backref" href="#id8">Uninstalling the AMDGPU Graphics Stack</a><a class="headerlink" href="#uninstalling-the-amdgpu-graphics-stack" title="Permalink to this headline">¶</a></h2>
+<p>To remove all components of the stack, run the uninstall script from anywhere
+in the system.</p>
+<ol class="arabic">
+<li><p class="first">Based on whether you installed the All-Open or Pro components, run one of
+the following commands:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Use this for All-Open components</span>
+$ amdgpu-uninstall
+
+<span class="c1"># Use this for Pro components</span>
+$ amdgpu-pro-uninstall
+</pre></div>
+</div>
+</li>
+<li><p class="first">After uninstalling the components, reboot the target system.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install-bugrep.html" class="btn btn-neutral float-right" title="Reporting Bugs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install-script.html" class="btn btn-neutral" title="Using the amdgpu-install Script" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Advanced Micro Devices 2017, 2020.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'20.20-1089974',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
