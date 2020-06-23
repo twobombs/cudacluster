@@ -16,7 +16,7 @@ RUN git clone https://github.com/intel/clGPU.git && cd /clGPU && chmod 755 make.
 
 # AMD ( AMDGPU & ROCm )
 RUN ln -s /etc/apt/sources.list.d/ /etc/aptsources.list.d
-RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd2020 && ./amdgpu-pro-install -y --opencl=legacy --headless && cd / && rm -rf cudacluster/
+RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster 
 # RUN apt install libnuma-dev && wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add - && echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list && apt update && apt -o Dpkg::Options::="--force-overwrite" install rocm-dkms && usermod -a -G video root && apt clean all
 
 # NVidia
@@ -25,4 +25,4 @@ RUN apt-get -o Dpkg::Options::="--force-overwrite" install nvidia-opencl-dev && 
 
 EXPOSE 6080
 
-ENTRYPOINT /root/run
+ENTRYPOINT /root/run2020
