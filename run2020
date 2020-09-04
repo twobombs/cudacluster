@@ -1,2 +1,0 @@
-cd /cudacluster/amd2020 && ./amdgpu-pro-install -y --opencl=legacy --headless
-read n -1
