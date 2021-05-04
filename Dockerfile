@@ -20,7 +20,7 @@ RUN git clone https://github.com/intel/clGPU.git && cd /clGPU && chmod 755 make.
 
 # NVidia cl libs
 RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
-RUN apt-get -o Dpkg::Options::="--force-overwrite" install nvidia-opencl-dev && apt-get clean all
+# RUN apt-get -o Dpkg::Options::="--force-overwrite" install nvidia-opencl-dev && apt-get clean all
 
 RUN curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey |  apt-key add - 
 RUN curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu20.04/nvidia-docker.list | tee /etc/apt/sources.list.d/nvidia-docker.list
