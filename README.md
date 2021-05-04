@@ -1,5 +1,5 @@
 # CUDA/OpenCL Cluster 2020 - R&D + C&C 
-# Based on Ubuntu 20.04 NVidia Docker 19.03+ CUDAGL Dev Image
+# Based on Ubuntu 20.04 NVidia Docker2 CUDAGL Dev Image
 
 ![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
 
@@ -15,6 +15,9 @@ The worker node sees the underlying hardware PCI bus X-times the amount of nodes
 Both the worker and controller nodes are of the same image; a controller can therefore also work because it has the binaries and settings to do so.
 
 This setting used to optimize the workload and usage of the GPUs, and also allows the abstract of running workload on thousands of GPU cores while only running on a small subset of those cores, therefore accurately simulating scaling. To make deployment for such environments easier one can use k3d in combination with Rancher 2.4+
+
+<img width="1433" alt="Screenshot 2021-05-04 at 15 50 42" src="https://user-images.githubusercontent.com/12692227/117013928-96f99680-acf0-11eb-95cb-3427ed861a36.png">
+
 
 This container image has drivers and/or configurations for
 - AMD ( OCL & ROCm )
