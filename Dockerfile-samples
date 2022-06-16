@@ -1,0 +1,10 @@
+FROM twobombs/cudacluster:dev
+
+RUN git clone https://github.com/NVIDIA/cuda-samples.git && cd cuda-samples && make
+
+ENV NVIDIA_VISIBLE_DEVICES all
+ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
+
+EXPOSE 6080
+
+ENTRYPOINT /root/run
