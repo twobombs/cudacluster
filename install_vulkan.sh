@@ -7,5 +7,6 @@ git clone https://github.com/KhronosGroup/Vulkan-Headers.git && cd /Vulkan-Heade
 git clone https://github.com/KhronosGroup/Vulkan-Loader.git && cd /Vulkan-Loader && mkdir build && cd build && cmake -DVULKAN_HEADERS_INSTALL_DIR=/Vulkan-Headers/build/install .. && make install && ldconfig
 mkdir -p /usr/local/include/vulkan && cp -r /Vulkan-Headers/build/install/include/vulkan/* /usr/local/include/vulkan && mkdir -p /usr/local/share/vulkan/registry && cp -r /Vulkan-Headers/build/install/share/vulkan/registry/* /usr/local/share/vulkan/registry
 rm -R /Vulkan-ValidationLayers && rm -R /Vulkan-Headers && rm -R /Vulkan-Loader 
-# add vulkan ICD link
+# add Vulkan ICD link - check ZINK output
 COPY nvidia_icd.json /etc/vulkan/icd.d/nvidia_icd.json
+# RUN __GLX_VENDOR_LIBRARY_NAME=mesa MESA_LOADER_DRIVER_OVERRIDE=zink GALLIUM_DRIVER=zink glxinfo 
