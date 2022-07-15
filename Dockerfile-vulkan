@@ -12,7 +12,7 @@ RUN mkdir -p /usr/local/include/vulkan && cp -r /Vulkan-Headers/build/install/in
 RUN rm -R /Vulkan-ValidationLayers && rm -R /Vulkan-Headers && rm -R /Vulkan-Loader 
 
 # add filter
-RUN git clone https://gitlab.com/mcoffin/vulkan-device-filter.git && cd vulkan-device-filter && cargo build --release && ./install.sh
+RUN git clone https://gitlab.com/mcoffin/vulkan-device-filter.git && cd vulkan-device-filter && cargo build --release
 
 # add vulkan ICD link
 COPY nvidia_icd.json /etc/vulkan/icd.d/nvidia_icd.json
