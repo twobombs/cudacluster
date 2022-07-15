@@ -8,7 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && add-apt-repository ppa:lutris-team/
 RUN export DEBIAN_FRONTEND=noninteractive && apt update && apt -y install lutris && apt clean all && apt -y autoremove
 
 # install moonlight host
-RUN apt install libboost-all-dev ffmpeg libssl-dev libavcodec-dev libavformat-dev libavfilter-dev libavdevice-dev libopus-dev libx11-dev libpulse-dev && apt clean all
+RUN apt install libboost-all-dev ffmpeg libssl-dev libavcodec-dev libavformat-dev libavfilter-dev libavdevice-dev libopus-dev libxcomposite-dev libx11-dev libpulse-dev && apt clean all
 RUN git clone --recurse-submodules https://github.com/SunshineStream/Sunshine.git && cd Sunshine && cmake . && make 
 
 ENV NVIDIA_VISIBLE_DEVICES all
