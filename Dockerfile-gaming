@@ -9,7 +9,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt update && apt -y install lutris
 
 # install moonlight host
 RUN apt install libboost-all-dev ffmpeg libssl-dev libavcodec-dev libavformat-dev libavfilter-dev libavdevice-dev libevdev-dev libxrandr-dev libxcb-xfixes0-dev libxcb-shm0-dev libopus-dev libxcomposite-dev libx11-dev libpulse-dev && apt clean all
-RUN git clone --recurse-submodules https://github.com/SunshineStream/Sunshine.git && cd Sunshine && mkdir build && cd build && cmake .. && make 
+RUN git clone --recurse-submodules https://github.com/SunshineStream/Sunshine.git && cd Sunshine && mkdir build && cd build && cmake .. && make && make install
 
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
