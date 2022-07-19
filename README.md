@@ -28,7 +28,8 @@ This container image has drivers and/or configurations for
 - CPU only ( POCL )
 
 ## Revisions:
-- v2022 vulkan/gaming: added Zink for native OpenGL inside container 
+- v2022 vulkan: added Zink for native OpenGL inside container
+        gaming: added Sunshine for streaming
 - v2021 gaming: added Wine, Steam Lutrix and Vulkan Engine in Gaming tag
 - v2020 iteration: upgraded to CUDA 11+ @ Ubuntu 20.04
 - OpenCL 1.2+ drivers for the 3 main Compute vendors plus one CPU only POCL version
