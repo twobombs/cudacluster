@@ -36,7 +36,7 @@ This container image has drivers and/or configurations for
 ### Vanilla OCL version
 <img width="1433" alt="Screenshot 2021-05-04 at 15 50 42" src="https://user-images.githubusercontent.com/12692227/117013928-96f99680-acf0-11eb-95cb-3427ed861a36.png">
 
-### Vulkan Gaming version
+### Vulkan/Gaming version
 ![Screenshot from 2021-08-30 21-10-48](https://user-images.githubusercontent.com/12692227/131392607-9abe5fed-a621-483d-9c0d-a88997c00b2d.png)
 
 
