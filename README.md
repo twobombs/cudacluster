@@ -29,7 +29,7 @@ This container image has drivers and/or configurations for
 
 ## Revisions:
 - v2022 vulkan: added Zink for native OpenGL inside container https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa
-        gaming: added Sunshine for streaming https://github.com/SunshineStream/Sunshine 
+- v2022 gaming: added Sunshine for streaming https://github.com/SunshineStream/Sunshine 
 - v2021 gaming: added Wine, Steam Lutrix and Vulkan Engine in Gaming tag
 - v2020 iteration: upgraded to CUDA 11+ @ Ubuntu 20.04
 - OpenCL 1.2+ drivers for the 3 main Compute vendors plus one CPU only POCL version
