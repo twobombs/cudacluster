@@ -30,7 +30,7 @@ This container image has drivers and/or configurations for
 
 ## Revisions:
 - v2022c added virtualcl - start containers with shared directories -v /virtualcl/volumename:/virtualcl/volumename
-- v2022b vulkan: added Zink for native OpenGL inside container https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa
+- v2022b vulkan: added Zink GL https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa
 - v2022a gaming: added Sunshine for streaming https://github.com/SunshineStream/Sunshine 
 - v2021 gaming: added Wine, Steam Lutrix and Vulkan Engine in Gaming tag
 - v2020 iteration: upgraded to CUDA 11+ @ Ubuntu 20.04
