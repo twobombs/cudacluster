@@ -25,9 +25,11 @@ This container image has drivers and/or configurations for
 - AMD ( OCL & ROCm )
 - Nvidia ( CUDA, Vulkan & OpenCL )
 - Intel ( OCLgrind & Beignet Compute )
-- CPU only ( POCL )
+- CPU only ( OpenCL POCL - http://portablecl.org/ ) 
+- VirtualCL https://mosix.cs.huji.ac.il/
 
 ## Revisions:
+- v2022c added virtualcl - start containers with shared directories -v /virtualcl/volumename:/virtualcl/volumename
 - v2022b vulkan: added Zink for native OpenGL inside container https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa
 - v2022a gaming: added Sunshine for streaming https://github.com/SunshineStream/Sunshine 
 - v2021 gaming: added Wine, Steam Lutrix and Vulkan Engine in Gaming tag
