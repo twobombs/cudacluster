@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# start vcl controller with nodes file from mount
+cp /var/log/vcl/etc/vcl/nodes /etc/vcl/nodes
+
+# start vcl backend and controller
+cd /vcl-1.25/ && ./vcl start
+
+tail -f /dev/null
