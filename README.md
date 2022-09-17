@@ -29,7 +29,7 @@ This container image has drivers and/or configurations for
 - VirtualCL https://mosix.cs.huji.ac.il/
 
 ## Revisions:
-- v2022c added virtualcl - start containers with shared directories -v /virtualcl/volumename:/virtualcl/volumename
+- v2022c added virtualcl https://mosix.cs.huji.ac.il/txt_vcl.html
 - v2022b vulkan: added Zink GL https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa
 - v2022a gaming: added Sunshine for streaming https://github.com/SunshineStream/Sunshine 
 - v2021 gaming: added Wine, Steam Lutrix and Vulkan Engine in Gaming tag
