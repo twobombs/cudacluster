@@ -41,6 +41,6 @@ RUN mkdir -p /etc/OpenCL/vendors && echo "libnvidia-opencl.so.1" > /etc/OpenCL/v
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
 
-EXPOSE 6080
+EXPOSE 255 6080
 
 ENTRYPOINT /root/run
