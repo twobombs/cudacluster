@@ -1,4 +1,4 @@
-FROM twobombs/cudacluster:dev
+FROM twobombs/cudacluster:vulkan
 
 # NV & Mesa samples building
 RUN git clone https://github.com/NVIDIA/cuda-samples.git && cd cuda-samples && make
