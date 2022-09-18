@@ -30,6 +30,8 @@ RUN touch /etc/vcl/is_back_end && touch /etc/vcl/is_host && touch /etc/vcl/may_r
 RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
 # RUN apt-get -o Dpkg::Options::="--force-overwrite" install nvidia-opencl-dev && apt-get clean all
 
+RUN git clone https://github.com/twobombs/cudacluster.git
+# install nvidia-docker bins for controller
 RUN curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey |  apt-key add - 
 RUN curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu20.04/nvidia-docker.list | tee /etc/apt/sources.list.d/nvidia-docker.list
 RUN apt-get update && apt-get install -y nvidia-docker2 docker.io && apt-get clean all
