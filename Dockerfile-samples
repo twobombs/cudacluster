@@ -5,8 +5,8 @@ RUN apt update && apt-get install libgl1-mesa-dev freeglut3-dev libglew-dev cmak
 # NV, OCL & Mesa samples building
 RUN git clone https://github.com/NVIDIA/cuda-samples.git && cd cuda-samples && make -k -i -j2
 #
-RUN git clone https://github.com/twobombs/cuda-workshop.git && cd cuda-workshop && cd shrutil && cmake . && make shrutil
-RUN git clone https://github.com/twobombs/nvidia-opencl-examples.git 
+COPY oclSamples.tar.gz /oclSamples.tar.gz
+RUN tar -xf oclSamples.tar.gz
 #
 RUN git clone https://github.com/freedesktop/mesa-demos.git && cd mesa-demos && cmake . && make -k -i -j2 && make install 
 
