@@ -2,6 +2,8 @@ FROM twobombs/cudacluster:vulkan
 
 # NV, OCL & Mesa samples building
 RUN git clone https://github.com/NVIDIA/cuda-samples.git && cd cuda-samples && make -k -i -j2
+#
+RUN git clone https://github.com/twobombs/cuda-workshop.git
 RUN git clone https://github.com/twobombs/nvidia-opencl-examples.git 
 #
 RUN apt update && apt-get install libgl1-mesa-dev freeglut3-dev libglew-dev cmake build-essential && apt clean all
