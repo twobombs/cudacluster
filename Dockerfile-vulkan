@@ -5,9 +5,9 @@ RUN apt update && apt install -y --no-install-recommends vulkan-utils libvulkan-
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # make driver
-RUN git clone https://github.com/KhronosGroup/Vulkan-ValidationLayers.git && cd /Vulkan-ValidationLayers && mkdir build && cd build && ../scripts/update_deps.py && cmake -C helper.cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . && make install && ldconfig
+RUN git clone --depth=1 --branch v1.3.230 https://github.com/KhronosGroup/Vulkan-ValidationLayers.git && cd /Vulkan-ValidationLayers && mkdir build && cd build && ../scripts/update_deps.py && cmake -C helper.cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . && make install && ldconfig
 RUN git clone --depth=1 --branch v1.3.230 https://github.com/KhronosGroup/Vulkan-Headers.git && cd /Vulkan-Headers && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=install .. && make install && ldconfig 
-RUN git clone https://github.com/KhronosGroup/Vulkan-Loader.git && cd /Vulkan-Loader && mkdir build && cd build && cmake -DVULKAN_HEADERS_INSTALL_DIR=/Vulkan-Headers/build/install .. && make install && ldconfig
+RUN git clone --depth=1 --branch v1.3.230 https://github.com/KhronosGroup/Vulkan-Loader.git && cd /Vulkan-Loader && mkdir build && cd build && cmake -DVULKAN_HEADERS_INSTALL_DIR=/Vulkan-Headers/build/install .. && make install && ldconfig
 RUN mkdir -p /usr/local/include/vulkan && cp -r /Vulkan-Headers/build/install/include/vulkan/* /usr/local/include/vulkan && mkdir -p /usr/local/share/vulkan/registry && cp -r /Vulkan-Headers/build/install/share/vulkan/registry/* /usr/local/share/vulkan/registry
 RUN rm -R /Vulkan-ValidationLayers && rm -R /Vulkan-Headers && rm -R /Vulkan-Loader 
 
