@@ -1,4 +1,4 @@
-FROM twobombs/deploy-nvidia-docker
+FROM nvidia/cudagl:11.4.2-base-ubuntu20.04
 
 # HPC SDK
 RUN curl https://developer.download.nvidia.com/hpc-sdk/ubuntu/DEB-GPG-KEY-NVIDIA-HPC-SDK | gpg --dearmor -o /usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg
