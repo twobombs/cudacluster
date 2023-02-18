@@ -1,6 +1,7 @@
 FROM nvidia/cudagl:11.4.2-base-ubuntu20.04
 
 # HPC SDK
+RUN apt update && apt install -y curl && apt clean all
 RUN curl https://developer.download.nvidia.com/hpc-sdk/ubuntu/DEB-GPG-KEY-NVIDIA-HPC-SDK | gpg --dearmor -o /usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg
 RUN echo 'deb [signed-by=/usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg] https://developer.download.nvidia.com/hpc-sdk/ubuntu/amd64 /' | tee /etc/apt/sources.list.d/nvhpc.list
 RUN apt update && apt install -y nvhpc-22-9-cuda-multi
