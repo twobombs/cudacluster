@@ -8,7 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt-get -y -f install libtasn1-bin 
 RUN export DEBIAN_FRONTEND=noninteractive && apt update && curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get 
 
 # install moonlight host
-RUN apt install libboost-all-dev ffmpeg libssl-dev libva-dev libavcodec-dev libavformat-dev libavfilter-dev libavdevice-dev libevdev-dev libxrandr-dev libxcb-xfixes0-dev libxcb-shm0-dev libopus-dev libxcomposite-dev libx11-dev libpulse-dev && apt clean all
+RUN apt install libboost-all-dev ffmpeg libssl-dev libva-dev vdpau-driver-all libavcodec-dev libavformat-dev libavfilter-dev libavdevice-dev libevdev-dev libxrandr-dev libxcb-xfixes0-dev libxcb-shm0-dev libopus-dev libxcomposite-dev libx11-dev libpulse-dev && apt clean all
 RUN git clone --recurse-submodules --branch v0.17.0 https://github.com/SunshineStream/Sunshine.git && cd Sunshine && mkdir build && cd build && cmake .. && make && make install
 
 ENV NVIDIA_VISIBLE_DEVICES all
