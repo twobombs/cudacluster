@@ -27,7 +27,7 @@ RUN touch /etc/vcl/is_back_end && touch /etc/vcl/is_host && touch /etc/vcl/may_r
 # RUN apt install libnuma-dev && wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add - && echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list && apt update && apt -o Dpkg::Options::="--force-overwrite" install rocm-dkms && usermod -a -G video root && apt clean all
 
 # NVidia cl libs
-RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
+# RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
 # RUN apt-get -o Dpkg::Options::="--force-overwrite" install nvidia-opencl-dev && apt-get clean all
 
 RUN git clone https://github.com/twobombs/cudacluster.git
