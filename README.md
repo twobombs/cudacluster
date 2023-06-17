@@ -29,6 +29,7 @@ This container image has drivers and/or configurations for
 - VirtualCL https://mosix.cs.huji.ac.il/
 
 ## Revisions:
+- v2023 upgrade to Ubuntu 22.04 and CUDA 12.1
 - v2022c added virtualcl https://mosix.cs.huji.ac.il/txt_vcl.html
 - v2022b vulkan: added Zink GL https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa
 - v2022a gaming: added Sunshine for streaming https://github.com/SunshineStream/Sunshine 
