@@ -1,5 +1,5 @@
 ## CUDA/OpenCL/Vulkan Cluster - R&D + C&C
-## Based on Ubuntu 20.04 NVidia Docker2
+## Based on Ubuntu 22.04 NVidia Docker2
 ## With Gaming version as PoC for streaming
 
 ![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
