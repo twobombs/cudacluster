@@ -27,7 +27,7 @@ RUN cd vcl-1.25 && cp vcl /etc/init.d/vcl && cp vclconf /sbin/vclconf && cp open
 RUN touch /etc/vcl/is_back_end && touch /etc/vcl/is_host && touch /etc/vcl/may_read_files && touch /etc/vcl/may_write_files && touch /var/log/vcl/etc/vcl/nodes
 
 # NVidia cl libs
-RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
+# RUN add-apt-repository -y ppa:graphics-drivers/dev && apt-get update
 # RUN apt-get -o Dpkg::Options::="--force-overwrite" install nvidia-opencl-dev && apt-get clean all
 
 RUN git clone https://github.com/twobombs/cudacluster.git
