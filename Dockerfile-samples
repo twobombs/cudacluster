@@ -3,7 +3,7 @@ FROM twobombs/cudacluster:vulkan
 # libs
 RUN apt update && apt-get install libgl1-mesa-dev freeglut3-dev libglew-dev cmake build-essential && apt clean all
 # NV, OCL & Mesa samples building
-RUN git clone -b 'v11.5' --single-branch --depth 1 https://github.com/NVIDIA/cuda-samples.git && cd cuda-samples && make -k -i -j2 2> /dev/null
+RUN git clone -b 'v12.1' --single-branch --depth 1 https://github.com/NVIDIA/cuda-samples.git && cd cuda-samples && make -k -i -j2 2> /dev/null
 
 #
 RUN git clone https://github.com/twobombs/cuda-workshop.git && cd cuda-workshop && cd shrutil && cmake . && make shrutil
