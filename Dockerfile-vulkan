@@ -2,7 +2,7 @@ FROM twobombs/cudacluster:dev
 
 # add NVulkan
 RUN apt update && apt install -y --no-install-recommends vulkan-tools libvulkan-dev cmake cargo pkg-config ca-certificates libclang-dev libegl1-mesa-dev libdrm-intel1 libdrm-dev libxkbcommon-dev libwayland-dev libx11-xcb-dev libxkbcommon-dev libxrandr-dev python3 python3-distutils wget && apt clean all && rm -rf /var/lib/apt/lists/*
-# RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # make driver
 RUN git clone --depth=1 --branch v1.3.230 https://github.com/KhronosGroup/Vulkan-ValidationLayers.git && cd /Vulkan-ValidationLayers && mkdir build && cd build && ../scripts/update_deps.py && cmake -C helper.cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . && make install && ldconfig
