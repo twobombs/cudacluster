@@ -21,3 +21,7 @@ COPY nvidia_icd.json /etc/vulkan/icd.d/nvidia_icd.json
 RUN wget -qO - http://packages.lunarg.com/lunarg-signing-key-pub.asc | sudo apt-key add -
 RUN wget -qO /etc/apt/sources.list.d/lunarg-vulkan-focal.list http://packages.lunarg.com/vulkan/lunarg-vulkan-focal.list
 RUN apt update && apt install -y vulkan-sdk && apt clean all 
+
+# fetch vulkan RT benchmark
+RUN apt-get install -y curl unzip tar libxi-dev libxinerama-dev libxcursor-dev xorg-dev && apt clean all
+RUN git clone https://github.com/GPSnoopy/RayTracingInVulkan.git && cd RayTracingInVulkan && ./vcpkg_linux.sh && ./build_linux.sh
