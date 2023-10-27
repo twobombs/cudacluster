@@ -28,7 +28,7 @@ This container image has drivers and/or configurations for
 - Nvidia ( CUDA, Vulkan & OpenCL )
 - Intel ( OCLgrind & Beignet Compute )
 - CPU only OpenCL [POCL](http://portablecl.org/) 
-- [VirtualCL](https://mosix.cs.huji.ac.il/)
+- [VirtualCL](https://mosix.cs.huji.ac.il/) for OpenCL clusters
 
 ## Revisions:
 - `v2023` upgrade to Ubuntu 22.04 and CUDA 12.1
