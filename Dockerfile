@@ -15,12 +15,12 @@ RUN apt-get update && apt-get install -y git software-properties-common ant free
 # RUN git clone https://github.com/intel/clGPU.git && cd clGPU && chmod 755 make.sh && /bin/bash ./make.sh && cd .. && rm -R /clGPU
 
 # add VCL + directories
-RUN wget https://mosix.cs.huji.ac.il/vcl/VCL-1.25.tbz && tar -xjf VCL-1.25.tbz && rm VCL-1.25.tbz
-RUN mkdir /var/log/vcl && mkdir /var/log/vcl/etc && mkdir /var/log/vcl/etc/vcl && mkdir /var/log/vcl/etc/init.d && mkdir /var/log/vcl/usr && mkdir /var/log/vcl/usr/bin && mkdir /var/log/vcl/etc/rc0.d && mkdir /var/log/vcl/etc/rc1.d && mkdir /var/log/vcl/etc/rc2.d  &&  mkdir /var/log/vcl/etc/rc3.d && mkdir /var/log/vcl/etc/rc4.d &&  mkdir /var/log/vcl/etc/rc5.d &&  mkdir /var/log/vcl/etc/rc6.d 
+# RUN wget https://mosix.cs.huji.ac.il/vcl/VCL-1.25.tbz && tar -xjf VCL-1.25.tbz && rm VCL-1.25.tbz
+# RUN mkdir /var/log/vcl && mkdir /var/log/vcl/etc && mkdir /var/log/vcl/etc/vcl && mkdir /var/log/vcl/etc/init.d && mkdir /var/log/vcl/usr && mkdir /var/log/vcl/usr/bin && mkdir /var/log/vcl/etc/rc0.d && mkdir /var/log/vcl/etc/rc1.d && mkdir /var/log/vcl/etc/rc2.d  &&  mkdir /var/log/vcl/etc/rc3.d && mkdir /var/log/vcl/etc/rc4.d &&  mkdir /var/log/vcl/etc/rc5.d &&  mkdir /var/log/vcl/etc/rc6.d 
 # setup & install VCL binaries manually
-RUN mkdir /usr/lib/vcl /etc/vcl
-RUN cd vcl-1.25 && cp vcl /etc/init.d/vcl && cp vclconf /sbin/vclconf && cp opencld /sbin/opencld && cp broker /sbin/broker && cp libOpenCL.so /usr/lib/vcl/libOpenCL.so && cp vclrun /usr/bin/vclrun && cp supercl.h /usr/include/supercl.h
-RUN touch /etc/vcl/is_back_end && touch /etc/vcl/is_host && touch /etc/vcl/may_read_files && touch /etc/vcl/may_write_files && touch /var/log/vcl/etc/vcl/nodes
+# RUN mkdir /usr/lib/vcl /etc/vcl
+# RUN cd vcl-1.25 && cp vcl /etc/init.d/vcl && cp vclconf /sbin/vclconf && cp opencld /sbin/opencld && cp broker /sbin/broker && cp libOpenCL.so /usr/lib/vcl/libOpenCL.so && cp vclrun /usr/bin/vclrun && cp supercl.h /usr/include/supercl.h
+# RUN touch /etc/vcl/is_back_end && touch /etc/vcl/is_host && touch /etc/vcl/may_read_files && touch /etc/vcl/may_write_files && touch /var/log/vcl/etc/vcl/nodes
 
 # AMD ( AMDGPU & ROCm )
 # RUN cd / && git clone --recursive https://github.com/twobombs/cudacluster && cd /cudacluster/amd1850 && ./amdgpu-install -y --headless --opencl=legacy && cd / && rm -rf cudacluster/
