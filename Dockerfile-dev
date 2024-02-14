@@ -20,7 +20,7 @@ RUN git clone https://github.com/intel/clGPU.git && cd clGPU && chmod 755 make.s
 
 # add zluda
 RUN apt update && apt-get -y install cargo cmake
-RUN git clone https://github.com/vosen/ZLUDA.git && cd ZLUDA && cargo xtask --release
+RUN git clone --recurse-submodules https://github.com/vosen/ZLUDA.git && cd ZLUDA && cargo xtask --release
 
 # add VCL + directories
 # RUN wget https://mosix.cs.huji.ac.il/vcl/VCL-1.25.tbz && tar -xjf VCL-1.25.tbz && rm VCL-1.25.tbz
