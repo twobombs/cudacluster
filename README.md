@@ -15,7 +15,7 @@ Spin up the controller image and you will have a VNC WebUI with vendor/driver su
 Expose the port if you want, an SSL loadbalancer advised as `6080` will be cleartext. Default password is `00000000`
 
 ```bash
-docker run --gpus all --device=/dev/dri:/dev/dri -d twobombs/cudacluster
+docker run --gpus all --device=/dev/kfd --device=/dev/dri:/dev/dri -d twobombs/cudacluster
 ````
 
 The worker node sees the underlying hardware PCI bus X-times the amount of nodes on the host so the controller node will see an X-amount of CUDA cores. 
