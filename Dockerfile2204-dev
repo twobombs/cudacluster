@@ -17,8 +17,8 @@ RUN curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey |  apt-key add -
 RUN curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu20.04/nvidia-docker.list | tee /etc/apt/sources.list.d/nvidia-docker.list
 RUN apt-get update && apt-get install -y nvidia-docker2 docker.io && apt-get clean all
 
-# NVidia hw integration
-RUN mkdir -p /etc/OpenCL/vendors && echo "libnvidia-opencl.so.1" > /etc/OpenCL/vendors/nvidia.icd
+# NVidia hw integration for cudacluster deprecated: both NV and AMD are avaliable in opencl in base image 2204dev
+# RUN mkdir -p /etc/OpenCL/vendors && echo "libnvidia-opencl.so.1" > /etc/OpenCL/vendors/nvidia.icd
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
 
