@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y git software-properties-common ant free
 
 # Intel
 # old: RUN cd /root && mkdir compute && cd compute && wget -q https://github.com/intel/compute-runtime/releases/download/19.03.12192/intel-gmmlib_18.4.1_amd64.deb && wget -q https://github.com/intel/compute-runtime/releases/download/19.03.12192/intel-igc-core_19.02.1330_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.03.12192/intel-igc-opencl_19.02.1330_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.03.12192/intel-opencl_19.03.12192_amd64.deb && dpkg -i --force-all *.deb && cd ..
-RUN mkdir compute && cd compute && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-gmmlib_19.2.1_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-igc-core_1.0.9-2211_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-igc-opencl_1.0.9-2211_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-opencl_19.26.13286_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-ocloc_19.26.13286_amd64.deb && dpkg -i --force-all *.deb && cd .. && apt clean all && rm -R /compute
-RUN git clone https://github.com/intel/clGPU.git && cd clGPU && chmod 755 make.sh && /bin/bash ./make.sh && cd .. && rm -R /clGPU
+# RUN mkdir compute && cd compute && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-gmmlib_19.2.1_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-igc-core_1.0.9-2211_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-igc-opencl_1.0.9-2211_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-opencl_19.26.13286_amd64.deb && wget https://github.com/intel/compute-runtime/releases/download/19.26.13286/intel-ocloc_19.26.13286_amd64.deb && dpkg -i --force-all *.deb && cd .. && apt clean all && rm -R /compute
+# RUN git clone https://github.com/intel/clGPU.git && cd clGPU && chmod 755 make.sh && /bin/bash ./make.sh && cd .. && rm -R /clGPU
 
 RUN git clone https://github.com/twobombs/cudacluster.git
 # install nvidia-docker bins for controller
@@ -17,8 +17,25 @@ RUN curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey |  apt-key add -
 RUN curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu20.04/nvidia-docker.list | tee /etc/apt/sources.list.d/nvidia-docker.list
 RUN apt-get update && apt-get install -y nvidia-docker2 docker.io && apt-get clean all
 
-# NVidia hw integration for cudacluster deprecated: both NV and AMD are avaliable in opencl in base image 2204dev
-# RUN mkdir -p /etc/OpenCL/vendors && echo "libnvidia-opencl.so.1" > /etc/OpenCL/vendors/nvidia.icd
+# fetch AMD ROCm drivers & prepare the image
+# pre-install dev tools and ROCm packages
+
+ARG ROCM_VERSION=6.3.4
+ARG AMDGPU_VERSION=6.3.4
+
+# AMD driver MI50+
+RUN wget https://repo.radeon.com/amdgpu-install/6.3.4/ubuntu/jammy/amdgpu-install_6.3.60304-1_all.deb
+RUN apt install -y ./amdgpu-install_6.3.60304-1_all.deb && apt update && apt clean all
+RUN apt install -y python3-setuptools python3-wheel && apt clean all
+RUN apt install -y rocm && apt clean all
+
+# enable AMD & NV OCL integrations
+RUN echo "libamdocl64.so" > /etc/OpenCL/vendors/amdocl64_60304_76.icd
+RUN echo "libnvidia-opencl.so.1" >  /etc/OpenCL/vendors/nvidia.icd
+
+# add Intel OpenCL ICD as well
+RUN apt install -y intel-opencl-icd && apt clean all
+
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
 
