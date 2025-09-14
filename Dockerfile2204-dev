@@ -24,8 +24,7 @@ ARG ROCM_VERSION=6.3.4
 ARG AMDGPU_VERSION=6.3.4
 
 # AMD driver MI50+
-RUN wget https://repo.radeon.com/amdgpu-install/6.3.4/ubuntu/jammy/amdgpu-install_6.3.60304-1_all.deb
-RUN apt install -y ./amdgpu-install_6.3.60304-1_all.deb && apt update && apt clean all
+RUN wget https://repo.radeon.com/amdgpu-install/6.3.4/ubuntu/jammy/amdgpu-install_6.3.60304-1_all.deb && apt install -y ./amdgpu-install_6.3.60304-1_all.deb && apt update && apt clean all && rm amdgpu-install_6.3.60304-1_all.deb
 RUN apt install -y python3-setuptools python3-wheel && apt clean all
 RUN apt install -y rocm && apt clean all
 
