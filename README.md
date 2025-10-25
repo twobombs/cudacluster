@@ -1,50 +1,196 @@
-## CUDA/OpenCL/Vulkan Cluster - R&D + C&C
-## Based on `Ubuntu 22.04 NVidia Docker2`
-## With `Gaming` version as PoC for streaming
+# CUDA/OpenCL/Vulkan Cluster
 
-![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
+## Overview
 
-System is build with `CUDA/OpenCL` nodes on top of (GPU) hosts to allow the distributed workloads layered on top of physical and/or virtual hosts. 
-The Infra & monitoring should be done by invoking you favorite k8s orchestrator eg. Rancher 1.6.x or 2.x
+This repository provides a set of Docker images for building a distributed computing cluster with support for CUDA, OpenCL, and Vulkan. The images are based on Ubuntu and are designed to work with NVIDIA, AMD, and Intel GPUs. The cluster can be used for a variety of purposes, including research and development, high-performance computing, and gaming.
 
-This docker image serves as the base for applications that use OpenCL/OpenGL/Vulkan Compute abstractions and also serves as middle-ware for ThereminQ, Bonsai Nbody and Mandelbulber container images. Recently a gaming tag was added for quick PoC purposes.
+## Features
 
-### How does it work ?
+-   **Multi-GPU Support**: Works with NVIDIA, AMD, and Intel GPUs.
+-   **Multiple Compute APIs**: Supports CUDA, OpenCL, and Vulkan.
+-   **Distributed Workloads**: Allows for distributed workloads across multiple nodes.
+-   **VNC Web UI**: Provides a VNC web UI for easy access to the controller node.
+-   **Gaming Support**: Includes a "gaming" version with support for Wine, Steam, and Lutris.
 
-Spin up the controller image and you will have a VNC WebUI with vendor/driver support and setting in an X session avaliable at port `6080`
-Expose the port if you want, an SSL loadbalancer advised as `6080` will be cleartext. Default password is `00000000`
+## Docker Images
+
+This repository contains several Dockerfiles for building different versions of the `cudacluster` image. Each image is designed for a specific purpose and includes a different set of dependencies and configurations.
+
+### `cudacluster:latest` (`Dockerfile`)
+
+This is the base image for the `cudacluster`. It includes the necessary dependencies for running CUDA and OpenCL applications, as well as the NVIDIA Docker runtime.
+
+**Dependencies:**
+- `git`
+- `software-properties-common`
+- `ant`
+- `freeglut3-dev`
+- `openjdk-8-jdk`
+- `qv4l2`
+- `ocl-icd-libopencl1`
+- `opencl-headers`
+- `ocl-icd-opencl-dev`
+- `oclgrind`
+- `python3-setuptools`
+- `dkms`
+- `intel-gpu-tools`
+- `nvidia-docker2`
+- `docker.io`
+
+**Configuration:**
+- Installs the NVIDIA Docker runtime.
+- Sets up the NVIDIA OpenCL ICD.
+- Exposes ports `255` and `6080`.
+- Sets the entrypoint to `/root/run`.
+
+### `cudacluster:dev` (`Dockerfile-dev`)
+
+This image is designed for development and includes a variety of development tools and libraries, as well as support for Intel GPUs.
+
+**Dependencies:**
+- All dependencies from the base image.
+- Intel Compute Runtime drivers.
+
+**Configuration:**
+- Installs the Intel Compute Runtime drivers.
+- Clones the `cudacluster` repository.
+- Sets up the NVIDIA OpenCL ICD.
+- Exposes ports `255` and `6080`.
+- Sets the entrypoint to `/root/run`.
+
+### `cudacluster:gaming` (`Dockerfile-gaming`)
+
+This image is designed for gaming and includes support for Wine, Steam, and Lutris, as well as the Vulkan graphics API.
+
+**Dependencies:**
+- All dependencies from the `vulkan` image.
+- `winehq-stable`
+- `steam`
+
+**Configuration:**
+- Adds the WineHQ repository.
+- Installs Wine and Steam.
+- Exposes port `6080`.
+- Sets the entrypoint to `/root/run`.
+
+### `cudacluster:hpc` (`Dockerfile-hpc`)
+
+This image is designed for high-performance computing and includes the NVIDIA HPC SDK.
+
+**Dependencies:**
+- `curl`
+- `nvhpc-22-9-cuda-multi`
+
+**Configuration:**
+- Installs the NVIDIA HPC SDK.
+- Exposes port `6080`.
+- Sets the entrypoint to `/root/run`.
+
+### `cudacluster:vulkan` (`Dockerfile-vulkan`)
+
+This image is designed for Vulkan development and includes the Vulkan SDK and validation layers.
+
+**Dependencies:**
+- All dependencies from the `dev` image.
+- `vulkan-tools`
+- `libvulkan-dev`
+- `cmake`
+- `cargo`
+- `pkg-config`
+- `libclang-dev`
+
+**Configuration:**
+- Installs the Vulkan SDK and validation layers.
+- Clones and builds the Vulkan-ValidationLayers, Vulkan-Headers, and Vulkan-Loader repositories.
+- Installs the `vulkan-device-filter`.
+- Copies the `nvidia_icd.json` file to the appropriate location.
+
+### `cudacluster:2204dev` (`Dockerfile2204-dev`)
+
+This is a development image based on Ubuntu 22.04. It includes support for AMD ROCm drivers and Intel OpenCL ICD.
+
+**Dependencies:**
+- All dependencies from the base image.
+- `rocm`
+- `radeontop`
+- `intel-opencl-icd`
+
+**Configuration:**
+- Installs the AMD ROCm drivers.
+- Sets up the AMD and NVIDIA OpenCL ICDs.
+- Installs the Intel OpenCL ICD.
+- Installs `koboldcpp`.
+- Exposes ports `255` and `6080`.
+- Sets the entrypoint to `/root/run`.
+
+## Usage
+
+To use the `cudacluster` images, you can either build them from the Dockerfiles in this repository or pull them from Docker Hub.
+
+### Building from Source
+
+To build the images from source, clone this repository and run the `docker build` command for the desired image. For example, to build the base image, run the following command:
 
 ```bash
-docker run --gpus all --device=/dev/kfd --device=/dev/dri:/dev/dri -d twobombs/cudacluster
-````
+docker build -t cudacluster:latest .
+```
 
-The worker node sees the underlying hardware PCI bus X-times the amount of nodes on the host so the controller node will see an X-amount of CUDA cores. 
-Both the worker and controller nodes are of the same image; a controller can therefore also work because it has the binaries and settings to do so.
+### Running the Container
 
-This setting used to optimize the workload and usage of the GPUs, and also allows the abstract of running workload on thousands of GPU cores while only running on a small subset of those cores, therefore accurately simulating scaling. To make deployment for such environments easier one can use k3d in combination with Rancher 2.4+
+To run a container, use the `docker run` command with the appropriate options. For example, to run the base image with GPU support, use the following command:
 
-This container image has drivers and/or configurations for
-- AMD ( OCL & ROCm )
-- Nvidia ( CUDA, Vulkan & OpenCL )
-- Intel ( OCLgrind & Beignet Compute )
-- CPU only OpenCL [POCL](http://portablecl.org/) 
-- [VirtualCL](https://mosix.cs.huji.ac.il/) for OpenCL clusters
+```bash
+docker run --gpus all --device=/dev/kfd --device=/dev/dri:/dev/dri -d cudacluster:latest
+```
 
-## Revisions:
-- `v2023` upgrade to Ubuntu 22.04 and CUDA 12.1
-- `v2022c` added virtualcl https://mosix.cs.huji.ac.il/txt_vcl.html
-- `v2022b` vulkan: added Zink GL https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa
-- `v2022a` gaming: added Sunshine for streaming https://github.com/SunshineStream/Sunshine 
-- `v2021` gaming: added Wine, Steam Lutrix and Vulkan Engine in Gaming tag
-- `v2020` iteration: upgraded to CUDA 11+ @ Ubuntu 20.04
-- OpenCL 1.2+ drivers for the 3 main Compute vendors plus one CPU only POCL version
+This will start a container in detached mode with access to all available GPUs. You can then access the VNC web UI at `http://localhost:6080`. The default password is `00000000`.
 
-### Vanilla OCL version
-<img width="1433" alt="Screenshot 2021-05-04 at 15 50 42" src="https://user-images.githubusercontent.com/12692227/117013928-96f99680-acf0-11eb-95cb-3427ed861a36.png">
+### Worker Nodes
 
-### Vulkan/Gaming version
-![Screenshot from 2021-08-30 21-10-48](https://user-images.githubusercontent.com/12692227/131392607-9abe5fed-a621-483d-9c0d-a88997c00b2d.png)
+The worker nodes use the same image as the controller node. When a worker node is started, it will automatically connect to the controller and become part of the cluster.
 
+### AMD GPU Setup (`run-amd`)
 
-### Zink Integration
-![Screenshot from 2022-07-19 11-23-29](https://user-images.githubusercontent.com/12692227/179716583-1f3f5d71-a95d-42ac-8266-a2d2cc0552d3.png)
+The `run-amd` script is used to set up AMD GPUs for use with OpenCL. It installs the necessary drivers and libraries and configures the system for use with AMD GPUs.
+
+**Dependencies:**
+- `mesa-opencl-icd`
+- `dialog`
+- `clinfo`
+
+**Configuration:**
+- Installs the AMD GPU drivers.
+- Creates a symbolic link for the OpenCL library.
+
+### Vulkan Installation (`install_vulkan.sh`)
+
+The `install_vulkan.sh` script is used to install the Vulkan SDK and validation layers. It also configures the system for use with Vulkan.
+
+**Dependencies:**
+- `vulkan-utils`
+- `cmake`
+- `python3`
+- `wget`
+
+**Configuration:**
+- Installs the Vulkan SDK and validation layers.
+- Clones and builds the Vulkan-ValidationLayers, Vulkan-Headers, and Vulkan-Loader repositories.
+- Copies the `nvidia_icd.json` file to the appropriate location.
+
+## Configuration
+
+The environment is configured using a combination of Docker environment variables and configuration files.
+
+### NVIDIA ICD (`nvidia_icd.json`)
+
+The `nvidia_icd.json` file is used to configure the NVIDIA OpenCL ICD. It specifies the path to the NVIDIA OpenCL library and the API version to use.
+
+## Revisions
+
+-   **v2023**: Upgrade to Ubuntu 22.04 and CUDA 12.1
+-   **v2022c**: Added virtualcl
+-   **v2022b**: Added Zink GL
+-   **v2022a**: Added Sunshine for streaming
+-   **v2021**: Added Wine, Steam, Lutrix, and Vulkan Engine in Gaming tag
+-   **v2020**: Upgraded to CUDA 11+ @ Ubuntu 20.04
+-   OpenCL 1.2+ drivers for the 3 main Compute vendors plus one CPU only POCL version
