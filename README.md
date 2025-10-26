@@ -1,8 +1,10 @@
-# CUDA/OpenCL/Vulkan Cluster
+<img width="5978" height="1578" alt="468390747-272a9fdc-d924-4771-850c-d100f23562f6 (1)" src="https://github.com/user-attachments/assets/8029cbc1-126e-4a0e-b189-fa4e407c4297" />
+
+# CUDA/ROCm/OpenCL/Vulkan as a Cluster
 
 ## Overview
 
-This repository provides a set of Docker images for building a distributed computing cluster with support for CUDA, OpenCL, and Vulkan. The images are based on Ubuntu and are designed to work with NVIDIA, AMD, and Intel GPUs. The cluster can be used for a variety of purposes, including research and development, high-performance computing, and gaming.
+This repository provides a set of Docker images for building a computing cluster with support for CUDA, OpenCL, and Vulkan. The images are based on Ubuntu and are designed to work with NVIDIA, AMD, and Intel GPUs. The cluster can be used for a variety of purposes, including research and development, high-performance computing, and gaming.
 
 ## Features
 
@@ -186,7 +188,7 @@ The environment is configured using a combination of Docker environment variable
 The `nvidia_icd.json` file is used to configure the NVIDIA OpenCL ICD. It specifies the path to the NVIDIA OpenCL library and the API version to use.
 
 ## Revisions
-
+-   **v2025**: ROCm support and upgrades for CUDA 12.8
 -   **v2023**: Upgrade to Ubuntu 22.04 and CUDA 12.1
 -   **v2022c**: Added virtualcl
 -   **v2022b**: Added Zink GL
