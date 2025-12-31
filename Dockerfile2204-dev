@@ -29,6 +29,7 @@ RUN apt-get update && apt-get install -y nvidia-docker2 docker.io && apt-get cle
 # RUN apt install -y rocm radeontop && apt clean all
 
 # enable AMD & NV OCL integrations
+RUN mkdir /etc/OpenCL && mkdir /etc/OpenCL/vendors
 # RUN echo "libamdocl64.so" > /etc/OpenCL/vendors/amdocl64_60304_76.icd
 RUN echo "libnvidia-opencl.so.1" >  /etc/OpenCL/vendors/nvidia.icd
 
@@ -36,7 +37,7 @@ RUN echo "libnvidia-opencl.so.1" >  /etc/OpenCL/vendors/nvidia.icd
 RUN apt install -y intel-opencl-icd && apt clean all
 
 # add mesa cl driver
-RUN apt install -y mesa-opencl-icd
+RUN apt install -y mesa-opencl-icd && apt clean all
 
 # fetch gguf model loader
 RUN cd /root && curl -fLo koboldcpp https://github.com/LostRuins/koboldcpp/releases/latest/download/koboldcpp-linux-x64-oldpc && chmod +x koboldcpp
