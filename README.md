@@ -1,4 +1,4 @@
-<img width="5978" height="1578" alt="468390747-272a9fdc-d924-4771-850c-d100f23562f6 (1)" src="https://github.com/user-attachments/assets/8029cbc1-126e-4a0e-b189-fa4e407c4297" />
+<img width="1536" height="1024" alt="ChatGPT Image Jan 1, 2026, 12_55_47 PM" src="https://github.com/user-attachments/assets/64036380-01d8-4b3a-9152-eff641577d4c" />
 
 # CUDA/ROCm/OpenCL/Vulkan as a Cluster
 
